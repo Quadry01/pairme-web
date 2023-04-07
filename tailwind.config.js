@@ -11,6 +11,7 @@ module.exports = {
           deeper: "#072f3b",
           light: "#8fe4ff",
           lighter: "#c8f1ff",
+          ring: '#0D486D'
         },
         gray: {
           active: "#B3C1CA"
@@ -30,6 +31,9 @@ module.exports = {
       maxWidth: {
         'home-mg': '777px',
       },
+      zIndex: {
+        '100': '100',
+      }
     },
   },
   plugins: [],

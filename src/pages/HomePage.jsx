@@ -50,7 +50,7 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-28 top-44 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-28 top-44 z-20">
           <img src={homeImg} className="w-full h-full" alt="" />
         </div>
       </section>
