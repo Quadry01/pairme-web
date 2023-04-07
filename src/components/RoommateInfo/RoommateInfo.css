@@ -1,0 +1,61 @@
+.roommate-info-wrapper {
+  padding: 20px 40px;
+  width: 38%;
+  color: #0a3855;
+
+  border-radius: 50px;
+  background-color: rgb(251, 252, 252);
+}
+.student-name {
+  font-weight: 500;
+  font-size: 25px;
+}
+.picture-name-section {
+  text-align: center;
+}
+.profile-picture {
+  height: 100px;
+  width: 100px;
+  background-color: brown;
+  border-radius: 100%;
+  margin: auto;
+}
+.about-header {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.religion-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.religion {
+}
+.side-hustle {
+  margin: 0px auto;
+}
+.about-li {
+  list-style-type: disc;
+  margin-left: 11px;
+}
+
+@media only screen and (max-width: 700px) {
+  .roommate-info-wrapper {
+    width: auto;
+  }
+  .profile-picture {
+    position: absolute;
+  }
+  .smallScreen-name-sec {
+    text-align: left;
+    position: relative;
+    left: 45%;
+  }
+  .profile-picture {
+    height: 83px;
+    width: 83px;
+  }
+}

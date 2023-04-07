@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "imgURL":[
+            {
+                "interior":"",
+                "front-view":"",
+                "left-view":"",
+                "right-view":""
+            }
+        ],
+        "name": "",
+        "type": "",
+        "location": "",
+        "yearly-rent": "",
+        "overview": "",
+        "features": [],
+        "hostel-regulations": [],
+        "linked-roommate":[
+            {
+                "name": "Gbenga Adebayo",
+                "university": "University of Lagos",
+                "department": "Law",
+                "about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
+                "religion": "christianity",
+                "side-hustle": "Event Planning",
+                "routine": "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+                "hobbies": ["Football", "Event Planning", "Music"]
+              }
+        ]
+    }
+]

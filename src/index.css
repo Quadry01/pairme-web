@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+
+
+.curve-style {
+  border-radius: 0 0 50% 50%;
+}
+
+@layer base {
+  body {
+    font-family: "Poppins", "sans-serif";
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

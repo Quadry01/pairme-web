@@ -1,0 +1,217 @@
+.form-container {
+  width: 40%;
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 50px;
+  border-top: solid 150px #072f3b;
+  border-bottom: solid 50px white;
+  text-align: center;
+  position: relative;
+  top: 60px;
+  z-index: 2;
+}
+
+.top-btn1 {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #072f3b;
+  border-radius: 30px;
+  margin-right: 20px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.top-btn2 {
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #072f3b;
+  border-radius: 30px;
+  margin-right: 20px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+}
+.name-input {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.email-input {
+  display: block;
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+.school-drpdwn {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+.department-drpdwn {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+.gender-drpdwn {
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 45%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.date-input {
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 51%;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 5px;
+}
+
+.profile-picture {
+  display: none;
+}
+.img-icon {
+  font-size: 50px;
+  margin: auto;
+  cursor: pointer;
+}
+.dispay-picture-tag {
+  margin: 0px 15px;
+}
+
+.roommate-head-div {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.side-hustle-drpdwn {
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.self-description-input {
+  height: 150px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.hobbie-input {
+  height: 150px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.schedule-input {
+  height: 150px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.ideal-roomate-input {
+  height: 150px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.Hostel-Address {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.accomondation-type {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  padding: 0 20px;
+
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.hostel-rent {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+.hostel-description {
+  height: 150px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.furnish-description {
+  height: 150px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px 20px;
+  margin-right: 10px;
+}
+.submit-btn {
+  display: block;
+  height: 40px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  background-color: #072f3b;
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 20px;
+}
+.footer-layer-effect {
+  position: relative;
+  bottom: 100px;
+  background-color: red;
+}
