@@ -117,14 +117,14 @@ export const SignUp = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="schedule amd Routine"
+              placeholder="Schedule and Routine"
             ></textarea>
             <textarea
               className="ideal-roomate-input"
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="Describe your ideal roomate"
+              placeholder="Describe your Ideal roomate"
             ></textarea>
           </div>
           <div className="Accomondation-information">
