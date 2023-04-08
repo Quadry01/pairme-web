@@ -5,8 +5,13 @@ import { RiImageAddFill } from "react-icons/ri";
 
 export const SignUp = () => {
   const [name, setName] = useState("");
-
+  const [selfDesription, setSelfDescription] = useState("");
   const [email, setEmail] = useState("");
+  const [hobbies, setHobbies] = useState("");
+  const [schedule, setSchedule] = useState("");
+  const [roomateDes, setroomateDes] = useState("");
+  const [hostelDes, setHostelDes] = useState("");
+  const [furnishDes, setFurnishDes] = useState("");
 
   return (
     <div className="w-full md:bg-red h-full">
@@ -100,30 +105,30 @@ export const SignUp = () => {
             <textarea
               className="self-description-input"
               type="text"
-              value={name}
+              value={selfDesription}
               maxLength={250}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => setSelfDescription(e.target.value)}
               placeholder="Brief Description of yourself"
             ></textarea>
             <textarea
               className="hobbie-input"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={hobbies}
+              onChange={(e) => setHobbies(e.target.value)}
               placeholder="Hobbies/Interests"
             ></textarea>
             <textarea
               className="schedule-input"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={schedule}
+              onChange={(e) => setSchedule(e.target.value)}
               placeholder="Schedule and Routine"
             ></textarea>
             <textarea
               className="ideal-roomate-input"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={roomateDes}
+              onChange={(e) => setroomateDes(e.target.value)}
               placeholder="Describe your Ideal roomate"
             ></textarea>
           </div>
@@ -154,16 +159,16 @@ export const SignUp = () => {
             <textarea
               className="hostel-description"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={hostelDes}
+              onChange={(e) => setHostelDes(e.target.value)}
               placeholder="Hostel Description eg Amenities, Proximity, Security"
             ></textarea>
 
             <textarea
               className="furnish-description"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={furnishDes}
+              onChange={(e) => setFurnishDes(e.target.value)}
               placeholder="Furnishes and Appliances if Included"
             ></textarea>
             <label className="dispay-picture-tag">

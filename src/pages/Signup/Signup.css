@@ -228,7 +228,6 @@
   }
   .date-input {
     width: 100%;
-    margin: 0;
   }
   .img-icon {
     font-size: 35px;
@@ -239,13 +238,23 @@
     width: 150px;
   }
   .top-btn1 {
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-bottom: 0px;
-  }
-  .top-btn1 {
+    width: 100%;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 20px;
+  }
+  .top-btn2 {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+  .top-btn1:hover {
+    background-color: #072f3b;
+    color: white;
+  }
+  .top-btn2:hover {
+    background-color: #072f3b;
+    color: white;
   }
 }
