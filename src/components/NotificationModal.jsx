@@ -21,7 +21,7 @@ export const NotificationModal = () => {
       onClick={handleClose}
       className="inset-0 fixed flex bg-black z-100 bg-opacity-30"
     >
-      <div className="absolute left-1/4 md:bottom-1/4 md:left-1/4 bottom-1/4 md:w-72 rounded-lg md:rounded-2xl overflow-hidden text-gray-500 text-xxs md:text-xs bg-white">
+      <div className="absolute left-1/4 md:bottom-1/4 bottom-1/4 w-52 md:w-72 rounded-lg md:rounded-2xl overflow-hidden text-gray-500 text-xxs md:text-xs bg-white">
         <div className="bg-gray-500 w-full h-10 px-3 md:px-5 flex justify-between items-center text-white"><span className="my-auto ">Notifications</span><span><FaChevronDown/></span></div>
         <ul className="list-none divide-y">
           {notifyText.map((item, i) => (
