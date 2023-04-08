@@ -5,7 +5,7 @@ import { BsBook } from "react-icons/bs";
 import accom from "../../images/accom.png";
 const RoommateCard = ({name, department, religion}) => {
   return (
-        <div className="roommate-card-wrapper h-52 md:h-72">
+        <div className="roommate-card-wrapper h-52 md:h-72 shadow-sm md:shadow-md">
           <div className="img-div">
             {" "}
             <img src={accom} alt="imag" />

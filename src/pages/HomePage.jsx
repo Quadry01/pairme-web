@@ -87,7 +87,7 @@ export const HomePage = forwardRef(() => {
         </div>
       </section>
 
-      <section ref={accomodationRef} className="relative text-blue ">
+      <section ref={accomodationRef} className="relative text-blue overflow-x-clip">
         <div className="flex flex-col gap-y-6 mt-4 md:mt-12">
           <div className="text-center flex flex-col items-center">
             <div className="text-xl md:text-5xl font-bold">Accomodations</div>
@@ -96,7 +96,9 @@ export const HomePage = forwardRef(() => {
               student-friendly range of accommodation options!
             </div>
           </div>
-          <AccomodationCard />
+          <div className="relative grid grid-cols-3  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
+            <AccomodationCard />
+          </div>
           <div className="relative flex ">
             <div className="h-80  w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 left-0"></div>
             <div className="h-80 w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 right-0"></div>
