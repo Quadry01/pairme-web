@@ -5,6 +5,7 @@ import { SignUp } from "./pages/Signup/SignUp.jsx";
 import { User } from "./pages/User";
 import SharedLayout from "./pages/SharedLayout";
 import ProtectedRoute from "./pages/ProtectedRoute";
+import { Payment } from "./pages/Payment";
 
 function App() {
   return (
@@ -16,13 +17,13 @@ function App() {
         </Route>
 
         <Route
-          path="/user"
           element={
-            <ProtectedRoute>
-              <User />
-            </ProtectedRoute>
+            <ProtectedRoute/>
           }
-        />
+        >
+          <Route path="/user" element={<User/>}/>
+          <Route path='/payment' element={<Payment/>}/>
+        </Route>
       </Routes>
     </div>
   );
