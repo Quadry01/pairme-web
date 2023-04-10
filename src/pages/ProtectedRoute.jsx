@@ -1,19 +1,17 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Outlet } from 'react-router-dom';
 
 import { useStateContext } from '../context/contextProvider';
 
 
-const ProtectedRoute = ({children}) => {
+const ProtectedRoute = () => {
 
     const {user} = useStateContext()
     if (!user) {
         return <Navigate to ='/'/>
     }
-    return <>
-    {children}
+    return <Outlet/>
     
-    </>
 }
 
 export default ProtectedRoute

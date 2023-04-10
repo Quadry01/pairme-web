@@ -70,18 +70,10 @@ export const HomePage = forwardRef(() => {
               What is PairMe About?
             </div>
             <div className="font-thin text-xs leading-6 md:font-light md:text-lg md:mt-11 text-justify">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters, as opposed to using 'Content here,
-              content here', making it look like readable English. Many desktop
-              publishing packages and web page editors now use. It is a long
-              established fact that a reader will be distracted by the readable
-              content of a page when looking at its layout. The point of using
-              Lorem Ipsum is that it has a more-or-less normal distribution of
-              letters, as opposed to using 'Content here, content here', making
-              it look like readable English. Many desktop publishing packages
-              and web page editors now use.
+                Pairme.com is a platform that seeks to make the process of accommodation and roommate pairing easy for Students in Nigeria tertiary institutions.
+                We do this by connecting Students in need of affordable accommodation 
+                with students with comfortable accommodation seeking for a roommate to share with. We have a large number of students registered on our platform and each student 
+                webpage where they upload the pictures of their hostels and its specifications.
             </div>
           </div>
         </div>
