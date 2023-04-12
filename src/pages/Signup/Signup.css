@@ -1,38 +1,63 @@
+.img-border-container {
+  width: 40%;
+  margin: auto;
+  position: relative;
+  top: 150px;
+  z-index: 3;
+}
 .form-container {
   width: 40%;
   height: 100%;
   margin: auto;
-  padding: 20px;
+  padding: 20px 35px;
   margin-top: 30px;
   background-color: white;
   border-radius: 50px;
-  border-top: solid 150px #072f3b;
-  border-bottom: solid 50px white;
+
+  border-top: 64px solid #f9fbfb;
   text-align: center;
   position: relative;
   top: 60px;
   z-index: 2;
 }
-
+.border-img {
+  width: 100%;
+}
 .top-btn1 {
   height: 40px;
   padding: 10px;
   border: 1px solid #072f3b;
   border-radius: 30px;
   margin-right: 20px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  position: relative;
+  right: 10px;
+  margin-bottom: 20px;
 }
 .top-btn2 {
   height: 40px;
   padding: 10px;
   border: 1px solid #072f3b;
   border-radius: 30px;
-  margin-right: 20px;
-  margin-left: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+.rm-header {
+  font-size: 25px;
+  font-weight: bold;
+}
+.rm-paragraph {
+  font-size: 13px;
 }
 .name-input {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.budget-input {
   display: block;
   height: 50px;
   border: solid 1px #072f3b;
@@ -61,6 +86,15 @@
   padding: 0 20px;
   margin-bottom: 15px;
 }
+.Prefered-accomondation {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
 .department-drpdwn {
   display: block;
   height: 50px;
@@ -76,8 +110,8 @@
   width: 45%;
   border-radius: 8px;
   padding: 0 20px;
-  margin-right: 10px;
-  margin-bottom: 15px;
+  position: relative;
+  right: 5px;
 }
 .date-input {
   height: 50px;
@@ -86,7 +120,8 @@
   border-radius: 8px;
   padding: 20px;
   margin: 0 5px;
-  margin-bottom: 15px;
+  position: relative;
+  left: 7px;
 }
 
 .profile-picture {
@@ -116,8 +151,18 @@
   margin-bottom: 15px;
   margin-top: 15px;
 }
+.prefered-location {
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 20px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
 .self-description-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -127,7 +172,7 @@
 }
 
 .hobbie-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -136,7 +181,7 @@
   margin-bottom: 15px;
 }
 .schedule-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -146,7 +191,7 @@
 }
 
 .ideal-roomate-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -183,8 +228,9 @@
   padding: 20px;
   margin-bottom: 15px;
 }
+
 .hostel-description {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -193,7 +239,7 @@
   margin-bottom: 15px;
 }
 .furnish-description {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -217,17 +263,46 @@
   bottom: 100px;
   background-color: red;
 }
+.top-btn1:hover {
+  background-color: #072f3b;
+  color: white;
+}
+.top-btn2:hover {
+  background-color: #072f3b;
+  color: white;
+}
+optgroup:first-child {
+  opacity: 0.5;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: none;
+}
 
 @media screen and (max-width: 640px) {
   .form-container {
     width: 85%;
-    border-top: solid 100px #072f3b;
+    border-top: solid 50px #072f3b;
+  }
+  .img-border-container {
+    width: 85%;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    z-index: 3;
   }
   .gender-drpdwn {
-    width: 100%;
+    width: 40%;
+    position: relative;
+    right: 2px;
   }
   .date-input {
-    width: 100%;
+    width: 50%;
+    margin-bottom: 15px;
+    position: relative;
+    left: 20px;
   }
   .img-icon {
     font-size: 35px;
@@ -249,12 +324,13 @@
     margin-left: 0px;
     margin-bottom: 20px;
   }
-  .top-btn1:hover {
-    background-color: #072f3b;
-    color: white;
-  }
-  .top-btn2:hover {
-    background-color: #072f3b;
-    color: white;
+  .hostel-description,
+  .furnish-description,
+  .ideal-roomate-input,
+  .schedule-input,
+  .hobbie-input,
+  .self-description-input {
+    height: 50px;
+    padding: 5px;
   }
 }
