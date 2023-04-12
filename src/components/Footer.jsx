@@ -8,31 +8,31 @@ import {FaLinkedinIn, FaFacebookSquare, FaTwitter} from 'react-icons/fa';
 export const Footer = () => {
     return(
         <div className=" relative footer-section overflow-x-clip text-white grid grid-cols-1 items-center pb-20 ">
-          <div className="z-10 font-normal mx-auto mt-20 md:text-xl">PairMe</div>
+          <div className="z-10 font-bold mx-auto mt-20 md:text-4xl">PairMe</div>
           <div className="z-10 text-xxs md:text-sm grid grid-cols-2 mt-14 gap-14 md:gap-20 md:grid-cols-4 mx-auto">
             <div>
-              <h3 className="text-xs md:text-lg font-medium">Company</h3>
+              <h3 className="text-xs md:text-xl font-semibold">Company</h3>
               <ul className="list-none mt-3">
                 <li>Home</li>
                 <li>About Us</li>
               </ul>
             </div>
             <div>
-            <h3 className="text-xs md:text-lg">Our Services</h3>
+            <h3 className="text-xs md:text-xl font-semibold">Our Services</h3>
               <ul className="list-none mt-3">
                 <li>Find Roomate</li>
                 <li>Find Accomodation</li>
               </ul>
             </div>
             <div>
-            <h3 className="text-xs md:text-lg">Legal</h3>
+            <h3 className="text-xs md:text-xl font-semibold">Legal</h3>
               <ul className="list-none mt-3">
                 <li>Terms and Conditions</li>
                 <li>Service Agreement</li>
               </ul>
             </div>
             <div>
-            <h3 className="text-xs md:text-lg">Support</h3>
+            <h3 className="text-xs md:text-xl font-semibold">Support</h3>
               <ul className="list-none mt-3">
                 <li>Customer Care</li>
                 <li>FAQs</li>
