@@ -1,8 +1,8 @@
 export const DropDownComponent = ({dropName}) => {
   return (
-    <div>
+    <div className="w-full">
       <select
-        className="block w-16 md:w-40 md:px-4 text-xxs font-light md:font-medium md:text-sm text-blue focus:outline-none focus:border-transparent rounded-md md:rounded-xl h-5 md:h-14 bg-white focus:ring-2 ring-1 ring-blue"
+        className="block w-full md:px-4 text-xxs font-light md:text-xl text-gray-400 focus:outline-none focus:border-transparent rounded-md md:rounded-xl h-5 md:h-14 bg-white focus:ring-2 ring-1 ring-blue"
       >
         <option value>{dropName}</option>
         <option value="opt1">option 1</option>

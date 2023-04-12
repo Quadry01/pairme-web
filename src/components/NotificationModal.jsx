@@ -6,23 +6,28 @@ import { Link } from "react-router-dom";
 export const NotificationModal = () => {
   const { userModal, setUserModal } = useStateContext();
   const [notifyDetail, setNotifyDetail] = useState(false)
-  const [notifyText, setNotifyText] = useState('')
+  const [notifyText, setNotifyText] = useState(null)
 
   const handleClose = (e) => {
     if (e.target.id === "container") setUserModal(false);
   };
+  const closeNotifyDetail = (e) =>{
+    if (e.target.id ==='notifyDetail') setNotifyDetail(false)
+    setNotifyText(null)
+  }
   
    
   const handleText =(e)=>{
     setNotifyDetail(true)
-    notifyData.forEach(item => item.id === e.target.id? setNotifyText(item.text): '')
+    notifyData.find(({text, id})=> id === e.target.id? setNotifyText(text): '')
+    console.log(e.target.id)
   }
 
   const notifyData = [
-    {id:'12fff',text:"This is to inform you that John is available to be your roommate."},
-    {id:'fgs34',text:"This is to inform you that Nkechi is available to be your roommate."},
-    {id:'56vff',text:"This is to inform you that Adamu is available to be your roommate."},
-    {id:'vfv78',text:"This is to inform you that Oluwabusayo is available to be your roommate."},
+    {id:'sdd',text:"This is to inform you that John is available to be your roommate."},
+    {id:'dsd',text:"This is to inform you that Nkechi is available to be your roommate."},
+    {id:'ewq',text:"This is to inform you that Adamu is available to be your roommate."},
+    {id:'dww',text:"This is to inform you that Oluwabusayo is available to be your roommate."},
   ];
 
   if (!userModal) return null;
@@ -36,25 +41,28 @@ export const NotificationModal = () => {
       <div className="absolute left-[15%] md:left-1/4 md:bottom-1/4 bottom-1/4 w-64 md:w-72 rounded-lg md:rounded-2xl overflow-hidden text-gray-500 text-xxs md:text-xs bg-white">
         <div className="bg-gray-500 w-full h-14 px-3 md:px-5 flex justify-between items-center text-white"><span className="my-auto ">Notifications</span><span><FaChevronDown/></span></div>
         <ul className="list-none divide-y">
-          {notifyData.map((item) => (
+          {notifyData.map((item, index) => (
             <li
               onClick={handleText}
               className="px-2 md:px-4 h-16 flex items-center justify-between w-full hover:cursor-pointer hover:bg-slate-100"
-              key={item.id}
-              id={item.id}
+              key={index}
+              id ={item?.id}
             >
               <span className="w-9/12">
                 {item.text.length > 20 ? `${item.text.substring(0, 30)}...` : item.text}
               </span>
               <span>9:52 am</span>
             </li>
-          ))}
+           
+          )
+          )
+          }
         </ul>
       </div>
       
 
       { notifyDetail ===true ? 
-        (<div  onClick={(e) => e.target.id ==='notifyDetail'? setNotifyDetail(false): null} id="notifyDetail" className="inset-0 fixed bg-black z-120 bg-opacity-30 flex items-center justify-center">
+        (<div  onClick={closeNotifyDetail} id="notifyDetail" className="inset-0 fixed bg-black z-120 bg-opacity-30 flex items-center justify-center">
             <div className="bg-white text-blue pb-8 md:pb-[120px] w-60 mt-8 md:mt-0 md:w-[33.3%] h-auto rounded-lg md:rounded-3xl px-7 absolute">
               <div className="text-3xl md:text-8xl flex justify-center mt-12 md:mt-28"><IoMdThumbsUp/></div><br />
               <div className="text-xs md:text-base text-center">{notifyText}</div>

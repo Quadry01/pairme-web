@@ -23,10 +23,10 @@ export const Navbar = () => {
 
 
   return (
-    <nav className="bg-white w-full shadow-md md:shadow-lg md:h-32 flex fixed top-0 left-0 z-40 text-blue">
-      <div className="justify-between px-7 py-2.5 mx-auto lg:max-w-7xl items-center flex md:px-8 w-full">
+    <nav className="bg-white w-full shadow-sm md:shadow-sm md:h-32 flex fixed top-0 left-0 z-40 text-blue">
+      <div className="justify-between px-7 py-2.5 items-center flex md:px-28 w-full">
         {/* LOGO */}
-        <div className="font-black text-base md:text-4xl cursor-pointer">
+        <div className="font-bold text-base md:text-4xl cursor-pointer">
           <NavLink to="/">PairMe</NavLink>
         </div>
         <div className=" hidden md:block">
@@ -36,9 +36,9 @@ export const Navbar = () => {
                 onClick={handlePageSection}
                 id ={link.id}
                 key={link.name}
-                className="text-blue text-base first:font-extralight cursor-pointer"
+                className="text-blue text-base first:font-bold cursor-pointer"
               >
-                {link.name}
+                  {link.name}
               </li>
             ))}
           </ul>
