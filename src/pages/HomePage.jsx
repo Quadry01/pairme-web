@@ -27,21 +27,21 @@ export const HomePage = forwardRef(() => {
       >
         <div className="flex flex-col  gap-3 md:gap-7 mt-14 md:mt-52 w-full md:w-8/12 z-30">
           <div className="w-11/12 md:w-9/12 text-blue">
-            <div className="text-2xl md:text-5xl font-black">
+            <div style={{lineHeight:'1.2'}} className="text-2xl  md:text-5xl font-bold">
               Find the best fit for you, both in roommate & accommodation
             </div>
-            <div className="text-xxs w-9/12 md:w-full md:text-base font-normal mt-4">
+            <div className="text-gray-600 text-xxs w-9/12 md:w-full md:text-base font-normal mt-4">
               We ensure you encounter zero stress when searching for a budget
               friendly apartment or for a suitable roommate.
             </div>
           </div>
-          <div className="shadow-sm md:shadow-md w-full h-11 md:h-28 px-2 md:px-4 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
-            <div className="flex justify-between items-center w-9/12">
+          <div className="shadow-sm md:shadow-md w-full h-11 md:h-28 px-4 gap-2 md:gap-4 md:px-10 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
+            <div className="flex gap-2 md:gap-4 justify-between items-center grow">
               <DropDownComponent dropName="Location" />
               <DropDownComponent dropName="Price" />
               <DropDownComponent dropName="Type" />
             </div>
-            <button className="text-white bg-blue flex rounded-full w-14 md:w-36 h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-4 tracking-wider font-light md:font-medium">
+            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-4 tracking-wider font-light md:font-medium">
               <span>
                 <CiSearch />
               </span>
@@ -65,11 +65,11 @@ export const HomePage = forwardRef(() => {
               <img src={homeImg8} className="w-full h-full" alt="" />
             </div>
           </div>
-          <div className=" w-10/12 md:w-7/12 mx-auto mt-40 md:mt-10 z-30">
+          <div className=" w-10/12 md:w-[55%] mx-auto mt-40 md:mt-10 z-30">
             <div className=" md:text-center font-semibold md:font-bold text-lg md:text-5xl">
               What is PairMe About?
             </div>
-            <div className="font-thin text-xs leading-6 md:font-light md:text-lg md:mt-11 text-justify">
+            <div style={{lineHeight:'2'}} className="font-thin text-xs md:font-light md:text-xl md:mt-11 text-justify">
                 Pairme.com is a platform that seeks to make the process of accommodation and roommate pairing easy for Students in Nigeria tertiary institutions.
                 We do this by connecting Students in need of affordable accommodation 
                 with students with comfortable accommodation seeking for a roommate to share with. We have a large number of students registered on our platform and each student 
@@ -80,7 +80,7 @@ export const HomePage = forwardRef(() => {
       </section>
 
       <section ref={accomodationRef} className="relative text-blue overflow-x-clip">
-        <div className="flex flex-col gap-y-6 mt-4 md:mt-12">
+        <div className="flex flex-col gap-y-6 mt-4 md:mt-20">
           <div className="text-center flex flex-col items-center">
             <div className="text-xl md:text-5xl font-bold">Accomodations</div>
             <div className="mt-3 text-xs md:text-base font-light w-10/12 md:w-5/12">
@@ -88,7 +88,7 @@ export const HomePage = forwardRef(() => {
               student-friendly range of accommodation options!
             </div>
           </div>
-          <div className="relative grid grid-cols-3  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
+          <div className="relative grid grid-cols-3 mt-5 -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
             <AccomodationCard />
           </div>
           <div className="relative flex ">
@@ -117,7 +117,7 @@ export const HomePage = forwardRef(() => {
               the right roommate!
             </div>
           </div>
-          <div className="relative grid grid-cols-3  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
+          <div className="relative grid grid-cols-3 mt-5  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
             
             {(window.innerWidth > 798 ? Roommate.slice(0, 5) : Roommate.slice(0, 3)).map((item) => (
               <div key={item.id} className="relative">
@@ -137,7 +137,7 @@ export const HomePage = forwardRef(() => {
             <Link to="/signup">
               {" "}
               <button className="bg-transparent rounded-full w-36 h-8 px-5 md:w-72 md:h-16 md:px-9 md:font-normal text-xxs md:text-base">
-                sign up to view more
+                Sign up to view more
               </button>{" "}
             </Link>{" "}
           </div>

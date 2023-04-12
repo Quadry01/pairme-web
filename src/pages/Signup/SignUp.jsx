@@ -14,7 +14,7 @@ export const SignUp = () => {
   const [furnishDes, setFurnishDes] = useState("");
 
   return (
-    <div className="w-full md:bg-red h-full">
+    <div className="">
       <section className="form-container">
         <form className="need-roomate">
           <div className="roommate-head-div">
