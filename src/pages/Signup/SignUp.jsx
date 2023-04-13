@@ -2,8 +2,16 @@ import { Footer } from "../../components/Footer";
 import { useState } from "react";
 import "./Signup.css";
 import { RiImageAddFill } from "react-icons/ri";
+import top_image from "../../images/Rectangle.png";
 
 export const SignUp = () => {
+  const roomateParagraph =
+    " Find your perfect match and share your University experience with the right roomate";
+  const accomondationParagraph =
+    "Discover your ideal 'home away from home'with our afordable & student-friendly range of accomondation options";
+  const roomateHeader = "Roomates";
+  const accomondationHeader = "Accomondations";
+
   const [name, setName] = useState("");
   const [selfDesription, setSelfDescription] = useState("");
   const [email, setEmail] = useState("");
@@ -12,21 +20,47 @@ export const SignUp = () => {
   const [roomateDes, setroomateDes] = useState("");
   const [hostelDes, setHostelDes] = useState("");
   const [furnishDes, setFurnishDes] = useState("");
+  const [budget, setBudget] = useState("");
+  const [roommate_section, SetRoomate_section] = useState("");
+  const [accomondation_section, SetAccomondation_section] = useState("hide");
+  const [form_hearder, SetForm_header] = useState("Roomates");
+  const [form_paragraph, SetForm_paragraph] = useState(
+    "Find your perfect match and share your University experience with the right roomate"
+  );
+
+  const RoommateHandler = (e) => {
+    e.preventDefault();
+    SetForm_header(roomateHeader);
+    SetForm_paragraph(roomateParagraph);
+    SetAccomondation_section("hide");
+    SetRoomate_section("");
+  };
+  const AccomondationHandler = (e) => {
+    e.preventDefault();
+    SetForm_header(accomondationHeader);
+    SetForm_paragraph(accomondationParagraph);
+    SetAccomondation_section("");
+    SetRoomate_section("hide");
+  };
 
   return (
     <div className="">
+      <div className="top-image-div">
+        <img src={top_image} alt="top-img" />
+      </div>
       <section className="form-container">
         <form className="need-roomate">
           <div className="roommate-head-div">
-            <h1>Roommates</h1>
-            <p>
-              Find your perfect match and share your University experience with
-              the right roomate
-            </p>
+            <h1 className="form-header">{form_hearder}</h1>
+            <p className="form-paragraph">{form_paragraph}</p>
           </div>
 
-          <button className="top-btn1">I Need a Roommate</button>
-          <button className="top-btn2">I Need a Accomondation</button>
+          <button onClick={RoommateHandler} className="top-btn1">
+            I Need a Roommate
+          </button>
+          <button onClick={AccomondationHandler} className="top-btn2">
+            I Need a Accomondation
+          </button>
           <div className="personal-info">
             <h6>Personal Information</h6>
             <input
@@ -48,6 +82,7 @@ export const SignUp = () => {
                 <option value="lasu">Lasu</option>
               </optgroup>
             </select>
+
             <select className="department-drpdwn" name="Department">
               <optgroup>
                 <option disabled selected hidden value="">
@@ -67,6 +102,7 @@ export const SignUp = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email Address"
             ></input>
+
             <select className="gender-drpdwn" name="gender">
               <optgroup>
                 <option disabled selected hidden value="">
@@ -76,13 +112,12 @@ export const SignUp = () => {
                 <option value="female">female</option>
               </optgroup>
             </select>
+
             <input
-              className="date-input"
+              className="date-input hide-date"
               type="date"
               value="date-of-birth"
-              placeholder="Date of Birth"
             ></input>
-
             <label className="dispay-picture-tag">
               <RiImageAddFill className="img-icon" /> Display Picture
               <input
@@ -132,7 +167,7 @@ export const SignUp = () => {
               placeholder="Describe your Ideal roomate"
             ></textarea>
           </div>
-          <div className="Accomondation-information">
+          <div className={`Accomondation-information ${roommate_section}`}>
             <h6>Hostel Information</h6>
             <input
               className="Hostel-Address"
@@ -179,10 +214,42 @@ export const SignUp = () => {
                 name="Hostel-picture"
               ></input>
             </label>
-            <button className="submit-btn">Submit</button>
           </div>
         </form>
-        <form className="need-accommondation"></form>
+        <form className={`need-accommondation ${accomondation_section}`}>
+          <h6>Accomondation Information</h6>
+          <select className="preffered-location" name="preffered-location">
+            <optgroup>
+              <option disabled selected hidden value="">
+                Preffered location
+              </option>
+              <option value="lagos">Lagos</option>
+              <option value="abuja">Abuja</option>
+              <option value="ogun">Ogun</option>
+            </optgroup>
+          </select>
+          <input
+            className="budget-input"
+            type="text"
+            value={budget}
+            placeholder="Budget for Rent"
+            onChange={(e) => setBudget(e.target.value)}
+          ></input>
+          <select
+            className="preffered-accomondation"
+            name="preffered-accomondation-type"
+          >
+            <optgroup>
+              <option disabled selected hidden value="">
+                Preffered Accomondation type
+              </option>
+              <option value="one">one room</option>
+              <option value="two">two rooms</option>
+              <option value="three">three rooms</option>
+            </optgroup>
+          </select>
+        </form>
+        <button className="submit-btn">Sign up</button>
       </section>
       <Footer className="footer-layer-effect" />
     </div>

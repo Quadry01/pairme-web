@@ -6,31 +6,50 @@
   margin-top: 30px;
   background-color: white;
   border-radius: 50px;
-  border-top: solid 150px #072f3b;
+  border-top: solid 90px #072f3b;
   border-bottom: solid 50px white;
   text-align: center;
   position: relative;
   top: 60px;
   z-index: 2;
 }
-
+.top-image-div {
+  width: 40%;
+  margin: auto;
+  position: relative;
+  top: 180px;
+  z-index: 3;
+}
+.form-header {
+  font-size: 30px;
+}
+.form-paragraph {
+  font-size: 13px;
+}
 .top-btn1 {
   height: 40px;
-  padding: 10px;
+  width: auto;
+  padding: 0px 15px;
   border: 1px solid #072f3b;
   border-radius: 30px;
-  margin-right: 20px;
-  margin-left: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .top-btn2 {
   height: 40px;
-  padding: 10px;
+  width: auto;
+  padding: 0px 15px;
   border: 1px solid #072f3b;
   border-radius: 30px;
-  margin-right: 20px;
-  margin-left: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.top-btn1:hover {
+  background-color: #072f3b;
+  color: white;
+}
+.top-btn2:hover {
+  background-color: #072f3b;
+  color: white;
 }
 .name-input {
   display: block;
@@ -73,20 +92,24 @@
 .gender-drpdwn {
   height: 50px;
   border: solid 1px #072f3b;
-  width: 45%;
+  width: 200px;
   border-radius: 8px;
   padding: 0 20px;
-  margin-right: 10px;
+  position: relative;
+  right: 130px;
   margin-bottom: 15px;
 }
 .date-input {
   height: 50px;
   border: solid 1px #072f3b;
-  width: 51%;
+  width: 250px;
   border-radius: 8px;
   padding: 20px;
   margin: 0 5px;
   margin-bottom: 15px;
+  margin-left: 13px;
+  position: absolute;
+  right: 15px;
 }
 
 .profile-picture {
@@ -117,7 +140,7 @@
   margin-top: 15px;
 }
 .self-description-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -127,7 +150,7 @@
 }
 
 .hobbie-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -136,7 +159,7 @@
   margin-bottom: 15px;
 }
 .schedule-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -146,7 +169,7 @@
 }
 
 .ideal-roomate-input {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -184,7 +207,7 @@
   margin-bottom: 15px;
 }
 .hostel-description {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -193,7 +216,7 @@
   margin-bottom: 15px;
 }
 .furnish-description {
-  height: 150px;
+  height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
@@ -202,9 +225,9 @@
 }
 .submit-btn {
   display: block;
-  height: 40px;
-  width: 150px;
-  padding: 10px;
+  height: 50px;
+
+  padding: 0px 15px;
   color: white;
   font-weight: bold;
   background-color: #072f3b;
@@ -217,17 +240,71 @@
   bottom: 100px;
   background-color: red;
 }
+.preffered-location {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.budget-input {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.preffered-accomondation {
+  display: block;
+  height: 50px;
+  border: solid 1px #072f3b;
+  width: 100%;
+  padding: 0 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.hide {
+  display: none;
+}
+.hide-date[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+
+  width: 100%;
+}
+.date-of-birth {
+  top: 2px;
+  right: 27px;
+  position: relative;
+  z-index: 3;
+  opacity: 0.4;
+}
 
 @media screen and (max-width: 640px) {
   .form-container {
     width: 85%;
-    border-top: solid 100px #072f3b;
+    border-top: solid 50px #072f3b;
+  }
+  .top-image-div {
+    width: 85%;
+    top: 150px;
   }
   .gender-drpdwn {
-    width: 100%;
+    height: 50px;
+    border: solid 1px #072f3b;
+    width: 45%;
+    right: 25%;
   }
   .date-input {
-    width: 100%;
+    height: 50px;
+    border: solid 1px #072f3b;
+    width: 45%;
   }
   .img-icon {
     font-size: 35px;
@@ -238,16 +315,18 @@
     width: 150px;
   }
   .top-btn1 {
-    width: 100%;
-    margin-right: 0px;
+    width: 45%;
+    margin-right: 10px;
     margin-left: 0px;
     margin-bottom: 20px;
+    font-size: 12px;
   }
   .top-btn2 {
-    width: 100%;
+    width: 45%;
     margin-right: 0px;
     margin-left: 0px;
     margin-bottom: 20px;
+    font-size: 12px;
   }
   .top-btn1:hover {
     background-color: #072f3b;
