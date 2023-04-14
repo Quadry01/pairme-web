@@ -29,7 +29,7 @@ export const Navbar = () => {
         <div className="font-bold text-base md:text-4xl cursor-pointer">
           <NavLink to="/">PairMe</NavLink>
         </div>
-        <div className=" hidden md:block">
+        <div className=" hidden lg:block">
           <ul className="md:flex md:items-center gap-x-9 md:font-normal tracking-wider">
             {Link.map((link) => (
               <li

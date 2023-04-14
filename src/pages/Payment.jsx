@@ -23,61 +23,63 @@ export const Payment = () => {
         </Link>
       </div>
       <div className=" relative">
-        <div className=" relative md:h-[100%] md:top-10 md:z-20 bg-white text-xxs md:text-sm flex flex-col gap-y-3 md:gap-y-6 mx-auto w-[80%] md:w-[50%] shadow-md rounded-xl md:rounded-3xl px-9 md:px-24 py-12 md:py-24">
+        <div className=" relative md:h-[100%] md:top-14 md:z-20 bg-white text-xxs md:text-sm flex flex-col gap-y-3 md:gap-y-6 mx-auto w-[80%] md:w-[50%] shadow-md rounded-xl md:rounded-3xl px-9 md:px-24 py-12 md:py-24">
           <span className="hidden md:block font-bold text-4xl">PairMe</span>
           <div className="w-full">
-            <span className="text-xs md:text-2xl font-medium">Card Number</span>
+            <span className="text-xs md:text-xl font-medium">Card Number</span>
             <br />
-            <span>Enter the 16-digit card number on the card</span>
+            <span className="text-gray-500">Enter the 16-digit card number on the card</span>
             <br />
             <input
-              className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4"
+              className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4 md:mt-3"
               type="number"
             />
           </div>
           <div className="flex  gap-x-2">
             <div className="w-full">
-              <span className="text-xs md:text-2xl font-medium">CVV</span>
+              <span className="text-xs md:text-xl font-medium">CVV</span>
               <br />
               <input
-                className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4"
+                className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4 md:mt-3"
                 type="number"
               />
             </div>
             <div className="w-full">
-              <span className="text-xs md:text-2xl font-medium">Exp. date</span>
+              <span className="text-xs md:text-xl font-medium">Exp. date</span>
               <br />
               <input
-                className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4"
+                className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4 md:mt-3"
                 type="date"
               />
             </div>
           </div>
           <div>
-            <span className="text-xs md:text-2xl font-medium">Password</span>
+            <span className="text-xs md:text-xl font-medium">Password</span>
             <br />
-            <span>Enter the 4-digit card pin</span>
+            <span className="text-gray-500">Enter the 4-digit card pin</span>
             <br />
             <input
-              className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4"
+              className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4 md:mt-3"
               type="password"
             />
           </div>
           <div>
-            <span className="text-xs md:text-2xl font-medium">OTP</span>
+            <span className="text-xs md:text-xl font-medium">OTP</span>
             <br />
-            <span>Enter the 6-digit OTP sent to your mail</span>
+            <span className="text-gray-500">Enter the 6-digit OTP sent to your mail</span>
             <br />
             <input
-              className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4"
+              className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4 md:mt-3"
               type="number"
             />
           </div>
           <div className="w-full mt-2 md:mt-4">
-            <input type="radio" />{" "}
-            <span>I agree to the Terms and Conditions</span> <br />
+            <div className="flex justify-center">
+            <input type="radio" />
+            <span className=" pl-3 font-medium md:text-xl">I agree to the Terms and Conditions</span> <br />
+            </div>
             <div className="text-center mt-6">
-              <button className="md:w-[285px] w-28 h-8 md:h-[85px] bg-blue text-white text-center rounded-full mx-auto">
+              <button className="md:text-xl md:w-[250px] w-28 h-8 md:h-[70px] bg-blue text-white text-center rounded-full mx-auto">
                 Make payment
               </button>
             </div>

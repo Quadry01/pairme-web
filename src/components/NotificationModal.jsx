@@ -3,6 +3,8 @@ import {FaChevronDown} from 'react-icons/fa';
 import {IoMdThumbsUp} from 'react-icons/io'
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { NotifyData } from "../data/NotificatioData";
+
 export const NotificationModal = () => {
   const { userModal, setUserModal } = useStateContext();
   const [notifyDetail, setNotifyDetail] = useState(false)
@@ -17,18 +19,11 @@ export const NotificationModal = () => {
   }
   
    
-  const handleText =(e)=>{
+  const handleText =(text)=>{
     setNotifyDetail(true)
-    notifyData.find(({text, id})=> id === e.target.id? setNotifyText(text): '')
-    console.log(e.target.id)
+    setNotifyText (text)
   }
 
-  const notifyData = [
-    {id:'sdd',text:"This is to inform you that John is available to be your roommate."},
-    {id:'dsd',text:"This is to inform you that Nkechi is available to be your roommate."},
-    {id:'ewq',text:"This is to inform you that Adamu is available to be your roommate."},
-    {id:'dww',text:"This is to inform you that Oluwabusayo is available to be your roommate."},
-  ];
 
   if (!userModal) return null;
   return (
@@ -41,22 +36,19 @@ export const NotificationModal = () => {
       <div className="absolute left-[15%] md:left-1/4 md:bottom-1/4 bottom-1/4 w-64 md:w-72 rounded-lg md:rounded-2xl overflow-hidden text-gray-500 text-xxs md:text-xs bg-white">
         <div className="bg-gray-500 w-full h-14 px-3 md:px-5 flex justify-between items-center text-white"><span className="my-auto ">Notifications</span><span><FaChevronDown/></span></div>
         <ul className="list-none divide-y">
-          {notifyData.map((item, index) => (
+          {NotifyData.map(({id, text}) => 
             <li
-              onClick={handleText}
+              onClick={()=>handleText(text)}
               className="px-2 md:px-4 h-16 flex items-center justify-between w-full hover:cursor-pointer hover:bg-slate-100"
-              key={index}
-              id ={item?.id}
+              key={id}
             >
               <span className="w-9/12">
-                {item.text.length > 20 ? `${item.text.substring(0, 30)}...` : item.text}
+                {text.length > 20 ? `${text.substring(0, 30)}...` : text}
               </span>
               <span>9:52 am</span>
             </li>
-           
           )
-          )
-          }
+        }
         </ul>
       </div>
       

@@ -69,7 +69,7 @@ export const HomePage = forwardRef(() => {
             <div className=" md:text-center font-semibold md:font-bold text-lg md:text-5xl">
               What is PairMe About?
             </div>
-            <div style={{lineHeight:'2'}} className="font-thin text-xs md:font-light md:text-xl md:mt-11 text-justify">
+            <div style={{lineHeight:'2'}} className="font-normal text-xs md:font-light md:text-xl md:mt-11 text-justify">
                 Pairme.com is a platform that seeks to make the process of accommodation and roommate pairing easy for Students in Nigeria tertiary institutions.
                 We do this by connecting Students in need of affordable accommodation 
                 with students with comfortable accommodation seeking for a roommate to share with. We have a large number of students registered on our platform and each student 
