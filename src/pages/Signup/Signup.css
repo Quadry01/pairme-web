@@ -274,9 +274,9 @@
   display: none;
 }
 .hide-date[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(100%);
+  /* filter: invert(100%);
 
-  width: 100%;
+  width: 100%; */
 }
 .date-of-birth {
   top: 2px;
@@ -284,6 +284,9 @@
   position: relative;
   z-index: 3;
   opacity: 0.4;
+}
+select:valid {
+  color: rgb(171, 170, 170);
 }
 
 @media screen and (max-width: 640px) {

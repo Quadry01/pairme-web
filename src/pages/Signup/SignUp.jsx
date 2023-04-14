@@ -13,6 +13,7 @@ export const SignUp = () => {
   const accomondationHeader = "Accomondations";
 
   const [name, setName] = useState("");
+  const [dob, setDob] = useState("");
   const [selfDesription, setSelfDescription] = useState("");
   const [email, setEmail] = useState("");
   const [hobbies, setHobbies] = useState("");
@@ -115,8 +116,12 @@ export const SignUp = () => {
 
             <input
               className="date-input hide-date"
-              type="date"
-              value="date-of-birth"
+              type="text"
+              value={dob}
+              placeholder="Date of Birth"
+              onChange={(e) => {
+                setDob(e.target.value);
+              }}
             ></input>
             <label className="dispay-picture-tag">
               <RiImageAddFill className="img-icon" /> Display Picture
