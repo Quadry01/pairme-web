@@ -10,13 +10,15 @@ import { useState } from "react";
 
 import { NotificationModal } from "../components/NotificationModal";
 import { Roommate } from "../data/roomate";
+import { UserProfileModal } from "../components/UserProfileModal";
 import RoommateCard from '../components/RoommateCard/RoommateCard'
 
 
 
 import { NavLink } from "react-router-dom";
 export const User = () => {
-  const { user, setUserModal } = useStateContext();
+  const { user, setUserModal, setProfileModal } = useStateContext()
+
   const [openSidebar, setOpenSidebar] = useState(false);
 
   return (
@@ -25,12 +27,12 @@ export const User = () => {
       <div className="h-12 fixed z-40 px-8 text-blue bg-white shadow-md md:hidden w-full flex items-center justify-between">
         <span className="font-bold hover:cursor-pointer"><NavLink to='/'>PairMe</NavLink></span>
         <div className="flex gap-2 items-center">
-          <span className=" hover:cursor-pointer rounded-full ring-1 ring-gray-300 w-5 h-5 text-xxs flex items-center justify-center"><HiUser/></span>
+          <span onClick={()=>setProfileModal(true)} className=" hover:cursor-pointer rounded-full ring-1 ring-gray-300 w-5 h-5 text-xxs flex items-center justify-center"><HiUser/></span>
           <span onClick={()=>setOpenSidebar(true)} className="hover:cursor-pointer text-2xl"><RxTextAlignJustify/></span>
         </div>
       </div>
 
-      {/* sliding sidebar for mobile */}
+      {/* sliding sidebar for mobile  */}
    <div className=" md:hidden">
     { openSidebar===true ? (
       <div onClick={(e)=> e.target.id === 'sidebarContainer'? setOpenSidebar(false): null} id ='sidebarContainer' 
@@ -62,7 +64,7 @@ export const User = () => {
               <img className="w-full h-full" src="" alt="" />
             </div>
             <div className="mt-7">{user?.name}</div>
-            <div className="flex justify-center mt-3 text-xs">View Profile <span><BsArrowRight className=" ml-2"/></span></div>
+            <div onClick={()=>setProfileModal(true)} className="flex justify-center mt-3 text-xs cursor-pointer">View Profile <span><BsArrowRight className=" ml-2"/></span></div>
           </div>
           <div className=" mb-96 mt-8 w-full px-5 text-center gap-y-1 flex flex-col">
             <button onClick={()=>setOpenSidebar(false)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><AiTwotoneHome/></span> Dashboard</button>
@@ -85,7 +87,7 @@ export const User = () => {
               'Discover your ideal ‘home away from home’ with our affordable & student-friendly range of accommodation options!'}
               </div>
               <div className="text-sm flex items-center justify-between h-11 mt-8  gap-2 md:gap-5 w-full">
-                <input type="text"className="h-full w-full rounded-xl md:rounded-2xl outline-none ring-blue ring-1 px-2 md:px-5 bg-transparent"/> 
+                <input placeholder="search keyword" type="text"className="h-full w-full rounded-xl md:rounded-2xl outline-none ring-blue ring-1 px-2 md:px-5 bg-transparent"/> 
                 <button className="h-full w-24 md:w-40 text-white rounded-2xl bg-blue">Search</button>
               </div>
             </div>
@@ -112,6 +114,7 @@ export const User = () => {
 
       </div>
       <NotificationModal/>
+      <UserProfileModal/>
     </div>
   );
 };
