@@ -3,9 +3,9 @@ import "./RoommateCard.css";
 import { FaPrayingHands } from "react-icons/fa";
 import { BsBook } from "react-icons/bs";
 import accom from "../../images/accom.png";
-const RoommateCard = ({name, department, religion}) => {
+const RoommateCard = ({name, department, religion, height}) => {
   return (
-        <div className="roommate-card-wrapper h-52 md:h-72 shadow-sm md:shadow-md">
+        <div className={`${height} roommate-card-wrapper shadow-sm md:shadow-md`}>
           <div className="img-div">
             {" "}
             <img src={accom} alt="imag" />
