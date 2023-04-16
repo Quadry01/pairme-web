@@ -3,14 +3,16 @@ import { useState } from "react";
 import "./Signup.css";
 import { RiImageAddFill } from "react-icons/ri";
 import top_image from "../../images/Rectangle.png";
+import { useNavigate } from "react-router-dom";
+import { useStateContext } from "../../context/contextProvider";
 
 export const SignUp = () => {
   const roomateParagraph =
     " Find your perfect match and share your University experience with the right roomate";
   const accomondationParagraph =
-    "Discover your ideal 'home away from home'with our afordable & student-friendly range of accomondation options";
+    "Discover your ideal 'home away from home'with our afordable & student-friendly range of accommodation options";
   const roomateHeader = "Roomates";
-  const accomondationHeader = "Accomondations";
+  const accomondationHeader = "Accommodations";
 
   const [name, setName] = useState("");
   const [dob, setDob] = useState("");
@@ -28,6 +30,10 @@ export const SignUp = () => {
   const [form_paragraph, SetForm_paragraph] = useState(
     "Find your perfect match and share your University experience with the right roomate"
   );
+  
+
+  const navigate = useNavigate()
+  const {setUser,userStatus, setUserStatus} = useStateContext()
 
   const RoommateHandler = (e) => {
     e.preventDefault();
@@ -35,6 +41,7 @@ export const SignUp = () => {
     SetForm_paragraph(roomateParagraph);
     SetAccomondation_section("hide");
     SetRoomate_section("");
+    setUserStatus('findingRoommate')
   };
   const AccomondationHandler = (e) => {
     e.preventDefault();
@@ -42,7 +49,14 @@ export const SignUp = () => {
     SetForm_paragraph(accomondationParagraph);
     SetAccomondation_section("");
     SetRoomate_section("hide");
+    setUserStatus('findingAccommodation')
   };
+
+  const handleFormSubmit = (e)=>{
+    e.preventDefault()
+    setUser({name, dob, selfDesription, email, hobbies, schedule, roomateDes, furnishDes, budget, status:userStatus})
+    navigate('/user')
+  }
 
   return (
     <div className="">
@@ -50,7 +64,7 @@ export const SignUp = () => {
         <img src={top_image} alt="top-img" />
       </div>
       <section className="form-container">
-        <form className="need-roomate">
+        <form onSubmit ={(e)=>handleFormSubmit} className="need-roomate">
           <div className="roommate-head-div">
             <h1 className="form-header">{form_hearder}</h1>
             <p className="form-paragraph">{form_paragraph}</p>
@@ -60,7 +74,7 @@ export const SignUp = () => {
             I Need a Roommate
           </button>
           <button onClick={AccomondationHandler} className="top-btn2">
-            I Need a Accomondation
+            I Need a Accommodation
           </button>
           <div className="personal-info">
             <h6>Personal Information</h6>
@@ -182,7 +196,7 @@ export const SignUp = () => {
             <select className="accomondation-type" name="hostel-type">
               <optgroup>
                 <option disabled selected hidden value="">
-                  Accomondation Type
+                  Accommodation Type
                 </option>
                 <option value="duplex">Duplex</option>
                 <option value="self-con">Self contain</option>
@@ -220,41 +234,41 @@ export const SignUp = () => {
               ></input>
             </label>
           </div>
+          <div className={`need-accommondation ${accomondation_section}`}>
+            <h6>Accommodation Information</h6>
+            <select className="preffered-location" name="preffered-location">
+              <optgroup>
+                <option disabled selected hidden value="">
+                  Preffered location
+                </option>
+                <option value="lagos">Lagos</option>
+                <option value="abuja">Abuja</option>
+                <option value="ogun">Ogun</option>
+              </optgroup>
+            </select>
+            <input
+              className="budget-input"
+              type="text"
+              value={budget}
+              placeholder="Budget for Rent"
+              onChange={(e) => setBudget(e.target.value)}
+            ></input>
+            <select
+              className="preffered-accomondation"
+              name="preffered-accomondation-type"
+            >
+              <optgroup>
+                <option disabled selected hidden value="">
+                  Preffered Accommodation type
+                </option>
+                <option value="one">one room</option>
+                <option value="two">two rooms</option>
+                <option value="three">three rooms</option>
+              </optgroup>
+            </select>
+          </div>
+          <button onClick={handleFormSubmit} className="submit-btn" type="submit">Sign up</button>
         </form>
-        <form className={`need-accommondation ${accomondation_section}`}>
-          <h6>Accomondation Information</h6>
-          <select className="preffered-location" name="preffered-location">
-            <optgroup>
-              <option disabled selected hidden value="">
-                Preffered location
-              </option>
-              <option value="lagos">Lagos</option>
-              <option value="abuja">Abuja</option>
-              <option value="ogun">Ogun</option>
-            </optgroup>
-          </select>
-          <input
-            className="budget-input"
-            type="text"
-            value={budget}
-            placeholder="Budget for Rent"
-            onChange={(e) => setBudget(e.target.value)}
-          ></input>
-          <select
-            className="preffered-accomondation"
-            name="preffered-accomondation-type"
-          >
-            <optgroup>
-              <option disabled selected hidden value="">
-                Preffered Accomondation type
-              </option>
-              <option value="one">one room</option>
-              <option value="two">two rooms</option>
-              <option value="three">three rooms</option>
-            </optgroup>
-          </select>
-        </form>
-        <button className="submit-btn">Sign up</button>
       </section>
       <Footer className="footer-layer-effect" />
     </div>

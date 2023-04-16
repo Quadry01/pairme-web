@@ -6,6 +6,7 @@ const StateContext = createContext({});
 export const ContextProvider = ({ children }) => {
   //setUp user
   const [user, setUser] = useState(null)
+  const [userStatus, setUserStatus] = useState('findingRoommate')
   //displaying singin popup
   const [showModal, setShowModal] = useState(false);
   const [userModal, setUserModal] = useState(false);
@@ -51,7 +52,9 @@ export const ContextProvider = ({ children }) => {
         user,
         setUser,
         profileModal, 
-        setProfileModal
+        setProfileModal,
+        userStatus, 
+        setUserStatus
         
       }}
     >

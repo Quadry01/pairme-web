@@ -60,7 +60,7 @@ export const User = () => {
         <section className=" md:overflow-y-auto hidden md:flex flex-col items-center md:h-screen md:w-3/12 text-white bg-blue">
           <div className="text-2xl font-bold mt-24 mx-auto"><NavLink to ='/'>PairMe</NavLink></div>
           <div className="w-full text-center">
-            <div className="rounded-full mx-auto ring-gray-active ring-4 w-36 h-36 mt-12">
+            <div className="rounded-full mx-auto ring-gray-active ring-8 w-36 h-36 mt-12">
               <img className="w-full h-full" src="" alt="" />
             </div>
             <div className="mt-7">{user?.name}</div>
@@ -77,7 +77,7 @@ export const User = () => {
 
         {/* Perform nested routing for both accomodation and roomate here */}
         <section className=" w-full md:w-9/12 md:px-28 px-8 pt-28 md:pt-32 overflow-y-auto h-screen text-blue relative overflow-x-hidden">
-        <div className="hidden md:block absolute -top-40 -right-20 bg-white ring-blue ring-8 w-96 h-96 rounded-full"></div>
+        <div className="hidden md:block absolute -top-40 -right-20 bg-white ring-blue ring-[1rem] w-96 h-96 rounded-full"></div>
 
           <div className="grid grid-cols-1 w-full">
             <div className="flex flex-col gap-3">
@@ -95,6 +95,7 @@ export const User = () => {
              {user?.status ==='findingRoommate' ? Roommate.map((item)=>(
               <div key={item.id}>
                 <RoommateCard
+                height={'h-44 md:h-72'}
                 name={item.name}
                 department={item.department}
                 religion={item.religion}

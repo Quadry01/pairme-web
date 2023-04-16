@@ -5,7 +5,7 @@ import { useStateContext } from "../context/contextProvider";
 export const SignInModal = () => {
 
     const navigate = useNavigate()
-    const {showModal, setShowModal, setUser}= useStateContext()
+    const {showModal, setShowModal, setUser, userStatus}= useStateContext()
     const [name, setName] = useState('')
     const [password, setPassword] = useState("")
 
@@ -14,7 +14,7 @@ export const SignInModal = () => {
         if (!name || !password){ 
         return
         }else{
-        setUser({name: name, password: password, status:'findingRoommate'})
+        setUser({name: name, password: password, status:userStatus})
         setShowModal(false)
         navigate('/user')
         }

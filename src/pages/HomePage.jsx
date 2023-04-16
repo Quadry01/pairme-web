@@ -50,7 +50,7 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-28 top-44 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-28 top-44 z-20">
           <img src={homeImg} className="w-full h-full" alt="" />
         </div>
       </section>
@@ -58,10 +58,10 @@ export const HomePage = forwardRef(() => {
       <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
-            <div className="absolute -top-16 md:top-0 -left-28 md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-4 md:ring-6 ring-gray-active md:ring-blue-foundation h-36 w-36 md:h-64 md:w-64">
+            <div className="absolute -top-16 md:top-0 -left-28 md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue-foundation h-36 w-36 md:h-64 md:w-64">
               <img src={homeImg7} className="w-full h-full" alt="" />
             </div>
-            <div className="absolute z-20 -bottom-3 -right-12 overflow-hidden hidden md:block rounded-full ring-4 md:ring-6 ring-blue-foundation h-28 w-28">
+            <div className="absolute z-20 -bottom-3 -right-12 overflow-hidden hidden md:block rounded-full ring-6 md:ring-8 ring-blue-foundation h-28 w-28">
               <img src={homeImg8} className="w-full h-full" alt="" />
             </div>
           </div>
@@ -89,7 +89,9 @@ export const HomePage = forwardRef(() => {
             </div>
           </div>
           <div className="relative grid grid-cols-3 mt-5 -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
+            <div className="relative first:blur-sm last:blur-sm">
             <AccomodationCard />
+            </div>
           </div>
           <div className="relative flex ">
             <div className="h-80  w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 left-0"></div>
@@ -117,20 +119,17 @@ export const HomePage = forwardRef(() => {
               the right roommate!
             </div>
           </div>
-          <div className="relative grid grid-cols-3 mt-5  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
-            
+          <div className="relative grid grid-cols-3 mt-5  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">    
             {(window.innerWidth > 798 ? Roommate.slice(0, 5) : Roommate.slice(0, 3)).map((item) => (
-              <div key={item.id} className="relative">
-                <RoommateCard 
+              <div key={item.id} className="relative first:blur-sm last:blur-sm">
+                <RoommateCard
+                height={'h-52 md:h-96'} 
                 name={item.name}
                 department={item.department}
                 religion={item.religion}
                 />
               </div>
             ))}
-
-            {/* <div className="h-64  w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 left-0"></div>
-              <div className="h-64 w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 right-0"></div> */}
           </div>
           <div className="text-center">
             {" "}
