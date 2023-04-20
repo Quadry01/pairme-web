@@ -9,6 +9,7 @@ import {RxTextAlignJustify} from 'react-icons/rx';
 import { useState } from "react";
 
 import { NotificationModal } from "../components/NotificationModal";
+import { LogoutModal } from "../components/LogoutModal";
 import { Roommate } from "../data/roomate";
 import { UserProfileModal } from "../components/UserProfileModal";
 import RoommateCard from '../components/RoommateCard/RoommateCard'
@@ -17,7 +18,7 @@ import RoommateCard from '../components/RoommateCard/RoommateCard'
 
 import { NavLink } from "react-router-dom";
 export const User = () => {
-  const { user, setUserModal, setProfileModal } = useStateContext()
+  const { user, setUserModal, setProfileModal, setLogoutModal } = useStateContext()
 
   const [openSidebar, setOpenSidebar] = useState(false);
 
@@ -49,7 +50,7 @@ export const User = () => {
             <button onClick={()=>setUserModal(true)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><BsBellFill/></span>Notification</button>
             <button className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><SiGooglechat/></span>Pull down space</button>
             <button className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><IoMdSettings/></span>Settings</button>
-            <button className="w-8/12 rounded-smd h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span className="-rotate-180"><IoLogOut/></span>Log out</button>
+            <button onClick={()=>setLogoutModal(true)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span className="-rotate-180"><IoLogOut/></span>Log out</button>
           </div>
           </div>
         </div>
@@ -64,14 +65,14 @@ export const User = () => {
               <img className="w-full h-full" src="" alt="" />
             </div>
             <div className="mt-7">{user?.name}</div>
-            <div onClick={()=>setProfileModal(true)} className="flex justify-center mt-3 text-xs cursor-pointer">View Profile <span><BsArrowRight className=" ml-2"/></span></div>
+            <div onClick={()=>setProfileModal(true)} className="flex justify-center mt-3 text-xs cursor-pointer">View Profile <span className="flex items-center"><BsArrowRight className=" ml-2"/></span></div>
           </div>
           <div className=" mb-96 mt-8 w-full px-5 text-center gap-y-1 flex flex-col">
             <button onClick={()=>setOpenSidebar(false)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><AiTwotoneHome/></span> Dashboard</button>
             <button onClick={()=>setUserModal(true)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><BsBellFill/></span>Notification</button>
             <button className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><SiGooglechat/></span>Pull down space</button>
             <button className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><IoMdSettings/></span>Settings</button>
-            <button className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span className="-rotate-180"><IoLogOut/></span>Log out</button>
+            <button onClick={()=>setLogoutModal(true)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span className="-rotate-180"><IoLogOut/></span>Log out</button>
           </div>
         </section>
 
@@ -116,6 +117,7 @@ export const User = () => {
       </div>
       <NotificationModal/>
       <UserProfileModal/>
+      <LogoutModal/>
     </div>
   );
 };

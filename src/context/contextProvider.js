@@ -10,7 +10,8 @@ export const ContextProvider = ({ children }) => {
   //displaying singin popup
   const [showModal, setShowModal] = useState(false);
   const [userModal, setUserModal] = useState(false);
-  const [profileModal, setProfileModal] = useState(false)
+  const [profileModal, setProfileModal] = useState(false);
+  const [logoutModal, setLogoutModal] = useState(false)
 
   //For home scroll
   const homeRef = useRef(null)
@@ -54,7 +55,9 @@ export const ContextProvider = ({ children }) => {
         profileModal, 
         setProfileModal,
         userStatus, 
-        setUserStatus
+        setUserStatus,
+        logoutModal, 
+        setLogoutModal
         
       }}
     >

@@ -41,8 +41,8 @@ export const HomePage = forwardRef(() => {
               <DropDownComponent dropName="Price" />
               <DropDownComponent dropName="Type" />
             </div>
-            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-4 tracking-wider font-light md:font-medium">
-              <span>
+            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-8 tracking-wider font-light md:font-normal">
+              <span className="md:text-xl">
                 <CiSearch />
               </span>
               <span>Search</span>
@@ -70,10 +70,12 @@ export const HomePage = forwardRef(() => {
               What is PairMe About?
             </div>
             <div style={{lineHeight:'2'}} className="font-normal text-xs md:font-light md:text-xl md:mt-11 text-justify">
-                Pairme.com is a platform that seeks to make the process of accommodation and roommate pairing easy for Students in Nigeria tertiary institutions.
-                We do this by connecting Students in need of affordable accommodation 
-                with students with comfortable accommodation seeking for a roommate to share with. We have a large number of students registered on our platform and each student 
-                webpage where they upload the pictures of their hostels and its specifications.
+            Pairme.com simplifies the task of finding accommodation and a 
+            roommate for tertiary institution students in Nigeria. Our approach 
+            involves linking students requiring reasonably priced accommodation 
+            with others who already have comfortable housing and seek a roommate. 
+            Our platform boasts a substantial number of registered students, 
+            and each one has a dedicated webpage featuring photos and specifications of their hostels.
             </div>
           </div>
         </div>
@@ -89,7 +91,7 @@ export const HomePage = forwardRef(() => {
             </div>
           </div>
           <div className="relative grid grid-cols-3 mt-5 -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
-            <div className="relative first:blur-sm last:blur-sm">
+            <div className="relative md:first:blur-sm md:last:blur-sm">
             <AccomodationCard />
             </div>
           </div>
@@ -121,7 +123,7 @@ export const HomePage = forwardRef(() => {
           </div>
           <div className="relative grid grid-cols-3 mt-5  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">    
             {(window.innerWidth > 798 ? Roommate.slice(0, 5) : Roommate.slice(0, 3)).map((item) => (
-              <div key={item.id} className="relative first:blur-sm last:blur-sm">
+              <div key={item.id} className="relative md:first:blur-sm md:last:blur-sm">
                 <RoommateCard
                 height={'h-52 md:h-96'} 
                 name={item.name}

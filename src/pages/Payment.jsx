@@ -49,7 +49,8 @@ export const Payment = () => {
               <br />
               <input
                 className="w-full md:rounded-2xl rounded-md h-8 ring-1 ring-blue md:h-[50px] md:px-4 md:mt-3"
-                type="date"
+                type="text"
+                placeholder="MM/YYYY"
               />
             </div>
           </div>
