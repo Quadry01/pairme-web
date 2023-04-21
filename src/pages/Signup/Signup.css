@@ -51,6 +51,11 @@
   background-color: #072f3b;
   color: white;
 }
+.top-btn2:focus,
+.top-btn1:focus {
+  background-color: #072f3b;
+  color: white;
+}
 .name-input {
   display: block;
   height: 50px;
@@ -96,7 +101,7 @@
   border-radius: 8px;
   padding: 0 20px;
   position: relative;
-  right: 130px;
+  right: 80px;
   margin-bottom: 15px;
 }
 .date-input {
@@ -216,11 +221,11 @@
   margin-bottom: 15px;
 }
 .furnish-description {
-  height: 100px;
+  height: 50px;
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
-  padding: 20px 20px;
+  padding: 0px 20px;
   margin-right: 10px;
 }
 .submit-btn {
@@ -270,17 +275,21 @@
   margin-bottom: 15px;
   margin-top: 15px;
 }
+.dob {
+  visibility: hidden;
+}
 .hide {
   display: none;
 }
 .hide-date[type="date"]::-webkit-calendar-picker-indicator {
-  /* filter: invert(100%);
-
-  width: 100%; */
+  /* filter: invert(100%); */
+  width: 0%;
 }
+
 .date-of-birth {
   top: 2px;
-  right: 27px;
+  font-size: 15px;
+  left: 80px;
   position: relative;
   z-index: 3;
   opacity: 0.4;

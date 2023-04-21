@@ -11,18 +11,19 @@ export const SignUp = () => {
     " Find your perfect match and share your University experience with the right roomate";
   const accomondationParagraph =
     "Discover your ideal 'home away from home'with our afordable & student-friendly range of accommodation options";
-  const roomateHeader = "Roomates";
+  const roomateHeader = "Roommates";
   const accomondationHeader = "Accommodations";
 
   const [name, setName] = useState("");
+
+  const [sideHustle, setSidHustle] = useState("");
   const [dob, setDob] = useState("");
   const [selfDesription, setSelfDescription] = useState("");
   const [email, setEmail] = useState("");
   const [hobbies, setHobbies] = useState("");
-  const [schedule, setSchedule] = useState("");
   const [roomateDes, setroomateDes] = useState("");
-  const [hostelDes, setHostelDes] = useState("");
-  const [furnishDes, setFurnishDes] = useState("");
+  const [department, setDepartment] = useState("");
+
   const [budget, setBudget] = useState("");
   const [roommate_section, SetRoomate_section] = useState("");
   const [accomondation_section, SetAccomondation_section] = useState("hide");
@@ -30,10 +31,9 @@ export const SignUp = () => {
   const [form_paragraph, SetForm_paragraph] = useState(
     "Find your perfect match and share your University experience with the right roomate"
   );
-  
 
-  const navigate = useNavigate()
-  const {setUser,userStatus, setUserStatus} = useStateContext()
+  const navigate = useNavigate();
+  const { setUser, userStatus, setUserStatus } = useStateContext();
 
   const RoommateHandler = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export const SignUp = () => {
     SetForm_paragraph(roomateParagraph);
     SetAccomondation_section("hide");
     SetRoomate_section("");
-    setUserStatus('findingRoommate')
+    setUserStatus("findingRoommate");
   };
   const AccomondationHandler = (e) => {
     e.preventDefault();
@@ -49,14 +49,22 @@ export const SignUp = () => {
     SetForm_paragraph(accomondationParagraph);
     SetAccomondation_section("");
     SetRoomate_section("hide");
-    setUserStatus('findingAccommodation')
+    setUserStatus("findingAccommodation");
   };
 
-  const handleFormSubmit = (e)=>{
-    e.preventDefault()
-    setUser({name, dob, selfDesription, email, hobbies, schedule, roomateDes, furnishDes, budget, status:userStatus})
-    navigate('/user')
-  }
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setUser({
+      name,
+      selfDesription,
+      email,
+      hobbies,
+      roomateDes,
+      budget,
+      status: userStatus,
+    });
+    navigate("/user");
+  };
 
   return (
     <div className="">
@@ -64,17 +72,17 @@ export const SignUp = () => {
         <img src={top_image} alt="top-img" />
       </div>
       <section className="form-container">
-        <form onSubmit ={(e)=>handleFormSubmit} className="need-roomate">
+        <form onSubmit={(e) => handleFormSubmit} className="need-roomate">
           <div className="roommate-head-div">
             <h1 className="form-header">{form_hearder}</h1>
             <p className="form-paragraph">{form_paragraph}</p>
           </div>
 
           <button onClick={RoommateHandler} className="top-btn1">
-            I Need a Roommate
+            I Need A Roommate
           </button>
           <button onClick={AccomondationHandler} className="top-btn2">
-            I Need a Accommodation
+            I Need An Accommodation
           </button>
           <div className="personal-info">
             <h6>Personal Information</h6>
@@ -91,25 +99,16 @@ export const SignUp = () => {
                   School
                 </option>
                 <option value="unilag">Unilag</option>
-                <option value="ui">UI</option>
-                <option value="unijos">Unijos</option>
-                <option value="uniben">Uniben</option>
-                <option value="lasu">Lasu</option>
               </optgroup>
             </select>
 
-            <select className="department-drpdwn" name="Department">
-              <optgroup>
-                <option disabled selected hidden value="">
-                  Department
-                </option>
-                <option value="Economics">Economics</option>
-                <option value="sociology">Sociology</option>
-                <option value="micro-biology">Micro Biology</option>
-                <option value="botany">Botany</option>
-                <option value="law">Law</option>
-              </optgroup>
-            </select>
+            <input
+              className="department-drpdwn"
+              name="Department"
+              value={department}
+              onChange={(e) => setDepartment(e.target.value)}
+              placeholder="Department"
+            ></input>
             <input
               className="email-input"
               type="email"
@@ -128,15 +127,14 @@ export const SignUp = () => {
               </optgroup>
             </select>
 
-            <input
-              className="date-input hide-date"
-              type="text"
-              value={dob}
-              placeholder="Date of Birth"
-              onChange={(e) => {
-                setDob(e.target.value);
-              }}
-            ></input>
+            <label>
+              <span className={`date-of-birth ${dob}`}>Date of Birth</span>
+              <input
+                className="date-input hide-date"
+                type="date"
+                name="date-of-birth"
+              ></input>
+            </label>
             <label className="dispay-picture-tag">
               <RiImageAddFill className="img-icon" /> Display Picture
               <input
@@ -145,17 +143,17 @@ export const SignUp = () => {
                 name="display-picture"
               ></input>
             </label>
-            <select className="side-hustle-drpdwn" name="side-hustle">
-              <optgroup>
-                <option disabled selected hidden value="">
-                  Side Hustle
-                </option>
-                <option value="one">Web developer</option>
-                <option value="two">fashion Designer</option>
-                <option value="three">Photography</option>
-                <option value="four">fire fighter</option>
-              </optgroup>
-            </select>
+
+            <input
+              className="side-hustle-drpdwn"
+              type="text"
+              value={sideHustle}
+              placeholder="Side Hustle"
+              onChange={(e) => {
+                setSidHustle(e.target.value);
+              }}
+            ></input>
+
             <textarea
               className="self-description-input"
               type="text"
@@ -171,13 +169,7 @@ export const SignUp = () => {
               onChange={(e) => setHobbies(e.target.value)}
               placeholder="Hobbies/Interests"
             ></textarea>
-            <textarea
-              className="schedule-input"
-              type="text"
-              value={schedule}
-              onChange={(e) => setSchedule(e.target.value)}
-              placeholder="Schedule and Routine"
-            ></textarea>
+
             <textarea
               className="ideal-roomate-input"
               type="text"
@@ -198,33 +190,29 @@ export const SignUp = () => {
                 <option disabled selected hidden value="">
                   Accommodation Type
                 </option>
-                <option value="duplex">Duplex</option>
-                <option value="self-con">Self contain</option>
-                <option value="one-room">One room</option>
+                <option value="Studio-Apartment">Studio Apartment</option>
+                <option value="two-room">2 Bedroom Apartmrnt</option>
+                <option value="one-room">3 Bedroom Apaertment</option>
               </optgroup>
             </select>
 
             <input
               className="hostel-rent"
               type="text"
-              placeholder="Rent"
+              placeholder=" Full Rent"
             ></input>
 
-            <textarea
-              className="hostel-description"
-              type="text"
-              value={hostelDes}
-              onChange={(e) => setHostelDes(e.target.value)}
-              placeholder="Hostel Description eg Amenities, Proximity, Security"
-            ></textarea>
+            <select className="furnish-description" name="furnish-description">
+              <optgroup>
+                <option disabled selected hidden value="">
+                  Furnishes
+                </option>
+                <option value="Studio-Apartment">Air Conditional</option>
+                <option value="two-room">Television</option>
+                <option value="one-room">Water closet</option>
+              </optgroup>
+            </select>
 
-            <textarea
-              className="furnish-description"
-              type="text"
-              value={furnishDes}
-              onChange={(e) => setFurnishDes(e.target.value)}
-              placeholder="Furnishes and Appliances if Included"
-            ></textarea>
             <label className="dispay-picture-tag">
               <RiImageAddFill className="img-icon" /> Hostel Pictures{" "}
               <input
@@ -241,21 +229,27 @@ export const SignUp = () => {
                 <option disabled selected hidden value="">
                   Preffered location
                 </option>
-                <option value="lagos">Lagos</option>
-                <option value="abuja">Abuja</option>
-                <option value="ogun">Ogun</option>
+                <option value="chemis">Chemist</option>
+                <option value="pako">Pako</option>
+                <option value="cms-grammar-school">CMS Grammar School</option>
+                <option value="dad-street">Dada Street</option>
+                <option value="anu/police-station">
+                  Anuoluwapo/Police Station
+                </option>
+                <option value="ilaje">Ilaje</option>
+                <option value="abeokuta-street">Abeokuta Street</option>
               </optgroup>
             </select>
             <input
               className="budget-input"
               type="text"
               value={budget}
-              placeholder="Budget for Rent"
+              placeholder="Rent Budget"
               onChange={(e) => setBudget(e.target.value)}
             ></input>
             <select
               className="preffered-accomondation"
-              name="preffered-accomondation-type"
+              name="prefered-accomondation-type"
             >
               <optgroup>
                 <option disabled selected hidden value="">
@@ -267,7 +261,13 @@ export const SignUp = () => {
               </optgroup>
             </select>
           </div>
-          <button onClick={handleFormSubmit} className="submit-btn" type="submit">Sign up</button>
+          <button
+            onClick={handleFormSubmit}
+            className="submit-btn"
+            type="submit"
+          >
+            Sign up
+          </button>
         </form>
       </section>
       <Footer className="footer-layer-effect" />
