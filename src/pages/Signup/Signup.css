@@ -310,15 +310,17 @@ select:valid {
   .gender-drpdwn {
     height: 50px;
     border: solid 1px #072f3b;
-    width: 110px;
-    right: 25px;
+    width: 40%;
+    position: relative;
+    left: -38px;
     padding: 0;
     padding-left: 10px;
   }
   .date-input {
     height: 50px;
     border: solid 1px #072f3b;
-    width: 130px;
+    width: 45%;
+    font-size: smaller;
   }
   .date-of-birth {
     visibility: hidden;
