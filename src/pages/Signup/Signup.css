@@ -311,12 +311,15 @@ select:valid {
     height: 50px;
     border: solid 1px #072f3b;
     width: 45%;
-    right: 25%;
+    right: 11%;
   }
   .date-input {
     height: 50px;
     border: solid 1px #072f3b;
     width: 45%;
+  }
+  .date-of-birth {
+    visibility: hidden;
   }
   .img-icon {
     font-size: 35px;
