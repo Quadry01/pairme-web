@@ -1,9 +1,7 @@
-import '../App.css';
-import {HiOutlineEnvelope} from'react-icons/hi2';
-import {BsInstagram} from 'react-icons/bs';
-import {FaLinkedinIn, FaFacebookSquare, FaTwitter} from 'react-icons/fa';
-
-
+import "../App.css";
+import { HiOutlineEnvelope } from "react-icons/hi2";
+import { BsInstagram } from "react-icons/bs";
+import { FaLinkedinIn, FaFacebookSquare, FaTwitter } from "react-icons/fa";
 
 export const Footer = () => {
     return(
