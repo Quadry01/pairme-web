@@ -5,6 +5,8 @@ import { RiImageAddFill } from "react-icons/ri";
 import top_image from "../../images/Rectangle.png";
 import { useNavigate } from "react-router-dom";
 import { useStateContext } from "../../context/contextProvider";
+import RoommateInfo from "../../components/RoommateInfo/RoommateInfo";
+import AccomodationInfo from "../../components/AccomondationIfo/AccomodationInfo";
 
 export const SignUp = () => {
   const roomateParagraph =
