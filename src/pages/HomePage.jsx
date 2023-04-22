@@ -28,7 +28,10 @@ export const HomePage = forwardRef(() => {
       >
         <div className="flex flex-col  gap-3 md:gap-7 mt-14 md:mt-52 w-full md:w-8/12 z-30">
           <div className="w-11/12 md:w-9/12 text-blue">
-            <div style={{lineHeight:'1.2'}} className="text-2xl  md:text-5xl font-bold">
+            <div
+              style={{ lineHeight: "1.2" }}
+              className="text-2xl  md:text-5xl font-bold"
+            >
               Find the best fit for you, both in roommate & accommodation
             </div>
             <div className="text-gray-600 text-xxs w-9/12 md:w-11/12 md:text-base font-normal mt-4">
@@ -55,7 +58,6 @@ export const HomePage = forwardRef(() => {
           <img src={homeImg} className="w-full h-full" alt="" />
         </div>
       </section>
-
       <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
@@ -70,19 +72,26 @@ export const HomePage = forwardRef(() => {
             <div className=" md:text-center font-semibold md:font-bold text-lg md:text-5xl">
               What is PairMe About?
             </div>
-            <div style={{lineHeight:'2'}} className="font-normal text-xs md:font-light md:text-xl md:mt-11 text-justify">
-            Pairme.com simplifies the task of finding accommodation and a 
-            roommate for tertiary institution students in Nigeria. Our approach 
-            involves linking students requiring reasonably priced accommodation 
-            with others who already have comfortable housing and seek a roommate. 
-            Our platform boasts a substantial number of registered students, 
-            and each one has a dedicated webpage featuring photos and specifications of their hostels.
+            <div
+              style={{ lineHeight: "2" }}
+              className="font-normal text-xs md:font-light md:text-xl md:mt-11 text-justify"
+            >
+              Pairme.com simplifies the task of finding accommodation and a
+              roommate for tertiary institution students in Nigeria. Our
+              approach involves linking students requiring reasonably priced
+              accommodation with others who already have comfortable housing and
+              seek a roommate. Our platform boasts a substantial number of
+              registered students, and each one has a dedicated webpage
+              featuring photos and specifications of their hostels.
             </div>
           </div>
         </div>
       </section>
 
-      <section ref={accomodationRef} className="relative text-blue overflow-x-clip">
+      <section
+        ref={accomodationRef}
+        className="relative text-blue overflow-x-clip"
+      >
         <div className="flex flex-col gap-y-6 mt-4 md:mt-20">
           <div className="text-center flex flex-col items-center">
             <div className="text-xl md:text-5xl font-bold">Accomodations</div>
@@ -93,7 +102,7 @@ export const HomePage = forwardRef(() => {
           </div>
           <div className="relative grid grid-cols-3 mt-5 -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
             <div className="relative md:first:blur-sm md:last:blur-sm">
-            <AccomodationCard />
+              <AccomodationCard />
             </div>
           </div>
           <div className="relative flex ">
@@ -122,9 +131,15 @@ export const HomePage = forwardRef(() => {
               the right roommate!
             </div>
           </div>
-          <div className="relative grid grid-cols-3 mt-5  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">    
-            {(window.innerWidth > 798 ? Roommate.slice(0, 5) : Roommate.slice(0, 3)).map((item) => (
-              <div key={item.id} className="relative md:first:blur-sm md:last:blur-sm">
+          <div className="relative grid grid-cols-3 mt-5  -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
+            {(window.innerWidth > 798
+              ? Roommate.slice(0, 5)
+              : Roommate.slice(0, 3)
+            ).map((item) => (
+              <div
+                key={item.id}
+                className="relative md:first:blur-sm md:last:blur-sm"
+              >
                 <RoommateCard
                 height={'h-[33vh] md:h-[27em] rounded-xl md:rounded-3xl'} 
                 nameText ={'text-sm md:text-3xl font-semibold'}
