@@ -3,10 +3,20 @@ import { useState } from "react";
 import "./Signup.css";
 import { RiImageAddFill } from "react-icons/ri";
 import top_image from "../../images/Rectangle.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useStateContext } from "../../context/contextProvider";
+import { useEffect } from "react";
 
 export const SignUp = () => {
+  const location = useLocation();
+  
+  useEffect(()=> {
+    if(location.pathname ==='/signup'){
+     window.scroll(0, 0)
+    }
+  }, [location])
+
+
   const roomateParagraph =
     " Find your perfect match and share your University experience with the right roomate";
   const accomondationParagraph =
@@ -67,7 +77,7 @@ export const SignUp = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <div className="top-image-div">
         <img src={top_image} alt="top-img" />
       </div>

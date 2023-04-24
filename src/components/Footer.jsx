@@ -33,7 +33,7 @@ export const Footer = () => {
             </div>
             <div>
             <h3 className="text-xs md:text-xl font-semibold">Support</h3>
-              <ul className="list-none mt-3">
+              <ul className="list-none mt-3 ">
                 <li>Customer Care</li>
                 <li>FAQs</li>
               </ul>
