@@ -18,8 +18,6 @@ import homeImg8 from "../images/Ellipse8.png";
 export const HomePage = forwardRef(() => {
   const { accomodationRef, homeRef, roommateRef} = useStateContext();
 
- 
-
   return (
     <div className="relative bg-blue-foundation w-full h-auto">
       <section

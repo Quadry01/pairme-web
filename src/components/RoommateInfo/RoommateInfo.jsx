@@ -1,11 +1,14 @@
 import React from "react";
 import "./RoommateInfo.css";
+import { CgProfile } from "react-icons/cg";
 
 const RoommateInfo = () => {
   return (
     <div className="roommate-info-wrapper">
       <div className="picture-name-section">
-        <div className="profile-picture"></div>
+        <div className="roommate-profile-picture">
+          <CgProfile className="dp-icon" />
+        </div>
         <div className="smallScreen-name-sec">
           <h3 className="student-name">Fatima Ahmed</h3>
           <span className="university-name"> Uinversity of Lagos</span> <br />
@@ -16,8 +19,7 @@ const RoommateInfo = () => {
         <h3 className="about-header">About</h3>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
-          expedita maxime fuga alias esse omnis iste porro doloribus
-          perspiciatis sapiente.
+          expedita
         </p>
 
         <div className="religion-section">
@@ -34,8 +36,7 @@ const RoommateInfo = () => {
           <h3 className="about-header">Schedule/Routine</h3>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
-            expedita maxime fuga alias esse omnis iste porro doloribus
-            perspiciatis sapiente.
+            expedita
           </p>
           <h3 className="about-header">Hobbies</h3>
           <ul>
@@ -45,6 +46,7 @@ const RoommateInfo = () => {
           </ul>
         </div>
       </div>
+      <button className="roomate-btn">Contact</button>
     </div>
   );
 };

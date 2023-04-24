@@ -2,9 +2,7 @@
   padding: 20px 40px;
   width: 38%;
   color: #0a3855;
-
   border-radius: 50px;
-  background-color: rgb(251, 252, 252);
 }
 .student-name {
   font-weight: 500;
@@ -13,10 +11,9 @@
 .picture-name-section {
   text-align: center;
 }
-.profile-picture {
+.roommate-profile-picture {
   height: 100px;
   width: 100px;
-  background-color: brown;
   border-radius: 100%;
   margin: auto;
 }
@@ -41,21 +38,42 @@
   list-style-type: disc;
   margin-left: 11px;
 }
-
+.dp-icon {
+  width: 100px;
+  font-size: 100px;
+}
+.roomate-btn {
+  height: 40px;
+  width: 90%;
+  color: white;
+  background-color: #0a3855;
+  border-radius: 30px;
+  margin: auto;
+  margin-left: 5%;
+  margin-top: 15px;
+}
 @media only screen and (max-width: 700px) {
   .roommate-info-wrapper {
     width: auto;
+    padding: 30px 15px;
   }
-  .profile-picture {
+  .roommate-profile-picture {
     position: absolute;
+    margin-left: 15px;
+    margin-top: -10px;
+    left: 10px;
   }
   .smallScreen-name-sec {
     text-align: left;
     position: relative;
-    left: 45%;
+    left: 40%;
+    margin-bottom: 30px;
   }
   .profile-picture {
     height: 83px;
     width: 83px;
+  }
+  .roomate-btn {
+    margin-left: 5%;
   }
 }

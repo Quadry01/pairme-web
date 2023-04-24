@@ -34,6 +34,10 @@
   border-radius: 30px;
   margin-bottom: 15px;
 }
+.bg {
+  background-color: #072f3b;
+  color: white;
+}
 .top-btn2 {
   height: 40px;
   width: auto;
@@ -82,7 +86,7 @@
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
-  padding: 0 20px;
+  padding: 0px 20px;
   margin-bottom: 15px;
 }
 .department-drpdwn {
@@ -91,7 +95,7 @@
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
-  padding: 0 20px;
+  padding: 0px 20px;
   margin-bottom: 15px;
 }
 .gender-drpdwn {
@@ -109,7 +113,7 @@
   border: solid 1px #072f3b;
   width: 250px;
   border-radius: 8px;
-  padding: 20px;
+  padding: 0px 20px;
   margin: 0 5px;
   margin-bottom: 15px;
   margin-left: 13px;
@@ -163,7 +167,7 @@
   margin-right: 10px;
   margin-bottom: 15px;
 }
-.schedule-input {
+/* .schedule-input {
   height: 100px;
   border: solid 1px #072f3b;
   width: 100%;
@@ -171,7 +175,7 @@
   padding: 20px 20px;
   margin-right: 10px;
   margin-bottom: 15px;
-}
+} */
 
 .ideal-roomate-input {
   height: 100px;
@@ -307,18 +311,52 @@ select:valid {
     width: 85%;
     top: 150px;
   }
+  .name-input {
+    padding: 7px;
+  }
+  .department-drpdwn {
+    padding: 7px;
+  }
+  .email-input {
+    padding: 7px;
+  }
+  .side-hustle-drpdwn {
+    padding: 7px;
+  }
+  .self-description-input {
+    padding: 7px;
+  }
+
+  .hobbie-input {
+    padding: 7px;
+  }
+  .Hostel-Address {
+    padding: 7px;
+  }
+
+  .hostel-rent {
+    padding: 7px;
+  }
+  .ideal-roomate-input {
+    padding: 7px;
+  }
+  .budget-input {
+    padding: 7px;
+  }
   .gender-drpdwn {
     height: 50px;
     border: solid 1px #072f3b;
-    width: 110px;
-    right: 25px;
+    width: 40%;
+    position: relative;
+    left: -38px;
     padding: 0;
     padding-left: 10px;
   }
   .date-input {
     height: 50px;
     border: solid 1px #072f3b;
-    width: 130px;
+    width: 45%;
+    font-size: smaller;
   }
   .date-of-birth {
     visibility: hidden;
@@ -331,6 +369,7 @@ select:valid {
   .submit-btn {
     width: 150px;
   }
+
   .top-btn1 {
     width: 45%;
     margin-right: 10px;
