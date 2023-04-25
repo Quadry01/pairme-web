@@ -1,14 +1,12 @@
 
 .roommate-card-wrapper {
   width: auto;
-  color: #0a3855;
-  border-radius: 1em;
   text-align: left;
   overflow: hidden;
 
 }
 .img-div {
-  height: 55%;
+  height: 60%;
   
   overflow: hidden;
 }
@@ -20,9 +18,9 @@
 
 .details {
   background-color:white;
-  padding-left: 1em;
-  padding-top: 1.5em;
-  height: 45%;
+  /* padding-left: 1em;
+  padding-top: 1.5em; */
+  height: 40%;
 }
 .roomate-card-icon {
   display: inline;

@@ -78,6 +78,7 @@ export const SignUp = () => {
 
   return (
     <div>
+      
       <div className="top-image-div">
         <img src={top_image} alt="top-img" />
       </div>

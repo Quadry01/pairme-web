@@ -38,7 +38,7 @@ export const HomePage = forwardRef(() => {
             <div className="flex gap-2 md:gap-4 justify-between items-center grow">
               <DropDownComponent dropName="Location" option1={'Yaba'} option2={'Idi-Araba'} option3={'Akoka'} option4={'Oju-elegba'} />
               <DropDownComponent dropName="Price" option1={'250,000'} option2={'300,000'} option3={'400,000'} option4={'500,000'}/>
-              <DropDownComponent dropName="Type" option1={'Single room'} option2={'2 bedroom flat'} option3={'3 bedroom shared apartment'} option4={'4 bedroom shared apartment'}/>
+              <DropDownComponent dropName="Type" option1={'Single room apartment'} option2={'studio apartment'} option3={'2 bedroom shared apartment'} option4={'self contain apartment'}/>
             </div>
             <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-8 tracking-wider font-light md:font-normal">
               <span className="md:text-xl">
@@ -124,7 +124,9 @@ export const HomePage = forwardRef(() => {
             {(window.innerWidth > 798 ? Roommate.slice(0, 5) : Roommate.slice(0, 3)).map((item) => (
               <div key={item.id} className="relative md:first:blur-sm md:last:blur-sm">
                 <RoommateCard
-                height={'h-52 md:h-96'} 
+                height={'h-[33vh] md:h-[60vh] rounded-xl md:rounded-3xl'} 
+                nameText ={'text-sm md:text-3xl font-semibold'}
+                cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
                 name={item.name}
                 department={item.department}
                 religion={item.religion}
