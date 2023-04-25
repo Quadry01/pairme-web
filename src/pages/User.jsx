@@ -14,6 +14,9 @@ import { Roommate } from "../data/roomate";
 import { UserProfileModal } from "../components/UserProfileModal";
 import RoommateCard from '../components/RoommateCard/RoommateCard';
 import profileImg from '../images/profile.png';
+
+
+
 import { NavLink } from "react-router-dom";
 import { RoommateModal } from "../components/RoommateModal";
 
