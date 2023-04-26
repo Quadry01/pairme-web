@@ -33,7 +33,7 @@ export const SignUp = () => {
   const [form_paragraph, SetForm_paragraph] = useState(
     "Find your perfect match and share your University experience with the right roomate"
   );
-
+  const [bg, setBg] = useState("bg");
   const navigate = useNavigate();
   const { setUser, userStatus, setUserStatus } = useStateContext();
 
@@ -52,6 +52,7 @@ export const SignUp = () => {
     SetAccomondation_section("");
     SetRoomate_section("hide");
     setUserStatus("findingAccommodation");
+    setBg("");
   };
 
   const handleFormSubmit = (e) => {
@@ -80,7 +81,7 @@ export const SignUp = () => {
             <p className="form-paragraph">{form_paragraph}</p>
           </div>
 
-          <button onClick={RoommateHandler} className="top-btn1">
+          <button onClick={RoommateHandler} className={`top-btn1 ${bg}`}>
             I Need A Roommate
           </button>
           <button onClick={AccomondationHandler} className="top-btn2">

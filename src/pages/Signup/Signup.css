@@ -34,6 +34,10 @@
   border-radius: 30px;
   margin-bottom: 15px;
 }
+.bg {
+  background-color: #072f3b;
+  color: white;
+}
 .top-btn2 {
   height: 40px;
   width: auto;
