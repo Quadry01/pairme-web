@@ -12,7 +12,8 @@ export const ContextProvider = ({ children }) => {
   const [userModal, setUserModal] = useState(false);
   const [profileModal, setProfileModal] = useState(false);
   const [logoutModal, setLogoutModal] = useState(false);
-  const [hideNavItem, setHideNavItem] = useState(false)
+  const [hideNavItem, setHideNavItem] = useState(false);
+  const [roommateModal, setRoommateModal] = useState(true);
 
   //For home scroll
   const homeRef = useRef(null)
@@ -60,7 +61,9 @@ export const ContextProvider = ({ children }) => {
         logoutModal, 
         setLogoutModal,
         hideNavItem,
-         setHideNavItem
+        setHideNavItem,
+        setRoommateModal, 
+        roommateModal
         
       }}
     >

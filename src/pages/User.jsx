@@ -14,14 +14,18 @@ import { Roommate } from "../data/roomate";
 import { UserProfileModal } from "../components/UserProfileModal";
 import RoommateCard from '../components/RoommateCard/RoommateCard';
 import profileImg from '../images/profile.png';
-
-
-
 import { NavLink } from "react-router-dom";
-export const User = () => {
-  const { user, setUserModal, setProfileModal, setLogoutModal } = useStateContext()
+import { RoommateModal } from "../components/RoommateModal";
 
+export const User = () => {
+  const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal } = useStateContext()
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [roommateInfo, setRoomateInfo] = useState(null);
+
+  const handleRoommateInfo = (item)=>{
+        setRoommateModal(!roommateModal)
+        setRoomateInfo(item)
+  }
 
   return (
     <div className="bg-blue-foundation relative">
@@ -94,10 +98,10 @@ export const User = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 justify-between mb-20 mt-10 gap-4 md:gap-7 ">
-             {user?.status ==='findingRoommate' ? Roommate.map((item)=>(
-              <div key={item.id}>
+             {user?.status ==='findingRoommate' && Roommate.map((item)=>(
+              <div onClick={()=>handleRoommateInfo(item)} key={item.id} >
                 <RoommateCard
-                height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl'}
+                height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white cursor:pointer'}
                 nameText={'font-semibold text-sm md:text-lg'}
                 cardText={'text-xxs md:text-xs pl-2 md:pl-4 pt-1 md:pt-3 gap-1 md:gap-2'}
                 name={item.name}
@@ -105,8 +109,9 @@ export const User = () => {
                 religion={item.religion}
                 />
               </div>
-             )) :
+             )) }
 
+                { user?.status === 'findingAccommodation' &&
               (<div className="flex flex-col">
               <div>Accommodation</div>
               <div></div>
@@ -121,6 +126,7 @@ export const User = () => {
       <NotificationModal/>
       <UserProfileModal/>
       <LogoutModal/>
+      <RoommateModal roommateInfo={roommateInfo}/>
     </div>
   );
 };

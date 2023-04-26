@@ -5,12 +5,12 @@ import { BsBook } from "react-icons/bs";
 import accom from "../../images/accom.png";
 const RoommateCard = ({name, department, religion, height, nameText, cardText}) => {
   return (
-        <div className={`${height} roommate-card-wrapper shadow-sm md:shadow-md`}>
+        <div className={`${height} roommate-card-wrapper shadow-sm md:shadow-md text-gray-700 bg-white`}>
           <div className="img-div">
             {" "}
             <img src={accom} alt="imag" />
           </div>
-          <div className={`text-gray-700 flex flex-col details ${cardText}`}>
+          <div className={` h-full flex flex-col details ${cardText}`}>
             <h2 className= {`${nameText}`}>{name.length > 13 ? `${name.substring(0, 13)}` : name}</h2>
             <h5 className="course">
               <BsBook className="roomate-card-icon" />
