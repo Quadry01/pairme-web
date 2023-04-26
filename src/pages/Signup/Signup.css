@@ -82,7 +82,7 @@
   border: solid 1px #072f3b;
   width: 100%;
   border-radius: 8px;
-  padding-left: 20px;
+  padding: 0px 20px;
   margin-bottom: 15px;
 }
 .department-drpdwn {
@@ -307,6 +307,10 @@ select:valid {
     width: 85%;
     top: 150px;
   }
+  .name-input {
+    padding: 5px;
+  }
+
   .gender-drpdwn {
     height: 50px;
     border: solid 1px #072f3b;
