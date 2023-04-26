@@ -34,6 +34,7 @@ export const SignUp = () => {
     "Find your perfect match and share your University experience with the right roomate"
   );
   const [bg, setBg] = useState("bg");
+  const [bg1, setBg1] = useState("");
   const navigate = useNavigate();
   const { setUser, userStatus, setUserStatus } = useStateContext();
 
@@ -44,6 +45,8 @@ export const SignUp = () => {
     SetAccomondation_section("hide");
     SetRoomate_section("");
     setUserStatus("findingRoommate");
+    setBg("bg");
+    setBg1("");
   };
   const AccomondationHandler = (e) => {
     e.preventDefault();
@@ -52,6 +55,7 @@ export const SignUp = () => {
     SetAccomondation_section("");
     SetRoomate_section("hide");
     setUserStatus("findingAccommodation");
+    setBg1("bg");
     setBg("");
   };
 
@@ -84,7 +88,7 @@ export const SignUp = () => {
           <button onClick={RoommateHandler} className={`top-btn1 ${bg}`}>
             I Need A Roommate
           </button>
-          <button onClick={AccomondationHandler} className="top-btn2">
+          <button onClick={AccomondationHandler} className={`top-btn2 ${bg1}`}>
             I Need An Accommodation
           </button>
           <div className="personal-info">
