@@ -272,7 +272,7 @@ export const SignUp = () => {
           </button>
         </form>
       </section>
-      <AccomodationInfo />
+      {/* <AccomodationInfo /> */}
       {/* <RoommateInfo/> */}
       <Footer className="footer-layer-effect" />
     </div>
