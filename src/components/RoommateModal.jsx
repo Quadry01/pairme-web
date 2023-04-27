@@ -1,6 +1,5 @@
 import { useStateContext } from "../context/contextProvider";
 import { HiUser } from "react-icons/hi2";
-import { BsArrowRight } from "react-icons/bs";
 
 export const RoommateModal = ({roommateInfo}) => {
   const handleClose = (e) => {
@@ -49,7 +48,7 @@ export const RoommateModal = ({roommateInfo}) => {
               <div>
                 <span className="text-xs md:text-sm font-medium">Side Hustle</span>
                 <br />
-                <span>Freelance Web Developer</span>
+                <span>{roommateInfo?.sideHustle}</span>
                 <br />
               </div>
             </div>
@@ -76,7 +75,7 @@ export const RoommateModal = ({roommateInfo}) => {
 
               className="text-gray-500 font-medium text-center flex items-center justify-center"
             >
-              <span className="w-full"><button className="bg-blue md:bg-blue-foundation md:text-blue text-white rounded-full w-full h-8 md:h-12">Contact</button></span>
+              <span className="w-full md:mt-3"><button className="bg-blue md:bg-blue-foundation md:text-blue text-white rounded-full w-full h-8 md:h-12">Contact</button></span>
               
             </div>
           </div>

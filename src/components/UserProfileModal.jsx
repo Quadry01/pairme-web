@@ -3,7 +3,7 @@ import { HiUser } from "react-icons/hi2";
 import { BsArrowRight } from "react-icons/bs";
 
 export const UserProfileModal = () => {
-  const { profileModal, setProfileModal } = useStateContext();
+  const { profileModal, setProfileModal, user } = useStateContext();
   const handleClose = (e) => {
     if (e.target.id === "container") setProfileModal(false);
   };
@@ -29,7 +29,7 @@ export const UserProfileModal = () => {
           <div className=" text-2xl md:text-5xl mx-auto w-16 h-16 md:w-24 md:h-24 rounded-full ring-4 md:ring-6 ring-gray-400 flex items-center justify-center">
             <HiUser />
           </div>
-          <div className="text-center mt-6 text-base md:text-xl font-medium ">Adekunle Simeon</div>
+          <div className="text-center mt-6 text-base md:text-xl font-medium ">{user?.name}</div>
           <div className="text-center mt-1">University of Lagos</div>
           <div className="text-center mt-1">Computer Science</div>
           <div className="flex flex-col gap-y-4 mt-4">
