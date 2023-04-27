@@ -3,12 +3,20 @@ import { useState } from "react";
 import "./Signup.css";
 import { RiImageAddFill } from "react-icons/ri";
 import top_image from "../../images/Rectangle.png";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useStateContext } from "../../context/contextProvider";
-import RoommateInfo from "../../components/RoommateInfo/RoommateInfo";
-import AccomodationInfo from "../../components/AccomondationIfo/AccomodationInfo";
+import { useEffect } from "react";
 
 export const SignUp = () => {
+  const location = useLocation();
+  
+  useEffect(()=> {
+    if(location.pathname ==='/signup'){
+     window.scroll(0, 0)
+    }
+  }, [location])
+
+
   const roomateParagraph =
     " Find your perfect match and share your University experience with the right roomate";
   const accomondationParagraph =
@@ -33,8 +41,7 @@ export const SignUp = () => {
   const [form_paragraph, SetForm_paragraph] = useState(
     "Find your perfect match and share your University experience with the right roomate"
   );
-  const [bg, setBg] = useState("bg");
-  const [bg1, setBg1] = useState("");
+
   const navigate = useNavigate();
   const { setUser, userStatus, setUserStatus } = useStateContext();
 
@@ -45,8 +52,6 @@ export const SignUp = () => {
     SetAccomondation_section("hide");
     SetRoomate_section("");
     setUserStatus("findingRoommate");
-    setBg("bg");
-    setBg1("");
   };
   const AccomondationHandler = (e) => {
     e.preventDefault();
@@ -55,8 +60,6 @@ export const SignUp = () => {
     SetAccomondation_section("");
     SetRoomate_section("hide");
     setUserStatus("findingAccommodation");
-    setBg1("bg");
-    setBg("");
   };
 
   const handleFormSubmit = (e) => {
@@ -74,7 +77,8 @@ export const SignUp = () => {
   };
 
   return (
-    <div className="">
+    <div>
+      
       <div className="top-image-div">
         <img src={top_image} alt="top-img" />
       </div>
@@ -85,10 +89,10 @@ export const SignUp = () => {
             <p className="form-paragraph">{form_paragraph}</p>
           </div>
 
-          <button onClick={RoommateHandler} className={`top-btn1 ${bg}`}>
+          <button onClick={RoommateHandler} className="top-btn1">
             I Need A Roommate
           </button>
-          <button onClick={AccomondationHandler} className={`top-btn2 ${bg1}`}>
+          <button onClick={AccomondationHandler} className="top-btn2">
             I Need An Accommodation
           </button>
           <div className="personal-info">
@@ -277,8 +281,6 @@ export const SignUp = () => {
           </button>
         </form>
       </section>
-      {/* <AccomodationInfo /> */}
-      {/* <RoommateInfo/> */}
       <Footer className="footer-layer-effect" />
     </div>
   );

@@ -12,15 +12,20 @@ import { NotificationModal } from "../components/NotificationModal";
 import { LogoutModal } from "../components/LogoutModal";
 import { Roommate } from "../data/roomate";
 import { UserProfileModal } from "../components/UserProfileModal";
-import RoommateCard from '../components/RoommateCard/RoommateCard'
-
-
-
+import RoommateCard from '../components/RoommateCard/RoommateCard';
+import profileImg from '../images/profile.png';
 import { NavLink } from "react-router-dom";
-export const User = () => {
-  const { user, setUserModal, setProfileModal, setLogoutModal } = useStateContext()
+import { RoommateModal } from "../components/RoommateModal";
 
+export const User = () => {
+  const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal } = useStateContext()
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [roommateInfo, setRoomateInfo] = useState(null);
+
+  const handleRoommateInfo = (item)=>{
+        setRoommateModal(!roommateModal)
+        setRoomateInfo(item)
+  }
 
   return (
     <div className="bg-blue-foundation relative">
@@ -62,7 +67,7 @@ export const User = () => {
           <div className="text-2xl font-bold mt-24 mx-auto"><NavLink to ='/'>PairMe</NavLink></div>
           <div className="w-full text-center">
             <div className="rounded-full mx-auto ring-gray-active ring-8 w-36 h-36 mt-12">
-              <img className="w-full h-full" src="" alt="" />
+              <img className="w-full h-full" src={profileImg} alt="" />
             </div>
             <div className="mt-7">{user?.name}</div>
             <div onClick={()=>setProfileModal(true)} className="flex justify-center mt-3 text-xs cursor-pointer">View Profile <span className="flex items-center"><BsArrowRight className=" ml-2"/></span></div>
@@ -92,18 +97,21 @@ export const User = () => {
                 <button className="h-full w-24 md:w-40 text-white rounded-2xl bg-blue">Search</button>
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 justify-between mb-20 mt-10 gap-4 md:gap-8 ">
-             {user?.status ==='findingRoommate' ? Roommate.map((item)=>(
-              <div key={item.id}>
+            <div className="grid grid-cols-2 md:grid-cols-4 justify-between mb-20 mt-10 gap-4 md:gap-7 ">
+             {user?.status ==='findingRoommate' && Roommate.map((item)=>(
+              <div onClick={()=>handleRoommateInfo(item)} key={item.id} >
                 <RoommateCard
-                height={'h-44 md:h-72'}
+                height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white cursor:pointer'}
+                nameText={'font-semibold text-sm md:text-lg'}
+                cardText={'text-xxs md:text-xs pl-2 md:pl-4 pt-1 md:pt-3 gap-1 md:gap-2'}
                 name={item.name}
                 department={item.department}
                 religion={item.religion}
                 />
               </div>
-             )) :
+             )) }
 
+                { user?.status === 'findingAccommodation' &&
               (<div className="flex flex-col">
               <div>Accommodation</div>
               <div></div>
@@ -118,6 +126,7 @@ export const User = () => {
       <NotificationModal/>
       <UserProfileModal/>
       <LogoutModal/>
+      <RoommateModal roommateInfo={roommateInfo}/>
     </div>
   );
 };

@@ -16,7 +16,9 @@ import homeImg7 from "../images/Ellipse7.png";
 import homeImg8 from "../images/Ellipse8.png";
 
 export const HomePage = forwardRef(() => {
-  const { accomodationRef, homeRef, roommateRef } = useStateContext();
+  const { accomodationRef, homeRef, roommateRef} = useStateContext();
+
+ 
 
   return (
     <div className="relative bg-blue-foundation w-full h-auto">
@@ -32,16 +34,16 @@ export const HomePage = forwardRef(() => {
             >
               Find the best fit for you, both in roommate & accommodation
             </div>
-            <div className="text-gray-600 text-xxs w-9/12 md:w-full md:text-base font-normal mt-4">
+            <div className="text-gray-600 text-xxs w-9/12 md:w-11/12 md:text-base font-normal mt-4">
               We ensure you encounter zero stress when searching for a budget
               friendly apartment or for a suitable roommate.
             </div>
           </div>
           <div className="shadow-sm md:shadow-md w-full h-11 md:h-28 px-4 gap-2 md:gap-4 md:px-10 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
             <div className="flex gap-2 md:gap-4 justify-between items-center grow">
-              <DropDownComponent dropName="Location" />
-              <DropDownComponent dropName="Price" />
-              <DropDownComponent dropName="Type" />
+              <DropDownComponent dropName="Location" option1={'Yaba'} option2={'Idi-Araba'} option3={'Akoka'} option4={'Oju-elegba'} />
+              <DropDownComponent dropName="Price" option1={'250,000'} option2={'300,000'} option3={'400,000'} option4={'500,000'}/>
+              <DropDownComponent dropName="Type" option1={'Single room apartment'} option2={'studio apartment'} option3={'2 bedroom shared apartment'} option4={'self contain apartment'}/>
             </div>
             <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-8 tracking-wider font-light md:font-normal">
               <span className="md:text-xl">
@@ -52,7 +54,7 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-28 top-44 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-32 top-44 z-20">
           <img src={homeImg} className="w-full h-full" alt="" />
         </div>
       </section>
@@ -139,10 +141,12 @@ export const HomePage = forwardRef(() => {
                 className="relative md:first:blur-sm md:last:blur-sm"
               >
                 <RoommateCard
-                  height={"h-52 md:h-96"}
-                  name={item.name}
-                  department={item.department}
-                  religion={item.religion}
+                height={'h-[33vh] md:h-[27em] rounded-xl md:rounded-3xl'} 
+                nameText ={'text-sm md:text-3xl font-semibold'}
+                cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
+                name={item.name}
+                department={item.department}
+                religion={item.religion}
                 />
               </div>
             ))}

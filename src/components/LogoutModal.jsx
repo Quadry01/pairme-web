@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export const LogoutModal = ()=> {
-    const { logoutModal, setLogoutModal, setUser } = useStateContext();
+    const { logoutModal, setLogoutModal, setUser, user } = useStateContext();
     const navigate = useNavigate()
 
     const handleLogout = ()=>{

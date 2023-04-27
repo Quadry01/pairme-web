@@ -8,7 +8,7 @@ export const Roommate = [
     about:
       "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
     religion: "christianity",
-    "side-hustle": "Event Planning",
+    sideHustle: "Event Planning",
     routine:
       "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Football", "Event Planning", "Music"],
@@ -22,7 +22,7 @@ export const Roommate = [
     about:
       "Adebayo is a highly motivated computer science student with a passion for coding and problem-solving. He is always eager to learn new programming languages and improve his skills.",
     religion: "christianity",
-    "side-hustle": "Freelance Web Developer",
+    sideHustle: "Freelance Web Developer",
     routine:
       "Adebayo wakes up at 6am every day, attends classes from 8am to 3pm, works on his freelance projects from 4pm to 7pm, plays football in the evening and reads before going to bed.",
     hobbies: ["Football", "Reading", "Coding"],
@@ -36,7 +36,7 @@ export const Roommate = [
     about:
       "Jumoke is a creative and detail-oriented architecture student with a talent for graphic design. She enjoys using her design skills to create beautiful and functional spaces.",
     religion: "Islam",
-    "side-hustle": "Freelance Graphic Designer",
+    sideHustle: "Freelance Graphic Designer",
     routine:
       " Jumoke wakes up at 7am every day, attends classes from 9am to 2pm, works on her freelance graphic design projects from 3pm to 6pm, creates art in the evening, and listens to music before going to bed.",
     hobbies: ["Art", "Music", "Graphic Design"],
@@ -50,7 +50,7 @@ export const Roommate = [
     about:
       "Olumide is a skilled and creative computer science student with a talent for web development. He enjoys creating user-friendly websites and web applications.",
     religion: "christianity",
-    "side-hustle": "Web Developer",
+    sideHustle: "Web Developer",
     routine:
       "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Technology", "Music", "Football"],
@@ -64,7 +64,7 @@ export const Roommate = [
     about:
       "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
     religion: "christianity",
-    "side-hustle": "Freelance Journalist",
+    sideHustle: "Freelance Journalist",
     routine:
       "Patricia wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance journalism projects from 3pm to 6pm, reads in the evening, and listens to music before going to bed.",
     hobbies: ["Writing", "Reading", "Music"],
@@ -78,7 +78,7 @@ export const Roommate = [
     about:
       "Chima is a dedicated and hardworking economics student with a strong interest in education. She enjoys teaching and helping others to learn.",
     religion: "christianity",
-    "side-hustle": "Part-Time Tutor",
+    sideHustle: "Part-Time Tutor",
     routine:
       " Chima wakes up at 5am every day to study, attends classes from 8am to 2pm, tutors students from 3pm to 6pm, listens to music and reads before going to bed.",
     hobbies: ["Music", "Reading", "Tutoring"],
@@ -106,7 +106,7 @@ export const Roommate = [
     about:
       "Mabel is a creative and talented English language student with a passion for writing. She enjoys using her words to educate and inspire others.",
     religion: "christianity",
-    "side-hustle": "Content Writing",
+    sideHustle: "Content Writing",
     routine:
       "Mabel wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her content writing projects from 3pm to 6pm, volunteers at a local charity in the evening, and reads before going to bed.",
     hobbies: ["Reading", "Writing", "Volunteering"],
@@ -120,7 +120,7 @@ export const Roommate = [
     about:
       "Quadri is a creative and organized political science student with a talent for event planning. He enjoys creating memorable and successful events.",
     religion: "Islam",
-    "side-hustle": "Event Planning",
+    sideHustle: "Event Planning",
     routine:
       "Quadri wakes up at 7am every day, attends classes from 9am to 2pm, works on his event planning business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Music", "Football", "Event Planning"],
@@ -134,7 +134,7 @@ export const Roommate = [
     about:
       "Rukayat is a talented and analytical law student with a passion for writing. She enjoys using her legal knowledge to write persuasive and informative content.",
     religion: "Islam",
-    "side-hustle": "Freelance Writing",
+    sideHustle: "Freelance Writing",
     routine:
       "Rukayat wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance writing projects from 3pm to 6pm, volunteers at a local NGO in the evening, and reads before going to bed.",
     hobbies: ["Writing", "Reading", "Volunteering"],
@@ -148,7 +148,7 @@ export const Roommate = [
     about:
       "Emeka is a practical and hands-on mechanical engineering student with a talent for fixing cars and other machines. He enjoys working with his hands and solving problems.",
     religion: "christianity",
-    "side-hustle": "Automobile Repair",
+    sideHustle: "Automobile Repair",
     routine:
       "Emeka wakes up at 7am every day, attends classes from 9am to 2pm, works on his automotive repairs business from 3pm to 7pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Football", "Automobile Repair", "Music"],
@@ -162,7 +162,7 @@ export const Roommate = [
     about:
       "Ibrahim is a hardworking and dedicated medicine and surgery student with a talent for teaching. He enjoys helping others to understand complex concepts and excel in their studies.",
     religion: "Islam",
-    "side-hustle": "Private Tutor",
+    sideHustle: "Private Tutor",
     routine:
       "Ibrahim wakes up at 6 am every day to study, attends classes from 8am to 3pm, tutors students from 4pm to 7pm, plays football in the evening, and reads before going to bed.",
     hobbies: ["Football", "Tutoring", "Reading"],
@@ -176,7 +176,7 @@ export const Roommate = [
     about:
       "Lekan is a highly skilled and creative electrical engineering student with a talent for mobile app development. He enjoys using his knowledge of technology to create innovative solutions.",
     religion: "Islam",
-    "side-hustle": "Mobile App Developer",
+    sideHustle: "Mobile App Developer",
     routine:
       "Lekan wakes up at 7am every day, attends classes from 9am to 3pm, works on his mobile app development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Technology", "Football", "Music"],
@@ -190,7 +190,7 @@ export const Roommate = [
     about:
       "Samuel is a hardworking and skilled civil engineering student with a talent for construction. He enjoys building structures that are safe and functional.",
     religion: "christianity",
-    "side-hustle": "Construction Worker",
+    sideHustle: "Construction Worker",
     routine:
       "Samuel wakes up at 6am every day to work on construction projects, attends classes from 8am to 2pm, works on his construction business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Football", "Construction", "Music"],
@@ -204,7 +204,7 @@ export const Roommate = [
     about:
       "Uchechi is a patient and knowledgeable chemistry student with a talent for teaching. She enjoys helping other students to understand difficult concepts in chemistry.",
     religion: "christianity",
-    "side-hustle": "Tutor",
+    sideHustle: "Tutor",
     routine:
       "Uchechi wakes up at 6am every day to prepare for her tutoring sessions, attends classes from 8am to 2pm, tutors students from 3pm to 6pm, creates art in the evening, and listens to music before going to bed.",
     hobbies: ["Science", "Art", "Music"],
@@ -218,7 +218,7 @@ export const Roommate = [
     about:
       "Fatima is a creative and ambitious pharmacy student with a talent for writing. She enjoys using her words to inspire and educate others.",
     religion: "Islam",
-    "side-hustle": "Freelance Writer",
+    sideHustle: "Freelance Writer",
     routine:
       "Fatima wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance writing projects from 3pm to 6pm, volunteers at a local charity in the evening, and reads before going to bed.",
     hobbies: ["Writing", "Reading", "Volunteering"],
@@ -232,7 +232,7 @@ export const Roommate = [
     about:
       "Kemi is a stylish and creative accounting student with a talent for fashion design. She enjoys creating unique and beautiful clothing pieces.",
     religion: "christianity",
-    "side-hustle": "Fashion Designer",
+    sideHustle: "Fashion Designer",
     routine:
       "Kemi wakes up at 6am every day to design clothes, attends classes from 8am to 2pm, works on her fashion design business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
     hobbies: ["Fashion Design", "Football", "Music"],
@@ -246,7 +246,7 @@ export const Roommate = [
     about:
       "Nkechi is a practical and resourceful biochemistry student with a talent for small-scale farming. She enjoys growing her own food and promoting sustainable agriculture.",
     religion: "christianity",
-    "side-hustle": "Small-Scale Farmer",
+    sideHustle: "Small-Scale Farmer",
     routine:
       "Nkechi wakes up at 5 am every day to tend to her farm, attends classes from 8am to 1pm, works on her farming projects from 2pm to 6pm, goes for a walk in nature in the evening, and reads about sustainable agriculture before going to bed.",
     hobbies: ["Nature", "Wildlife", "Farming"],
@@ -260,7 +260,7 @@ export const Roommate = [
     about:
       "Tunde is a charismatic and strategic business administration student with a talent for online marketing. He enjoys helping businesses to grow through effective digital marketing strategies.",
     religion: "christianity",
-    "side-hustle": "Online Marketer",
+    sideHustle: "Online Marketer",
     routine:
       "Tunde wakes up at 7am every day, attends classes from 9am to 2pm, works on his online marketing business from 3pm to 6pm, reads about business and entrepreneurship in the evening, and listens to music before going to bed.",
     hobbies: ["Reading", "Music", "entrepreneurship"],
@@ -274,7 +274,7 @@ export const Roommate = [
     about:
       "Victor is a creative and innovative electrical engineering student with a talent for graphic design. He enjoys creating visually appealing designs for businesses and individuals.",
     religion: "christianity",
-    "side-hustle": "Freelance Graphic Designer",
+    sideHustle: "Freelance Graphic Designer",
     routine:
       "Victor wakes up at 7am every day, attends classes from 9am to 2pm, works on his graphic design projects from 3pm to 6pm, watches comedy shows in the evening, and listens to music before going to bed.",
     hobbies: ["Music", "Comedy", "Tehnology"],

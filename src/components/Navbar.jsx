@@ -1,10 +1,22 @@
-import { NavLink} from "react-router-dom";
+import { NavLink, useLocation} from "react-router-dom";
 import {HiUser} from 'react-icons/hi2';
 import { useStateContext } from "../context/contextProvider";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const Navbar = () => {
-
+  const location = useLocation()
   const {setShowModal, accomodationRef, homeRef, roommateRef} = useStateContext()
+
+  const [showNavList, setShowNavList] = useState(false)
+
+  useEffect(()=> {
+    if(location.pathname ==='/signup'){
+      setShowNavList(false)
+    }else{
+      setShowNavList(true)
+    }
+  },[location])
 
   const Link = [
     { name: "Home", link: "/", id:"home" },
@@ -18,9 +30,7 @@ export const Navbar = () => {
     if(e.target.id === "home") homeRef.current?.scrollIntoView({behavior:'smooth', block: 'end'})
     if (e.target.id === "accomodation") accomodationRef.current?.scrollIntoView({behavior:'smooth',block: 'center'})
     if (e.target.id === "roommate")roommateRef.current?.scrollIntoView({behavior:'smooth', block: 'center'})
-
-  }
-
+}
 
   return (
     <nav className="bg-white w-full shadow-sm md:shadow-sm md:h-32 flex fixed top-0 left-0 z-40 text-blue">
@@ -30,6 +40,7 @@ export const Navbar = () => {
           <NavLink to="/">PairMe</NavLink>
         </div>
         <div className=" hidden lg:block">
+          {showNavList && 
           <ul className="md:flex md:items-center gap-x-9 md:font-normal tracking-wider">
             {Link.map((link) => (
               <li
@@ -42,15 +53,18 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
+          }
         </div>
         {/* Authentication prompt */}
         <div className="flex  gap-6 md:gap-x-10 text-xxs md:text-base">
             <div className="flex items-center gap-1 cursor-pointer" onClick ={() => setShowModal(true)}>
                 <span className="hidden md:block"><HiUser/></span> <span>Log in</span>
             </div>
+            { showNavList &&
             <div>
                 <NavLink to ='/signup'><button className="bg-blue text-white h-7 w-16 md:h-14 md:w-32 rounded-full">Sign Up</button></NavLink>
             </div>
+            }
         </div>
       </div>
     </nav>
