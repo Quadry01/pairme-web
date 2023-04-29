@@ -1,11 +1,16 @@
 import { useStateContext } from "../context/contextProvider";
 import { HiUser } from "react-icons/hi2";
+import { useState } from "react";
+import { FaThumbsUp} from 'react-icons/fa'
 
 export const RoommateModal = ({roommateInfo}) => {
   const handleClose = (e) => {
     if (e.target.id === "container") setRoommateModal(!roommateModal);
   };
+
+  const [showInterest, setShowInterest] = useState(false)
   const {setRoommateModal, roommateModal} = useStateContext()
+  
 
   return (
     <>
@@ -66,21 +71,33 @@ export const RoommateModal = ({roommateInfo}) => {
                 {roommateInfo?.hobbies.map((item, i) =>
                     <li key={i}>{item}</li>
                 )}
-                {/* <li>Football</li>
-                <li>Reading</li>
-                <li>Coding</li> */}
+                
               </div>
             </div>
             <div
 
               className="text-gray-500 font-medium text-center flex items-center justify-center"
             >
-              <span className="w-full md:mt-3"><button className="bg-blue md:bg-blue-foundation md:text-blue text-white rounded-full w-full h-8 md:h-12">Contact</button></span>
+              <span className="w-full md:mt-3"><button onClick={()=>setShowInterest(true)} className="bg-blue md:bg-blue-foundation md:text-blue text-white rounded-full w-full h-8 md:h-12">Contact</button></span>
               
             </div>
           </div>
         </div>
       </div>
+
+      {showInterest &&(
+        <div onClick={(e)=> e.target.id ==='interest-container'? setShowInterest(!showInterest) : null} id='interest-container' className="inset-0 fixed bg-black z-120 bg-opacity-30 flex items-center justify-center">
+          <div className="text-xxs md:text-xs px-5 md:px-10 gap-2 md:gap-3 flex flex-col items-center justify-center h-[28%] md:h-[43%] w-[24em] rounded-xl md:rounded-2xl bg-white text-blue">
+            <div> <span className="bg-red text-4xl text-gray-700 md:text-blue md:text-7xl"><FaThumbsUp/></span></div>
+            <div className="text-center leading-4 md:leading-6">{`You have successfully shown your interest in ${roommateInfo?.name.split(" ")[0]}. Continue your search 
+              while you wait for a response.`}
+            </div>
+            <div>
+              <button onClick={()=> {setShowInterest(false); setRoommateModal(true)}} className="rounded-full w-16 md:w-24 h-5 md:h-8 bg-blue text-white">Continue</button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

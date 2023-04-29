@@ -1,6 +1,6 @@
 import { useStateContext } from "../context/contextProvider";
 import {FaChevronDown} from 'react-icons/fa';
-import {IoMdThumbsUp} from 'react-icons/io'
+import { FaThumbsUp} from 'react-icons/fa';
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NotifyData } from "../data/NotificatioData";
@@ -15,7 +15,6 @@ export const NotificationModal = () => {
   };
   const closeNotifyDetail = (e) =>{
     if (e.target.id ==='notifyDetail') setNotifyDetail(false)
-    setNotifyText(null)
   }
   
    
@@ -56,7 +55,7 @@ export const NotificationModal = () => {
       { notifyDetail ===true ? 
         (<div  onClick={closeNotifyDetail} id="notifyDetail" className="inset-0 fixed bg-black z-120 bg-opacity-30 flex items-center justify-center">
             <div className="bg-white text-blue pb-8 md:pb-[120px] w-60 mt-8 md:mt-0 md:w-[33.3%] h-auto rounded-lg md:rounded-3xl px-7 absolute">
-              <div className="text-gray-700 md:text-blue text-3xl md:text-8xl flex justify-center mt-12 md:mt-28"><IoMdThumbsUp/></div><br />
+              <div className="text-gray-700 md:text-blue text-3xl md:text-8xl flex justify-center mt-12 md:mt-28"><FaThumbsUp/></div><br />
               <div className="text-xs md:text-base text-center">{notifyText}</div>
               <div className="flex justify-center"><Link to='/payment'><button className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">proceed to payment </button></Link></div>
             </div>
