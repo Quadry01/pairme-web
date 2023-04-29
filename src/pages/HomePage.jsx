@@ -141,7 +141,7 @@ export const HomePage = forwardRef(() => {
                 className="relative md:first:blur-sm md:last:blur-sm"
               >
                 <RoommateCard
-                height={'h-[33vh] md:h-[27em] rounded-xl md:rounded-3xl'} 
+                height={'h-[14em] md:h-[27em] rounded-xl md:rounded-3xl'} 
                 nameText ={'text-sm md:text-3xl font-semibold'}
                 cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
                 name={item.name}

@@ -101,7 +101,7 @@ export const User = () => {
              {user?.status ==='findingRoommate' && Roommate.map((item)=>(
               <div onClick={()=>handleRoommateInfo(item)} key={item.id} >
                 <RoommateCard
-                height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white cursor:pointer'}
+                height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white hover:cursor-pointer'}
                 nameText={'font-semibold text-sm md:text-lg'}
                 cardText={'text-xxs md:text-xs pl-2 md:pl-4 pt-1 md:pt-3 gap-1 md:gap-2'}
                 name={item.name}
