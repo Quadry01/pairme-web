@@ -350,8 +350,8 @@ select:valid {
     width: 45%;
     position: relative;
     left: -53px;
-    padding: 0;
-    padding-left: 10px;
+    padding: 0px;
+    padding-left: 5px;
   }
   .date-input {
     height: 50px;
@@ -400,5 +400,22 @@ select:valid {
   .genderDob {
     padding-left: 15px;
     width: 90%;
+  }
+
+  .school-drpdwn {
+    padding: 0px 5px;
+  }
+  .accomondation-type {
+    padding: 0 5px;
+  }
+  .furnish-description {
+    padding: 0px 5px;
+  }
+  .preffered-location {
+    padding: 0 5px;
+  }
+
+  .preffered-accomondation {
+    padding: 0 5px;
   }
 }
