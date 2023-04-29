@@ -268,7 +268,7 @@ export const Roommate = [
   {
     id: 20,
     imgURL: "",
-    name: "Viictor Onwuka",
+    name: "Victor Onwuka",
     university: "University of Lagos",
     department: "Electrical Engineering",
     about:
