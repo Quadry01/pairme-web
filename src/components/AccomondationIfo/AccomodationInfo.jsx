@@ -9,7 +9,7 @@ const AccomodationInfo = () => {
   return (
     <div className="accomondation-card-container">
       <>
-        <h1 className="accomodation-main-header">Self Contain</h1>
+        <h1 className="accomodation-main-header text-2xl">Self Contain</h1>
         <div className="grid-container">
           <div className="grid-img1">1</div>
           <div className="grid-img2">2</div>
@@ -18,16 +18,16 @@ const AccomodationInfo = () => {
         </div>
         <div>
           <h5 className="accomodation-header">Overview</h5>
-          <p>
+          <p className="sm:w-full text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
             debitis, accusantium provident incidunt laboriosam natus commodi
-            vero inventore quas sint.
+            vero inventore quas sint just a sample text.
           </p>
         </div>
         <div>
           <h5 className="accomodation-header">Location</h5>
           <iframe
-            className="iframe-map"
+            className="iframe-map sm:w-full m-0 p-0"
             title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.046772803073!2d3.387269774665151!3d6.515764323253908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d24c04d3e75%3A0x7347f1a6be13e004!2sUniversity%20of%20Lagos!5e0!3m2!1sen!2sng!4v1682168559663!5m2!1sen!2sng"
             allowfullscreen=""
@@ -75,7 +75,7 @@ const AccomodationInfo = () => {
           </div>
           <div className="rules-section">
             <h5 className="rule-header">
-              Rules and <br /> Regulations
+              Rules and <br className="rm-br" /> Regulations
             </h5>
             <ul className="rules-list1">
               <li className="li">No Entry after 10:00pm</li>

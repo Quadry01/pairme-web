@@ -6,7 +6,7 @@
   margin-top: 30px;
   background-color: white;
   border-radius: 50px;
-  border-top: solid 90px #072f3b;
+  border-top: solid 90px white;
   border-bottom: solid 50px white;
   text-align: center;
   position: relative;
@@ -34,7 +34,8 @@
   border-radius: 30px;
   margin-bottom: 15px;
 }
-.bg {
+.bg1,
+.bg2 {
   background-color: #072f3b;
   color: white;
 }
@@ -105,7 +106,7 @@
   border-radius: 8px;
   padding: 0 20px;
   position: relative;
-  right: 80px;
+  right: 90px;
   margin-bottom: 15px;
 }
 .date-input {
@@ -305,11 +306,11 @@ select:valid {
 @media screen and (max-width: 640px) {
   .form-container {
     width: 85%;
-    border-top: solid 50px #072f3b;
+    border-top: solid 50px white;
   }
   .top-image-div {
     width: 85%;
-    top: 150px;
+    top: 148px;
   }
   .name-input {
     padding: 7px;
@@ -346,20 +347,24 @@ select:valid {
   .gender-drpdwn {
     height: 50px;
     border: solid 1px #072f3b;
-    width: 40%;
+    width: 45%;
     position: relative;
-    left: -38px;
+    left: -53px;
     padding: 0;
     padding-left: 10px;
   }
   .date-input {
     height: 50px;
     border: solid 1px #072f3b;
-    width: 45%;
+    width: 50%;
     font-size: smaller;
+    margin-left: 10px;
   }
   .date-of-birth {
-    visibility: hidden;
+    font-size: 10px;
+    position: relative;
+    top: 15px;
+    left: 60px;
   }
   .img-icon {
     font-size: 35px;
@@ -391,5 +396,9 @@ select:valid {
   .top-btn2:hover {
     background-color: #072f3b;
     color: white;
+  }
+  .genderDob {
+    padding-left: 15px;
+    width: 90%;
   }
 }

@@ -9,13 +9,12 @@ import { useEffect } from "react";
 
 export const SignUp = () => {
   const location = useLocation();
-  
-  useEffect(()=> {
-    if(location.pathname ==='/signup'){
-     window.scroll(0, 0)
-    }
-  }, [location])
 
+  useEffect(() => {
+    if (location.pathname === "/signup") {
+      window.scroll(0, 0);
+    }
+  }, [location]);
 
   const roomateParagraph =
     " Find your perfect match and share your University experience with the right roomate";
@@ -33,11 +32,12 @@ export const SignUp = () => {
   const [hobbies, setHobbies] = useState("");
   const [roomateDes, setroomateDes] = useState("");
   const [department, setDepartment] = useState("");
-
+  const [bg1, setBg1] = useState("bg1");
+  const [bg2, setBg2] = useState("");
   const [budget, setBudget] = useState("");
   const [roommate_section, SetRoomate_section] = useState("");
   const [accomondation_section, SetAccomondation_section] = useState("hide");
-  const [form_hearder, SetForm_header] = useState("Roomates");
+  const [form_hearder, SetForm_header] = useState("Roommates");
   const [form_paragraph, SetForm_paragraph] = useState(
     "Find your perfect match and share your University experience with the right roomate"
   );
@@ -52,6 +52,8 @@ export const SignUp = () => {
     SetAccomondation_section("hide");
     SetRoomate_section("");
     setUserStatus("findingRoommate");
+    setBg2("");
+    setBg1("bg1");
   };
   const AccomondationHandler = (e) => {
     e.preventDefault();
@@ -60,6 +62,8 @@ export const SignUp = () => {
     SetAccomondation_section("");
     SetRoomate_section("hide");
     setUserStatus("findingAccommodation");
+    setBg1("");
+    setBg2("bg2");
   };
 
   const handleFormSubmit = (e) => {
@@ -78,7 +82,6 @@ export const SignUp = () => {
 
   return (
     <div>
-      
       <div className="top-image-div">
         <img src={top_image} alt="top-img" />
       </div>
@@ -89,10 +92,10 @@ export const SignUp = () => {
             <p className="form-paragraph">{form_paragraph}</p>
           </div>
 
-          <button onClick={RoommateHandler} className="top-btn1">
+          <button onClick={RoommateHandler} className={`top-btn1 ${bg1}`}>
             I Need A Roommate
           </button>
-          <button onClick={AccomondationHandler} className="top-btn2">
+          <button onClick={AccomondationHandler} className={`top-btn2 ${bg2}`}>
             I Need An Accommodation
           </button>
           <div className="personal-info">
@@ -127,25 +130,26 @@ export const SignUp = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email Address"
             ></input>
+            <div className="genderDob">
+              <select className="gender-drpdwn" name="gender">
+                <optgroup>
+                  <option disabled selected hidden value="">
+                    Gender
+                  </option>
+                  <option value="male">Male</option>
+                  <option value="female">female</option>
+                </optgroup>
+              </select>
 
-            <select className="gender-drpdwn" name="gender">
-              <optgroup>
-                <option disabled selected hidden value="">
-                  Gender
-                </option>
-                <option value="male">Male</option>
-                <option value="female">female</option>
-              </optgroup>
-            </select>
-
-            <label>
-              <span className={`date-of-birth ${dob}`}>Date of Birth</span>
-              <input
-                className="date-input hide-date"
-                type="date"
-                name="date-of-birth"
-              ></input>
-            </label>
+              <label>
+                <span className={`date-of-birth ${dob}`}>Date of Birth</span>
+                <input
+                  className="date-input hide-date"
+                  type="date"
+                  name="date-of-birth"
+                ></input>
+              </label>
+            </div>
             <label className="dispay-picture-tag">
               <RiImageAddFill className="img-icon" /> Display Picture
               <input
