@@ -11,7 +11,7 @@ const RoommateCard = ({name, department, religion, height, nameText, cardText}) 
             <img src={accom} alt="imag" />
           </div>
           <div className={` h-full flex flex-col details ${cardText}`}>
-            <h2 className= {`${nameText}`}>{name.length > 13 ? `${name.substring(0, 13)}` : name}</h2>
+            <h2 className= {`${nameText}`}>{name.split(" ")[0]}</h2>
             <h5 className="course">
               <BsBook className="roomate-card-icon" />
               {department.length > 25 ? `${department.substring(0, 25)}` : department}
