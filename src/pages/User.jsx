@@ -118,6 +118,7 @@ export const User = () => {
                      height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white hover:cursor-pointer'}
                      nameText={'font-semibold text-sm md:text-lg'}
                      cardText={'text-xxs md:text-xs pl-2 md:pl-4 pt-1 md:pt-3 gap-1 md:gap-2'}
+                     payText ={'text-xs md:text-sm'}
                      type ={item.type}
                      yearlyrent={item.yearlyrent}
                      location={item.name}
