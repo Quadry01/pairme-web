@@ -4,24 +4,23 @@ import { MdLocationPin } from "react-icons/md";
 import { BsHouseFill } from "react-icons/bs";
 import accom from "../../images/accom.png";
 
-const AccomodationCard = () => {
+const AccomodationCard = ({height, nameText, cardText, payText, location, yearlyrent, type}) => {
 
   return (
-    <div className="accomodation-card-wrapper h-52 md:h-72 shadow-sm md:shadow-md">
+    <div className={`${height} accomodation-card-wrapper shadow-sm md:shadow-md text-gray-700 bg-white`}>
       <div className="accomodation-img-div">
         <img src={accom} alt="hostel"></img>
       </div>
-      <div className="accomodation-details md:text-sm text-xxs ">
-        <h1 className="accomodation-name text-sm md:text-lg"> Aflix Hostel</h1>
-        <span className="accomodation-type">
+      <div className={`${cardText} h-full flex flex-col`}>
+        <h1 className={`${nameText}`}>Hostel</h1>
+        <h2>
           <BsHouseFill className="accomodation-card-icon" />
-          Self Contain
-        </span>
-        <br />
-        <span className="accomodation-location">
-          <MdLocationPin className="accomodation-card-icon" /> Mayfair
-        </span> <br/>
-        <span className="accomodation-price  text-sm md:text-lg"> £75,000/year</span>
+          {type}
+        </h2>
+        <h2>
+          <MdLocationPin className="accomodation-card-icon" /> {location.length > 15 ? `${location.substring(0, 15)}...` : location}
+        </h2>
+        <h2 className={`${payText}`}> ₦{yearlyrent}/year</h2>
       </div>
     </div>
   );

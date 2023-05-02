@@ -7,6 +7,7 @@ import { useStateContext } from "../context/contextProvider";
 import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
 import RoommateCard from "../components/RoommateCard/RoommateCard";
 import { Roommate } from "../data/roomate";
+import accommodationData from '../data/accommodation.json'
 
 import "../App.css";
 
@@ -45,7 +46,7 @@ export const HomePage = forwardRef(() => {
               <DropDownComponent dropName="Price" option1={'250,000'} option2={'300,000'} option3={'400,000'} option4={'500,000'}/>
               <DropDownComponent dropName="Type" option1={'Single room apartment'} option2={'studio apartment'} option3={'2 bedroom shared apartment'} option4={'self contain apartment'}/>
             </div>
-            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-8 tracking-wider font-light md:font-normal">
+            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-6 tracking-wider font-light md:font-normal">
               <span className="md:text-xl">
                 <CiSearch />
               </span>
@@ -76,7 +77,7 @@ export const HomePage = forwardRef(() => {
               style={{ lineHeight: "2" }}
               className="font-normal text-xs md:font-light md:text-xl md:mt-11 text-justify"
             >
-              Pairme.com simplifies the task of finding accommodation and a
+              Pairmeon.com simplifies the task of finding accommodation and a
               roommate for tertiary institution students in Nigeria. Our
               approach involves linking students requiring reasonably priced
               accommodation with others who already have comfortable housing and
@@ -101,9 +102,24 @@ export const HomePage = forwardRef(() => {
             </div>
           </div>
           <div className="relative grid grid-cols-3 mt-5 -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
-            <div className="relative md:first:blur-sm md:last:blur-sm">
-              <AccomodationCard />
-            </div>
+            {
+              (window.innerWidth > 798
+                ? accommodationData.slice(0, 5)
+                : accommodationData.slice(0, 3)).map((item) =>
+
+            <div key={item.id} className="relative md:first:blur-sm md:last:blur-sm">
+              <AccomodationCard 
+              height={'h-[14em] md:h-[27em] rounded-xl md:rounded-3xl'}
+              nameText ={'text-sm md:text-3xl font-semibold'}
+              cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
+              payText ={'text-sm md:text-lg'}
+              type ={item.type}
+              yearlyrent={item.yearlyrent}
+              location={item.name}
+              />
+            </div>        
+              )
+            }
           </div>
           <div className="relative flex ">
             <div className="h-80  w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 left-0"></div>
