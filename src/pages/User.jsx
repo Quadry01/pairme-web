@@ -7,15 +7,16 @@ import {IoLogOut} from 'react-icons/io5';
 import {HiUser} from 'react-icons/hi2';
 import {RxTextAlignJustify} from 'react-icons/rx';
 import { useState } from "react";
-
+import accommodationData from '../data/accommodation.json'
 import { NotificationModal } from "../components/NotificationModal";
 import { LogoutModal } from "../components/LogoutModal";
 import { Roommate } from "../data/roomate";
 import { UserProfileModal } from "../components/UserProfileModal";
 import RoommateCard from '../components/RoommateCard/RoommateCard';
-import profileImg from '../images/profile.png';
+import profileImg from '../images/humanIcon.jpeg';
 import { NavLink } from "react-router-dom";
 import { RoommateModal } from "../components/RoommateModal";
+import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
 
 export const User = () => {
   const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal } = useStateContext()
@@ -66,7 +67,7 @@ export const User = () => {
         <section className=" md:overflow-y-auto hidden md:flex flex-col items-center md:h-screen md:w-3/12 text-white bg-blue">
           <div className="text-2xl font-bold mt-24 mx-auto"><NavLink to ='/'>PairMe</NavLink></div>
           <div className="w-full text-center">
-            <div className="rounded-full mx-auto ring-gray-active ring-8 w-36 h-36 mt-12">
+            <div className="rounded-full mx-auto ring-gray-active ring-8 w-36 h-36 mt-12 overflow-hidden">
               <img className="w-full h-full" src={profileImg} alt="" />
             </div>
             <div className="mt-7">{user?.name}</div>
@@ -92,9 +93,9 @@ export const User = () => {
               {user?.status ==='findingRoommate' ?'Find your perfect match and share your university experience with the right roommate! ':
               'Discover your ideal ‘home away from home’ with our affordable & student-friendly range of accommodation options!'}
               </div>
-              <div className="text-sm flex items-center justify-between h-11 mt-8  gap-2 md:gap-5 w-full">
+              <div className="text-sm flex items-center justify-between h-8 md:h-11 mt-8  gap-2 md:gap-5 w-full">
                 <input placeholder="search keyword" type="text"className="h-full w-full rounded-xl md:rounded-2xl outline-none ring-blue ring-1 px-2 md:px-5 bg-transparent"/> 
-                <button className="h-full w-24 md:w-40 text-white rounded-2xl bg-blue">Search</button>
+                <button className="h-full w-24 md:w-40 text-white rounded-full bg-blue text-xs md:text-lg">Search</button>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 justify-between mb-20 mt-10 gap-4 md:gap-7 ">
@@ -111,11 +112,19 @@ export const User = () => {
               </div>
              )) }
 
-                { user?.status === 'findingAccommodation' &&
-              (<div className="flex flex-col">
-              <div>Accommodation</div>
-              <div></div>
-            </div> )
+                { user?.status === 'findingAccommodation' && accommodationData.map((item) => (
+                  <div key={item.id}>
+                    <AccomodationCard
+                     height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white hover:cursor-pointer'}
+                     nameText={'font-semibold text-sm md:text-lg'}
+                     cardText={'text-xxs md:text-xs pl-2 md:pl-4 pt-1 md:pt-3 gap-1 md:gap-2'}
+                     type ={item.type}
+                     yearlyrent={item.yearlyrent}
+                     location={item.name}
+                    />
+                  </div>
+                ))
+              
             }
             </div>
           </div>  

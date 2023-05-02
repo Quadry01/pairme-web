@@ -2,6 +2,7 @@ import { useStateContext } from "../context/contextProvider";
 import { HiUser } from "react-icons/hi2";
 import { useState } from "react";
 import { FaThumbsUp} from 'react-icons/fa'
+import {MdWavingHand} from 'react-icons/md'
 
 export const RoommateModal = ({roommateInfo}) => {
   const handleClose = (e) => {
@@ -78,7 +79,7 @@ export const RoommateModal = ({roommateInfo}) => {
 
               className="text-gray-500 font-medium text-center flex items-center justify-center"
             >
-              <span className="w-full md:mt-3"><button onClick={()=>setShowInterest(true)} className="bg-blue md:bg-blue-foundation md:text-blue text-white rounded-full w-full h-8 md:h-12">Contact</button></span>
+              <span className="w-full md:mt-3"><button onClick={()=>setShowInterest(true)} className="bg-blue md:bg-blue-foundation md:text-blue text-white rounded-full w-full h-8 md:h-12 flex items-center justify-center gap-1 md:gap-2"><span>Wave at {roommateInfo?.name.split(" ")[0]}</span> <span><MdWavingHand/></span></button></span>
               
             </div>
           </div>

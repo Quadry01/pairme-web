@@ -1,32 +1,820 @@
 [
-    {
-        "id": 1,
-        "imgURL":[
-            {
-                "interior":"",
-                "front-view":"",
-                "left-view":"",
-                "right-view":""
-            }
-        ],
-        "name": "Chemist",
-        "type": "Studio apartment with a single bed",
-        "location": "10-minute walk to the nearest bus stop",
-        "yearly-rent": "",
-        "overview": "",
-        "features": [],
-        "hostel-regulations": [],
-        "linked-roommate":[
-            {
-                "name": "Gbenga Adebayo",
-                "university": "University of Lagos",
-                "department": "Law",
-                "about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
-                "religion": "christianity",
-                "side-hustle": "Event Planning",
-                "routine": "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
-                "hobbies": ["Football", "Event Planning", "Music"]
-              }
-        ]
-    }
+  {
+    "id": 1,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Chemist",
+    "type": "Studio Apartment",
+    "distance": [
+      {
+        "driving": 4,
+        "cycling": 7,
+        "trekking": 10
+      }
+    ],
+    "yearlyrent": 120000,
+    "overview": "Studio apartment with a single bed, table, and chair. 10-minute walk to the nearest bus stop. Regular power supply and access to clean water. Strict rules against smoking and noise.",
+    "features": ["Regular power supply", "Access to clean water"],
+    "hostelregulations": ["No smoking", "No noise-making"],
+    "linkedroommate": [
+      {
+        "name": "Gbenga Adebayo",
+        " university": "University of Lagos",
+        "department": "Law",
+        " about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
+        "religion": "christianity",
+        "sideHustle": "Event Planning",
+        "routine": "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Football", "Event Planning", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Dada Street",
+    "type": "Shared apartment",
+    "distance": [
+      {
+        "driving": 1,
+        "cycling": 2,
+        "trekking": 5
+      }
+    ],
+    "yearlyrent": 180000,
+    "overview": "Shared apartment with four bedrooms and two bathrooms. Furnished with basic amenities including beds, tables, and chairs. 5-minute walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise"],
+    "linkedroommate": [
+      {
+        "name": "Adebayo Adekule",
+        " university": "University of Lagos",
+        "department": "computer science",
+        "about": "Adebayo is a highly motivated computer science student with a passion for coding and problem-solving. He is always eager to learn new programming languages and improve his skills.",
+        "religion": "christianity",
+        "sideHustle": "Freelance Web Developer",
+        "routine": "Adebayo wakes up at 6am every day, attends classes from 8am to 3pm, works on his freelance projects from 4pm to 7pm, plays football in the evening and reads before going to bed.",
+        "hobbies": ["Football", "Reading", "Coding"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Pako Area",
+    "type": "Shared apartment",
+    "distance": [
+      {
+        "driving": 5,
+        "cycling": 8,
+        "trekking": 10
+      }
+    ],
+    "yearlyrent": 150000,
+    "overview": "Shared apartment with two bedrooms and two bathrooms. Furnished with basic amenities including beds, tables, and chairs. 10-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise", "No fighting"],
+    "linkedroommate": [
+      {
+        "name": "Jumoke Adekunle",
+        "university": "University of Lagos",
+        "department": "Architecture",
+        "about": "Jumoke is a creative and detail-oriented architecture student with a talent for graphic design. She enjoys using her design skills to create beautiful and functional spaces.",
+        "religion": "Islam",
+        "sideHustle": "Freelance Graphic Designer",
+        "routine": " Jumoke wakes up at 7am every day, attends classes from 9am to 2pm, works on her freelance graphic design projects from 3pm to 6pm, creates art in the evening, and listens to music before going to bed.",
+        "hobbies": ["Art", "Music", "Graphic Design"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Dada street",
+    "type": "Studio apartment",
+    "distance": [
+      {
+        "driving": 1,
+        "cycling": 2,
+        "trekking": 5
+      }
+    ],
+    "yearlyrent": 100000,
+    "overview": "Studio apartment with a single bed, reading chair and table. Furnished with basic amenities including beds, tables & chairs and an in-built kitchen. 5-minute walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking, fighting, late nights and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": [
+      "No smoking",
+      "No loud noise",
+      "No fighting",
+      "No late nights"
+    ],
+    "linkedroommate": [
+      {
+        "name": "Olumide Ogunmola",
+        " university": "University of Lagos",
+        "department": "computer science",
+        " about": "Olumide is a skilled and creative computer science student with a talent for web development. He enjoys creating user-friendly websites and web applications.",
+        "religion": "christianity",
+        "sideHustle": "Web Developer",
+        "routine": "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Technology", "Music", "Football"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Ilaje Area",
+    "type": "Self-Contain Apartment",
+    "distance": [
+      {
+        "driving": 2,
+        "cycling": 3,
+        "trekking": 6
+      }
+    ],
+    "yearlyrent": 110000,
+    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair, semi-detached kitchen. 6-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise", "No fighting"],
+    "linkedroommate": [
+      {
+        " name": "Patricia Adeleke",
+        " university": "University of Lagos",
+        "department": "Mass Communication",
+        "about": "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+        "religion": "christianity",
+        "sideHustle": "Freelance Journalist",
+        "routine": "Patricia wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance journalism projects from 3pm to 6pm, reads in the evening, and listens to music before going to bed.",
+        "hobbies": ["Writing", "Reading", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Chemist Area",
+    "type": "Self-Contain Apartment",
+    "distance": [
+      {
+        "driving": 4,
+        "cycling": 6,
+        "trekking": 9
+      }
+    ],
+    "yearlyrent": 130000,
+    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair, reading room (library), semi-detached kitchen. 9-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting, littering, latenights and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished",
+      "Reading room"
+    ],
+    "hostelregulations": [
+      "No smoking",
+      "No loud noise",
+      "No littering",
+      "No late nights"
+    ],
+    "linkedroommate": [
+      {
+        "name": "Chima Nwachukwu",
+        " university": "University of Lagos",
+        "department": "Economics",
+        "about": "Chima is a dedicated and hardworking economics student with a strong interest in education. She enjoys teaching and helping others to learn.",
+        " religion": "christianity",
+        "sideHustle": "Part-Time Tutor",
+        "routine": " Chima wakes up at 5am every day to study, attends classes from 8am to 2pm, tutors students from 3pm to 6pm, listens to music and reads before going to bed.",
+        " hobbies": ["Music", "Reading", "Tutoring"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "CMS Grammar School",
+    "type": "Shared Apartment ",
+    "distance": [
+      {
+        "driving": 10,
+        "cycling": 14,
+        "trekking": 20
+      }
+    ],
+    "yearlyrent": 120000,
+    "overview": "Shared apartment with three bedrooms and one bathroom. Furnished with basic amenities including beds, tables & chairs. 20-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise", "No fighting"],
+    "linkedroommate": [
+      {
+        "name": "Halima Musa",
+        "university": "University of Lagos",
+        " department": "Mass Communication",
+        "about": "Halima is a charismatic and outgoing mass communication student with a large following on social media. She enjoys using her platform to promote positive messages and connect with others.",
+        "religion": "Islam",
+        "sideHustle": "Social Media Influencer",
+        "routine": "Halima is a charismatic and outgoing mass communication student with a large following on social media. She enjoys using her platform to promote positive messages and connect with others.",
+        "hobbies": ["Music", "Social Media", "Volunteering"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Anuoluwapo/Police Station",
+    "type": "Shared Apartment ",
+    "distance": [
+      {
+        "driving": 8,
+        "cycling": 11,
+        "trekking": 15
+      }
+    ],
+    "yearlyrent": 140000,
+    "overview": "Shared apartment with three bedrooms and three bathrooms. Furnished with basic amenities including beds, tables & chairs. 15-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise", "No fighting"],
+    "linkedroommate": [
+      {
+        " name": "Mabel Okonkwo",
+        "university": "University of Lagos",
+        "department": "English Language",
+        "about": "Mabel is a creative and talented English language student with a passion for writing. She enjoys using her words to educate and inspire others.",
+        "religion": "christianity",
+        "sideHustle": "Content Writing",
+        " routine": "Mabel wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her content writing projects from 3pm to 6pm, volunteers at a local charity in the evening, and reads before going to bed.",
+        " hobbies": ["Reading", "Writing", "Volunteering"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Pako Area",
+    "type": "Studio Apartment ",
+    "distance": [
+      {
+        "driving": 7,
+        "cycling": 10,
+        "trekking": 17
+      }
+    ],
+    "yearlyrent": 90000,
+    "overview": "Studio apartment with a single bed, table, and chair. 17-minute walk to the nearest bus stop. Reasonable power supply and access to clean water. Strict rules against smoking and noise.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise"],
+    "linkedroommate": [
+      {
+        "name": "Quadri Abiodun",
+        "university": "University of Lagos",
+        "department": "Political Science",
+        "about": "Quadri is a creative and organized political science student with a talent for event planning. He enjoys creating memorable and successful events.",
+        "religion": "Islam",
+        "sideHustle": "Event Planning",
+        "routine": "Quadri wakes up at 7am every day, attends classes from 9am to 2pm, works on his event planning business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
+        " hobbies": ["Music", "Football", "Event Planning"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Dada Street",
+    "type": "Studio Apartment ",
+    "distance": [
+      {
+        "driving": 3,
+        "cycling": 5,
+        "trekking": 8
+      }
+    ],
+    "yearlyrent": 150000,
+    "overview": "Studio apartment with a single bed, table, and chair. 8-minute walk to the nearest bus stop. Regular power supply and access to clean water. Strict rules against smoking and noise. ",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Fully furnished",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No loud noise"],
+    "linkedroommate": [
+      {
+        "name": "Rukkayat Ibrahim",
+        "university": "University of Lagos",
+        "department": "Law",
+        " about": "Rukayat is a talented and analytical law student with a passion for writing. She enjoys using her legal knowledge to write persuasive and informative content.",
+        " religion": "Islam",
+        "sideHustle": "Freelance Writing",
+        "routine": "Rukayat wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance writing projects from 3pm to 6pm, volunteers at a local NGO in the evening, and reads before going to bed.",
+        "hobbies": ["Writing", "Reading", "Volunteering"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Dada Street",
+    "type": "Self-contain Apartment ",
+    "distance": [
+      {
+        "driving": 2,
+        "cycling": 3,
+        "trekking": 5
+      }
+    ],
+    "yearlyrent": 150000,
+    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair, semi-detached kitchen. 5-minutes walk to the nearest bus stop. Access to clean water, monthly-paid cable subscription and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Semi-detached",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No loud noise"],
+    "linkedroommate": [
+      {
+        "name": "Emeka Okafor",
+        "university": "University of Lagos",
+        "department": "Mechanical Engineering",
+        "about": "Emeka is a practical and hands-on mechanical engineering student with a talent for fixing cars and other machines. He enjoys working with his hands and solving problems.",
+        "religion": "christianity",
+        "sideHustle": "Automobile Repair",
+        "routine": "Emeka wakes up at 7am every day, attends classes from 9am to 2pm, works on his automotive repairs business from 3pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Football", "Automobile Repair", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Chemist Area",
+    "type": "Self-contain Apartment ",
+    "distance": [
+      {
+        "driving": 5,
+        "cycling": 8,
+        "trekking": 12
+      }
+    ],
+    "yearlyrent": 150000,
+    "overview": "Shared apartment with two bedrooms and two bathrooms. Furnished with basic amenities including beds, tables & chairs. 12-minutes walk to the nearest bus stop. Access to clean water, monthly-paid cable subscription and electricity. Rules against smoking,fighting and loud sound",
+    "features": [
+      "Regular power supply",
+      "Access to clean water",
+      "Semi-detached",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No loud noise"],
+    "linkedroommate": [
+      {
+        " name": "Ibrahim Yusuf",
+        "university": "University of Lagos",
+        "department": "Medcine & Surgery",
+        "about": "Ibrahim is a hardworking and dedicated medicine and surgery student with a talent for teaching. He enjoys helping others to understand complex concepts and excel in their studies.",
+        " religion": "Islam",
+        " sideHustle": "Private Tutor",
+        "routine": "Ibrahim wakes up at 6 am every day to study, attends classes from 8am to 3pm, tutors students from 4pm to 7pm, plays football in the evening, and reads before going to bed.",
+        "hobbies": ["Football", "Tutoring", "Reading"]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Ilaje Area",
+    "type": "Self-contain Apartment ",
+    "distance": [
+      {
+        "driving": 8,
+        "cycling": 13,
+        "trekking": 18
+      }
+    ],
+    "yearlyrent": 130000,
+    "overview": "Shared apartment with three bedrooms and three bathrooms. Furnished with basic amenities including beds, tables & chairs. 18-minutes walk to the nearest bus stop. Access to clean water, monthly-paid cable subscription and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Access to clean water",
+      "Semi-detached",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No loud noise"],
+    "linkedroommate": [
+      {
+        "name": "Lekan Adekoya",
+        "university": "University of Lagos",
+        "department": "Electrical Engineering",
+        "about": "Lekan is a highly skilled and creative electrical engineering student with a talent for mobile app development. He enjoys using his knowledge of technology to create innovative solutions.",
+        "religion": "Islam",
+        "sideHustle": "Mobile App Developer",
+        "routine": "Lekan wakes up at 7am every day, attends classes from 9am to 3pm, works on his mobile app development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Technology", "Football", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Anuoluwapo/Police Station",
+    "type": "Self-contain Apartment ",
+    "distance": [
+      {
+        "driving": 7,
+        "cycling": 10,
+        "trekking": 14
+      }
+    ],
+    "yearlyrent": 125000,
+    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair. 14-minutes walk to the nearest bus stop. Access to clean water, monthly-paid cable subscription and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Access to clean water",
+      "Fully furnished",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No loud noise"],
+    "linkedroommate": [
+      {
+        "name": "Samuel Adekoya",
+        "university": "University of Lagos",
+        "department": "Civil Engineering",
+        "about": "Samuel is a hardworking and skilled civil engineering student with a talent for construction. He enjoys building structures that are safe and functional.",
+        "religion": "christianity",
+        "sideHustle": "Construction Worker",
+        "routine": "Samuel wakes up at 6am every day to work on construction projects, attends classes from 8am to 2pm, works on his construction business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Football", "Construction", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Chemist Area",
+    "type": "Studio Apartment ",
+    "distance": [
+      {
+        "driving": 1,
+        "cycling": 2,
+        "trekking": 5
+      }
+    ],
+    "yearlyrent": 115000,
+    "overview": "Studio apartment with a single bed, reading chair and table. Furnished with basic amenities including beds, tables & chairs and an in-built kitchen. 5-minute walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking, fighting, late nights and loud music.",
+    "features": [
+      "Access to clean water",
+      "Fully furnished",
+      "Access to electricity"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No late nights"],
+    "linkedroommate": [
+      {
+        "name": "Uchechi Ejiofor",
+        "university": "University of Lagos",
+        "department": "Chemistry",
+        "about": "Uchechi is a patient and knowledgeable chemistry student with a talent for teaching. She enjoys helping other students to understand difficult concepts in chemistry.",
+        "religion": "christianity",
+        "sideHustle": "Tutor",
+        "routine": "Uchechi wakes up at 6am every day to prepare for her tutoring sessions, attends classes from 8am to 2pm, tutors students from 3pm to 6pm, creates art in the evening, and listens to music before going to bed.",
+        "hobbies": ["Science", "Art", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Pako Area",
+    "type": "Studio Apartment ",
+    "distance": [
+      {
+        "driving": 8,
+        "cycling": 11,
+        "trekking": 15
+      }
+    ],
+    "yearlyrent": 120000,
+    "overview": "Studio apartment with a single bed, reading chair and table. Furnished with basic amenities including beds, tables & chairs and an in-built kitchen. 15-minute walk to the nearest bus stop. Access to clean water, monthly-paid cable subscription and electricity. Rules against smoking, fighting, late nights and loud music.",
+    "features": [
+      "Access to clean water",
+      "Fully furnished",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No late nights"],
+    "linkedroommate": [
+      {
+        "name": "Fatima Ahmed",
+        "university": "University of Lagos",
+        " department": "Pharmacy",
+        "about": "Fatima is a creative and ambitious pharmacy student with a talent for writing. She enjoys using her words to inspire and educate others.",
+        "religion": "Islam",
+        "sideHustle": "Freelance Writer",
+        "routine": "Fatima wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance writing projects from 3pm to 6pm, volunteers at a local charity in the evening, and reads before going to bed.",
+        "hobbies": ["Writing", "Reading", "Volunteering"]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Ilaje Area",
+    "type": "Shared Apartment ",
+    "distance": [
+      {
+        "driving": 8,
+        "cycling": 11,
+        "trekking": 15
+      }
+    ],
+    "yearlyrent": 135000,
+    "overview": "Shared apartment with four bedrooms and four bathrooms. Furnished with basic amenities including beds, tables & chairs. 15-minutes walk to the nearest bus stop. Access to clean water, monthly-paid cable subscription and electricity. Rules against smoking,fighting and loud music.",
+    "features": [
+      "Access to clean water",
+      "Fully furnished",
+      "Free cable suscription"
+    ],
+    "hostelregulations": ["No smoking", "No fighting", "No late nights"],
+    "linkedroommate": [
+      {
+        "name": "Kemi Adeyemi",
+        " university": "University of Lagos",
+        " department": "Accounting",
+        " about": "Kemi is a stylish and creative accounting student with a talent for fashion design. She enjoys creating unique and beautiful clothing pieces.",
+        "religion": "christianity",
+        "sideHustle": "Fashion Designer",
+        "routine": "Kemi wakes up at 6am every day to design clothes, attends classes from 8am to 2pm, works on her fashion design business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Fashion Design", "Football", "Music"]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Anuoluwapo/Police Station",
+    "type": "Self-contain Apartment ",
+    "distance": [
+      {
+        "driving": 4,
+        "cycling": 8,
+        "trekking": 12
+      }
+    ],
+    "yearlyrent": 115000,
+    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair, reading room (library), semi-detached kitchen. 12-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting, littering, and loud music.",
+    "features": [
+      "Reading room",
+      "Fully furnished",
+      "Free cable suscription",
+      "Semi-detached"
+    ],
+    "hostelregulations": [
+      "No smoking",
+      "No fighting",
+      "No late nights",
+      "No littering"
+    ],
+    "linkedroommate": [
+      {
+        "name": "Nkechi Eze",
+        "university": "University of Lagos",
+        "department": "Biochemistry",
+        "about": "Nkechi is a practical and resourceful biochemistry student with a talent for small-scale farming. She enjoys growing her own food and promoting sustainable agriculture.",
+        "religion": "christianity",
+        "sideHustle": "Small-Scale Farmer",
+        "routine": "Nkechi wakes up at 5 am every day to tend to her farm, attends classes from 8am to 1pm, works on her farming projects from 2pm to 6pm, goes for a walk in nature in the evening, and reads about sustainable agriculture before going to bed.",
+        "hobbies": ["Nature", "Wildlife", "Farming"]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Dada Street",
+    "type": "Studio Apartment ",
+    "distance": [
+      {
+        "driving": 6,
+        "cycling": 9,
+        "trekking": 13
+      }
+    ],
+    "yearlyrent": 105000,
+    "overview": "Studio apartment with a single bed, table, and chair. 13-minute walk to the nearest bus stop. Reasonable power supply and access to clean water, monthly-paid cable subscription. Strict rules against smoking and noise.",
+    "features": ["Access to clean water", "Free cable suscription"],
+    "hostelregulations": [
+      "No smoking",
+      "No fighting",
+      "No late nights",
+      "No littering"
+    ],
+    "linkedroommate": [
+      {
+        "name": "Tunde Adebayo",
+        "university": "University of Lagos",
+        "department": "Business Administration",
+        "about": "Tunde is a charismatic and strategic business administration student with a talent for online marketing. He enjoys helping businesses to grow through effective digital marketing strategies.",
+        "religion": "christianity",
+        "sideHustle": "Online Marketer",
+        "routine": "Tunde wakes up at 7am every day, attends classes from 9am to 2pm, works on his online marketing business from 3pm to 6pm, reads about business and entrepreneurship in the evening, and listens to music before going to bed.",
+        "hobbies": ["Reading", "Music", "entrepreneurship"]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "imgURL": [
+      {
+        "interior": "",
+        "frontview": "",
+        "leftview": "",
+        "rightview": ""
+      }
+    ],
+    "name": "Pako Area",
+    "type": "Shared Apartment ",
+    "distance": [
+      {
+        "driving": 8,
+        "cycling": 11,
+        "trekking": 15
+      }
+    ],
+    "yearlyrent": 120000,
+    "overview": "Shared apartment with two bedrooms and two bathrooms. Furnished with basic amenities including beds, tables & chairs. 15-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
+    "features": ["Access to clean water", "Fully furnished"],
+    "hostelregulations": [
+      "No smoking",
+      "No fighting",
+      "No late nights",
+      "No littering"
+    ],
+    "linkedroommate": [
+      {
+        "name": "Gbenga Adebayo",
+        "university": "University of Lagos",
+        "department": "Law",
+        "about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
+        "religion": "christianity",
+        "sideHustle": "Event Planning",
+        "routine": "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
+        "hobbies": ["Football", "Event Planning", "Music"]
+      }
+    ]
+  }
 ]

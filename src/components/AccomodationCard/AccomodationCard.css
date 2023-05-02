@@ -1,7 +1,5 @@
 .accomodation-card-wrapper {
   width: auto;
-  color: #0a3855;
-  border-radius: 1em;
   text-align: left;
   overflow: hidden;
 }
@@ -12,12 +10,7 @@
 }
 .accomodation-img-div {
   height: 50%;
-}
-.accomodation-details {
-  background-color: white;
-  padding-left: 1em;
-  padding-top: 1.5em;
-  height: 50%;
+  overflow: hidden;
 }
 .accomodation-card-icon {
   display: inline;
