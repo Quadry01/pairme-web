@@ -5,11 +5,13 @@ import { BiCycling } from "react-icons/bi";
 import { GiWalk } from "react-icons/gi";
 import { FaRoad } from "react-icons/fa";
 
-const AccomodationInfo = () => {
+const AccomodationInfo = ({ accommodateInfo }) => {
   return (
     <div className="accomondation-card-container">
       <>
-        <h1 className="accomodation-main-header text-2xl">Self Contain</h1>
+        <h1 className="accomodation-main-header text-2xl">
+          {accommodateInfo?.type}
+        </h1>
         <div className="grid-container">
           <div className="grid-img1">1</div>
           <div className="grid-img2">2</div>
@@ -18,11 +20,7 @@ const AccomodationInfo = () => {
         </div>
         <div>
           <h5 className="accomodation-header">Overview</h5>
-          <p className="sm:w-full text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            debitis, accusantium provident incidunt laboriosam natus commodi
-            vero inventore quas sint just a sample text.
-          </p>
+          <p className="sm:w-full text-justify">{accommodateInfo?.overview}</p>
         </div>
         <div>
           <h5 className="accomodation-header">Location</h5>
@@ -38,22 +36,52 @@ const AccomodationInfo = () => {
         <div className="label-container">
           <label className="label1">
             <AiFillCar className="accom-icon1" />{" "}
-            <span className="accom-span1">5 min</span>
+            <span className="accom-span1">
+              {accommodateInfo?.distance.map((i) => i.driving)} min
+            </span>
           </label>
           <label className="label2">
             <BiCycling className="accom-icon2" />{" "}
-            <span className="accom-span2">10 min</span>
+            <span className="accom-span2">
+              {accommodateInfo?.distance.map((i) => i.cycling)} min
+            </span>
           </label>
           <label className="label3">
             <GiWalk className="accom-icon3" />{" "}
-            <span className="accom-span3">15 min</span>
+            <span className="accom-span3">
+              {accommodateInfo?.distance.map((i) => i.trekking)} min
+            </span>
           </label>
           <label className="label4">
             <FaRoad className="accom-icon4" />{" "}
             <span className="accom-span4">to main road</span>
           </label>
         </div>
-        <div className="feature-rules-div">
+
+        <div className="flex md:flex-col md:mb-6 pt-4 md:pt-0">
+          <div className="w-6/12 md:w-full flex flex-col md:flex-row md:max-h-12 md:mt-4">
+            <div className="md:w-[20%] font-semibold text-xs md:text-sm"> Features </div>
+            <div className="text-xxs md:text-xs pl-1 md:pl-6 w-full flex flex-col flex-wrap">
+              {accommodateInfo?.features.map((i) => (
+                <li className="md:w-6/12">{i}</li>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-6/12 md:w-full flex flex-col md:flex-row md:max-h-12 md:mt-4">
+            <div className="md:w-[20%] font-semibold text-xs md:text-sm">
+              {" "}
+              Rules and Regulations{" "}
+            </div>
+            <div className="text-xxs md:text-xs pl-1 md:pl-6 w-full flex flex-col flex-wrap">
+              {accommodateInfo?.hostelregulations.map((i) => (
+                <li className="md:w-6/12">{i}</li>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="feature-rules-div">
           <div className="feature-section">
             <h5 className="feature-header">Features</h5>
             <ul className="feature-list1">
@@ -86,7 +114,8 @@ const AccomodationInfo = () => {
               <li className="li">Rent must be paid before due date</li>
             </ul>
           </div>
-        </div>
+        </div> */}
+        
         <button className="accom-btn">Contact</button>
       </>
     </div>
