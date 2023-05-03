@@ -17,16 +17,22 @@ import profileImg from '../images/humanIcon.jpeg';
 import { NavLink } from "react-router-dom";
 import { RoommateModal } from "../components/RoommateModal";
 import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
+import { AccommodationModal } from "../components/AccomodationModal";
 
 export const User = () => {
-  const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal } = useStateContext()
+  const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal,accommodateModal, setAccommodateModal } = useStateContext()
   const [openSidebar, setOpenSidebar] = useState(false);
   const [roommateInfo, setRoomateInfo] = useState(null);
+  const [accommodateInfo, setAccommodateInfo] = useState(null)
 
   const handleRoommateInfo = (item)=>{
         setRoommateModal(!roommateModal)
         setRoomateInfo(item)
   }
+  const handleAccommodateInfo = (item)=>{
+    setAccommodateModal(!accommodateModal)
+    setAccommodateInfo(item)
+}
 
   return (
     <div className="bg-blue-foundation relative">
@@ -113,7 +119,7 @@ export const User = () => {
              )) }
 
                 { user?.status === 'findingAccommodation' && accommodationData.map((item) => (
-                  <div key={item.id}>
+                  <div onClick={()=>handleAccommodateInfo(item)} key={item.id}>
                     <AccomodationCard
                      height={'h-44 md:h-[37vh] rounded-xl md:rounded-2xl hover:bg-blue hover:text-white hover:cursor-pointer'}
                      nameText={'font-semibold text-sm md:text-lg'}
@@ -137,6 +143,7 @@ export const User = () => {
       <UserProfileModal/>
       <LogoutModal/>
       <RoommateModal roommateInfo={roommateInfo}/>
+      <AccommodationModal accommodateInfo={accommodateInfo}/>
     </div>
   );
 };

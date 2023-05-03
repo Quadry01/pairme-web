@@ -1,12 +1,12 @@
 .accomondation-card-container {
-  width: 45%;
+  width: full;
   height: auto;
   padding: 15px 30px;
   background-color: #f7fcff;
-  border-radius: 30px;
+  /* border-radius: 30px;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 200px;
+  margin-bottom: 200px; */
   position: relative;
 }
 

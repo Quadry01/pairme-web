@@ -14,6 +14,7 @@ export const ContextProvider = ({ children }) => {
   const [logoutModal, setLogoutModal] = useState(false);
   const [hideNavItem, setHideNavItem] = useState(false);
   const [roommateModal, setRoommateModal] = useState(true);
+  const [accommodateModal, setAccommodateModal] = useState(true)
 
   //For home scroll
   const homeRef = useRef(null)
@@ -63,7 +64,9 @@ export const ContextProvider = ({ children }) => {
         hideNavItem,
         setHideNavItem,
         setRoommateModal, 
-        roommateModal
+        roommateModal,
+        accommodateModal, 
+        setAccommodateModal
         
       }}
     >
