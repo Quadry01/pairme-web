@@ -25,9 +25,9 @@
     "linkedroommate": [
       {
         "name": "Gbenga Adebayo",
-        " university": "University of Lagos",
+        "university": "University of Lagos",
         "department": "Law",
-        " about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
+        "about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
         "religion": "christianity",
         "sideHustle": "Event Planning",
         "routine": "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
@@ -65,7 +65,7 @@
     "linkedroommate": [
       {
         "name": "Adebayo Adekule",
-        " university": "University of Lagos",
+        "university": "University of Lagos",
         "department": "computer science",
         "about": "Adebayo is a highly motivated computer science student with a passion for coding and problem-solving. He is always eager to learn new programming languages and improve his skills.",
         "religion": "christianity",
@@ -150,9 +150,9 @@
     "linkedroommate": [
       {
         "name": "Olumide Ogunmola",
-        " university": "University of Lagos",
+        "university": "University of Lagos",
         "department": "computer science",
-        " about": "Olumide is a skilled and creative computer science student with a talent for web development. He enjoys creating user-friendly websites and web applications.",
+        "about": "Olumide is a skilled and creative computer science student with a talent for web development. He enjoys creating user-friendly websites and web applications.",
         "religion": "christianity",
         "sideHustle": "Web Developer",
         "routine": "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
@@ -189,8 +189,8 @@
     "hostelregulations": ["No smoking", "No loud noise", "No fighting"],
     "linkedroommate": [
       {
-        " name": "Patricia Adeleke",
-        " university": "University of Lagos",
+        "name": "Patricia Adeleke",
+        "university": "University of Lagos",
         "department": "Mass Communication",
         "about": "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
         "religion": "christianity",
@@ -236,13 +236,13 @@
     "linkedroommate": [
       {
         "name": "Chima Nwachukwu",
-        " university": "University of Lagos",
+        "university": "University of Lagos",
         "department": "Economics",
         "about": "Chima is a dedicated and hardworking economics student with a strong interest in education. She enjoys teaching and helping others to learn.",
-        " religion": "christianity",
+        "religion": "christianity",
         "sideHustle": "Part-Time Tutor",
         "routine": " Chima wakes up at 5am every day to study, attends classes from 8am to 2pm, tutors students from 3pm to 6pm, listens to music and reads before going to bed.",
-        " hobbies": ["Music", "Reading", "Tutoring"]
+        "hobbies": ["Music", "Reading", "Tutoring"]
       }
     ]
   },
@@ -277,7 +277,7 @@
       {
         "name": "Halima Musa",
         "university": "University of Lagos",
-        " department": "Mass Communication",
+        "department": "Mass Communication",
         "about": "Halima is a charismatic and outgoing mass communication student with a large following on social media. She enjoys using her platform to promote positive messages and connect with others.",
         "religion": "Islam",
         "sideHustle": "Social Media Influencer",
@@ -315,14 +315,14 @@
     "hostelregulations": ["No smoking", "No loud noise", "No fighting"],
     "linkedroommate": [
       {
-        " name": "Mabel Okonkwo",
+        "name": "Mabel Okonkwo",
         "university": "University of Lagos",
         "department": "English Language",
         "about": "Mabel is a creative and talented English language student with a passion for writing. She enjoys using her words to educate and inspire others.",
         "religion": "christianity",
         "sideHustle": "Content Writing",
-        " routine": "Mabel wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her content writing projects from 3pm to 6pm, volunteers at a local charity in the evening, and reads before going to bed.",
-        " hobbies": ["Reading", "Writing", "Volunteering"]
+        "routine": "Mabel wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her content writing projects from 3pm to 6pm, volunteers at a local charity in the evening, and reads before going to bed.",
+        "hobbies": ["Reading", "Writing", "Volunteering"]
       }
     ]
   },
@@ -362,7 +362,7 @@
         "religion": "Islam",
         "sideHustle": "Event Planning",
         "routine": "Quadri wakes up at 7am every day, attends classes from 9am to 2pm, works on his event planning business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
-        " hobbies": ["Music", "Football", "Event Planning"]
+        "hobbies": ["Music", "Football", "Event Planning"]
       }
     ]
   },
@@ -399,8 +399,8 @@
         "name": "Rukkayat Ibrahim",
         "university": "University of Lagos",
         "department": "Law",
-        " about": "Rukayat is a talented and analytical law student with a passion for writing. She enjoys using her legal knowledge to write persuasive and informative content.",
-        " religion": "Islam",
+        "about": "Rukayat is a talented and analytical law student with a passion for writing. She enjoys using her legal knowledge to write persuasive and informative content.",
+        "religion": "Islam",
         "sideHustle": "Freelance Writing",
         "routine": "Rukayat wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance writing projects from 3pm to 6pm, volunteers at a local NGO in the evening, and reads before going to bed.",
         "hobbies": ["Writing", "Reading", "Volunteering"]
@@ -478,12 +478,12 @@
     "hostelregulations": ["No smoking", "No fighting", "No loud noise"],
     "linkedroommate": [
       {
-        " name": "Ibrahim Yusuf",
+        "name": "Ibrahim Yusuf",
         "university": "University of Lagos",
         "department": "Medcine & Surgery",
         "about": "Ibrahim is a hardworking and dedicated medicine and surgery student with a talent for teaching. He enjoys helping others to understand complex concepts and excel in their studies.",
-        " religion": "Islam",
-        " sideHustle": "Private Tutor",
+        "religion": "Islam",
+        "sideHustle": "Private Tutor",
         "routine": "Ibrahim wakes up at 6 am every day to study, attends classes from 8am to 3pm, tutors students from 4pm to 7pm, plays football in the evening, and reads before going to bed.",
         "hobbies": ["Football", "Tutoring", "Reading"]
       }
@@ -640,7 +640,7 @@
       {
         "name": "Fatima Ahmed",
         "university": "University of Lagos",
-        " department": "Pharmacy",
+        "department": "Pharmacy",
         "about": "Fatima is a creative and ambitious pharmacy student with a talent for writing. She enjoys using her words to inspire and educate others.",
         "religion": "Islam",
         "sideHustle": "Freelance Writer",
@@ -679,9 +679,9 @@
     "linkedroommate": [
       {
         "name": "Kemi Adeyemi",
-        " university": "University of Lagos",
-        " department": "Accounting",
-        " about": "Kemi is a stylish and creative accounting student with a talent for fashion design. She enjoys creating unique and beautiful clothing pieces.",
+        "university": "University of Lagos",
+        "department": "Accounting",
+        "about": "Kemi is a stylish and creative accounting student with a talent for fashion design. She enjoys creating unique and beautiful clothing pieces.",
         "religion": "christianity",
         "sideHustle": "Fashion Designer",
         "routine": "Kemi wakes up at 6am every day to design clothes, attends classes from 8am to 2pm, works on her fashion design business from 3pm to 6pm, plays football in the evening, and listens to music before going to bed.",
