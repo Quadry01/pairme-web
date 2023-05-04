@@ -1,12 +1,15 @@
+.switch {
+  width: 100%;
+  color: #0a3855;
+  padding: 10px 20px;
+  background-color: #f7fcff;
+}
 .accomondation-card-container {
-  width: full;
+  width: ful;
   height: auto;
   padding: 15px 30px;
   background-color: #f7fcff;
-  /* border-radius: 30px;
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 200px; */
+  color: #0a3855;
   position: relative;
 }
 
@@ -52,14 +55,17 @@
   position: relative;
   top: 50%;
   margin-top: 5px;
-  background-color: brown;
+  background-color: rgb(244, 237, 237);
   height: 95px;
   border-radius: 10px;
 }
 .accomodation-header {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 10px;
+}
+.overview {
+  font-size: 15px;
 }
 .iframe-map {
   width: 100%;
