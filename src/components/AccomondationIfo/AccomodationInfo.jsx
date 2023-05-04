@@ -1,4 +1,4 @@
-import { useState, React } from "react";
+
 import "./AccomondationInfo.css";
 import RoommateInfo from "../RoommateInfo/RoommateInfo";
 import { AiFillCar } from "react-icons/ai";
@@ -6,9 +6,7 @@ import { BiCycling } from "react-icons/bi";
 import { GiWalk } from "react-icons/gi";
 import { FaRoad } from "react-icons/fa";
 
-const AccomodationInfo = ({ accommodateInfo }) => {
-  const [hideaccom, setHaccom] = useState("");
-  const [hideroom, setHroom] = useState("hidden");
+const AccomodationInfo = ({ accommodateInfo, hideaccom, setHaccom, hideroom, setHroom }) => {
 
   const AccomHandler = (e) => {
     e.preventDefault();
@@ -24,10 +22,10 @@ const AccomodationInfo = ({ accommodateInfo }) => {
   return (
     <div>
       <div className="switch">
-        <button className="underline" onClick={AccomHandler}>
-          Accomondtion
+        <button className={`underline ${hideaccom==='hidden'? 'text-gray-400': 'text-blue'}`} onClick={AccomHandler}>
+          Accommodtion
         </button>
-        <button className="ml-4 underline  " onClick={RoomHandler}>
+        <button className={`underline ml-4 ${hideroom==='hidden'? 'text-gray-400': 'text-blue'}`} onClick={RoomHandler}>
           Roommate
         </button>
       </div>
@@ -84,25 +82,25 @@ const AccomodationInfo = ({ accommodateInfo }) => {
             </label>
           </div>
 
-          <div className="flex md:flex-col md:mb-6 pt-4 md:pt-0">
+          <div className="flex md:flex-col md:mb-6 pt-4 md:pt-0 gap-4 md:gap-0">
             <div className="w-6/12 md:w-full flex flex-col md:flex-row md:max-h-12 md:mt-4">
-              <div className="md:w-[20%] font-semibold text-xs md:text-sm">
+              <div className="md:w-[20%] font-bold md:text-lg">
                 {" "}
                 Features{" "}
               </div>
-              <div className="text-xxs md:text-xs pl-1 md:pl-6 w-full flex flex-col flex-wrap">
+              <div className="text-xs md:text-sm pl-1 md:pl-11 w-full flex flex-col flex-wrap">
                 {accommodateInfo?.features.map((i) => (
                   <li className="md:w-6/12">{i}</li>
                 ))}
               </div>
             </div>
 
-            <div className="w-6/12 md:w-full flex flex-col md:flex-row md:max-h-12 md:mt-4">
-              <div className="md:w-[20%] font-semibold text-xs md:text-sm">
+            <div className=" w-6/12 md:w-full flex flex-col md:flex-row md:max-h-12 md:mt-4">
+              <div className="md:w-[20%] font-bold md:text-lg">
                 {" "}
                 Rules and Regulations{" "}
               </div>
-              <div className="text-xxs md:text-xs pl-1 md:pl-6 w-full flex flex-col flex-wrap">
+              <div className="text-xs md:text-sm pl-1 md:pl-8 w-full flex flex-col flex-wrap">
                 {accommodateInfo?.hostelregulations.map((i) => (
                   <li className="md:w-6/12">{i}</li>
                 ))}
@@ -149,7 +147,9 @@ const AccomodationInfo = ({ accommodateInfo }) => {
         </>
       </div>
       <div className={`${hideroom}`}>
-        <RoommateInfo />
+        <RoommateInfo 
+        accommodateInfo={accommodateInfo}
+        />
       </div>
     </div>
   );

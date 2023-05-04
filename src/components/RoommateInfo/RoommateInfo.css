@@ -53,6 +53,10 @@
   margin-top: 15px;
 }
 @media only screen and (max-width: 700px) {
+  .student-name {
+    font-weight: 700;
+    font-size: 20px;
+  }
   .roommate-info-wrapper {
     width: auto;
     padding: 30px 30px;
