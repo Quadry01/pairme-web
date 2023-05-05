@@ -43,7 +43,7 @@ export const SignUp = () => {
   );
 
   const navigate = useNavigate();
-  const { setUser, userStatus, setUserStatus } = useStateContext();
+  const { setUser ,userStatus, setUserStatus } = useStateContext();
 
   const RoommateHandler = (e) => {
     e.preventDefault();
