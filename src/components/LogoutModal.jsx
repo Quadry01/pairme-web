@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 
 export const LogoutModal = ()=> {
-    const { logoutModal, setLogoutModal, setUser, user } = useStateContext();
+    const { logoutModal, setLogoutModal, setUser, setUserStatus} = useStateContext();
     const navigate = useNavigate()
 
     const handleLogout = ()=>{
         setLogoutModal(false)
+        setUserStatus('findingRoommate')
         setUser(null)
         navigate('/')
 

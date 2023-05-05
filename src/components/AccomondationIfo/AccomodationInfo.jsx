@@ -23,7 +23,7 @@ const AccomodationInfo = ({ accommodateInfo, hideaccom, setHaccom, hideroom, set
     <div>
       <div className="switch">
         <button className={`underline ${hideaccom==='hidden'? 'text-gray-400': 'text-blue'}`} onClick={AccomHandler}>
-          Accommodtion
+          Accommodation
         </button>
         <button className={`underline ml-4 ${hideroom==='hidden'? 'text-gray-400': 'text-blue'}`} onClick={RoomHandler}>
           Roommate
