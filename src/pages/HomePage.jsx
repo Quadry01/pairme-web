@@ -12,7 +12,7 @@ import accommodationData from '../data/accommodation.json'
 import "../App.css";
 
 import "../index.css";
-import homeImg from "../images/Ellipse_6.png";
+import homeImg from "../images/fivestudents.jpg";
 import homeImg7 from "../images/Ellipse7.png";
 import homeImg8 from "../images/Ellipse8.png";
 
