@@ -53,7 +53,7 @@ export const User = () => {
       >
       </div>  ): null}
         <div className="relative">
-          <div className={`fixed z-100 flex items-center flex-col overflow-hidden gap-y-8 text-white bg-blue h-[90vh] w-8/12 top-0 -right-0 ${openSidebar===false ?'translate-x-full':'translate-x-0'} ease-in-out duration-300`}>
+          <div className={`fixed z-100 flex items-center flex-col overflow-hidden gap-y-8 text-white bg-blue h-[100vh] w-8/12 top-0 -right-0 ${openSidebar===false ?'translate-x-full':'translate-x-0'} ease-in-out duration-300`}>
           <div className="absolute -top-32 -right-28 rounded-full ring-6 ring-blue-ring bg-white w-64 h-64"></div>
             <div className="absolute -bottom-32 -left-28 rounded-full ring-6 ring-blue-ring bg-white w-64 h-64"></div>
             <div className="text-lg font-bold w-full ml-16 mt-24"><NavLink to ='/'>PairMe</NavLink></div>
