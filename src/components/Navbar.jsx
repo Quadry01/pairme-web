@@ -3,6 +3,7 @@ import {HiUser} from 'react-icons/hi2';
 import { useStateContext } from "../context/contextProvider";
 import { useState } from "react";
 import { useEffect } from "react";
+import PairMeLogo from './PairMeLogo.jsx';
 
 export const Navbar = () => {
   const location = useLocation()
@@ -37,7 +38,9 @@ export const Navbar = () => {
       <div className="justify-between px-7 py-2.5 items-center flex md:px-28 w-full">
         {/* LOGO */}
         <div className="font-bold text-base md:text-4xl cursor-pointer">
-          <NavLink to="/">PairMe</NavLink>
+          <NavLink to="/">
+            <PairMeLogo/>
+          </NavLink>
         </div>
         <div className=" hidden lg:block">
           {showNavList && 

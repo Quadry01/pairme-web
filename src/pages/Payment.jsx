@@ -6,6 +6,7 @@ import '../App.css';
 import {HiOutlineEnvelope} from'react-icons/hi2';
 import {BsInstagram} from 'react-icons/bs';
 import {FaLinkedinIn, FaFacebookSquare, FaTwitter} from 'react-icons/fa';
+import PairMeLogo from "../components/PairMeLogo";
 
 export const Payment = () => {
   const { setUserModal } = useStateContext();
@@ -14,12 +15,12 @@ export const Payment = () => {
     <div className="bg-white md:bg-blue-foundation w-full  text-blue">
       <div className="z-40  hidden bg-white md:flex items-center h-32 pl-28 font-bold text-4xl shadow-sm w-full">
         <Link onClick={() => setUserModal(false)} to="/">
-          PairMe
+          <PairMeLogo/>
         </Link>
       </div>
-      <div className="md:hidden font-bold text-base w-full text-center mt-14 mb-8">
+      <div className="flex items-center justify-center md:hidden font-bold text-base w-full text-center mt-14 mb-8">
         <Link onClick={() => setUserModal(false)} to="/">
-          PairMe
+          <PairMeLogo/>
         </Link>
       </div>
       <div className=" relative">

@@ -18,6 +18,7 @@ import { NavLink } from "react-router-dom";
 import { RoommateModal } from "../components/RoommateModal";
 import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
 import { AccommodationModal } from "../components/AccomodationModal";
+import PairMeLogo from "../components/PairMeLogo";
 
 export const User = () => {
   const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal,accommodateModal, setAccommodateModal } = useStateContext()
@@ -37,8 +38,8 @@ export const User = () => {
   return (
     <div className="bg-blue-foundation relative">
 
-      <div className="h-12 fixed z-40 px-8 text-blue bg-white shadow-md md:hidden w-full flex items-center justify-between">
-        <span className="font-bold hover:cursor-pointer"><NavLink to='/'>PairMe</NavLink></span>
+      <div className="h-12 fixed z-40 px-8 text-blue bg-white shadow-sm md:hidden w-full flex items-center justify-between">
+        <span className="font-bold hover:cursor-pointer"><NavLink to='/'><PairMeLogo/></NavLink></span>
         <div className="flex gap-2 items-center">
           <span onClick={()=>setProfileModal(true)} className=" hover:cursor-pointer rounded-full ring-1 ring-gray-300 w-5 h-5 text-xxs flex items-center justify-center"><HiUser/></span>
           <span onClick={()=>setOpenSidebar(true)} className="hover:cursor-pointer text-2xl"><RxTextAlignJustify/></span>
@@ -53,7 +54,7 @@ export const User = () => {
       >
       </div>  ): null}
         <div className="relative">
-          <div className={`fixed z-100 flex items-center flex-col overflow-hidden gap-y-8 text-white bg-blue h-[90vh] w-8/12 top-0 -right-0 ${openSidebar===false ?'translate-x-full':'translate-x-0'} ease-in-out duration-300`}>
+          <div className={`fixed z-100 flex items-center flex-col overflow-hidden gap-y-8 text-white bg-blue h-[100vh] w-8/12 top-0 -right-0 ${openSidebar===false ?'translate-x-full':'translate-x-0'} ease-in-out duration-300`}>
           <div className="absolute -top-32 -right-28 rounded-full ring-6 ring-blue-ring bg-white w-64 h-64"></div>
             <div className="absolute -bottom-32 -left-28 rounded-full ring-6 ring-blue-ring bg-white w-64 h-64"></div>
             <div className="text-lg font-bold w-full ml-16 mt-24"><NavLink to ='/'>PairMe</NavLink></div>
@@ -71,10 +72,10 @@ export const User = () => {
       <div className="relative overflow-x-hidden flex">  
         {/* <div className="fixed bottom-0 left-0 w-full"><Footer/></div> */} 
         <section className=" md:overflow-y-auto hidden md:flex flex-col items-center md:h-screen md:w-3/12 text-white bg-blue">
-          <div className="text-2xl font-bold mt-24 mx-auto"><NavLink to ='/'>PairMe</NavLink></div>
+          <div className="text-2xl font-bold mt-24 mx-auto">PairMe</div>
           <div className="w-full text-center">
             <div className="rounded-full mx-auto ring-gray-active ring-8 w-36 h-36 mt-12 overflow-hidden">
-              <img className="w-full h-full" src={profileImg} alt="" />
+              <img className="w-full h-full object-cover" src={profileImg} alt="" />
             </div>
             <div className="mt-7">{user?.name}</div>
             <div onClick={()=>setProfileModal(true)} className="flex justify-center mt-3 text-xs cursor-pointer">View Profile <span className="flex items-center"><BsArrowRight className=" ml-2"/></span></div>
