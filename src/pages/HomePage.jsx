@@ -55,14 +55,14 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-32 top-44 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-20 md:right-32 md:top-44 top-48 z-20">
           <img src={homeImg} className="w-full h-full object-cover" alt="" />
         </div>
       </section>
       <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
-            <div className="absolute -top-16 md:top-0 -left-28 md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue-foundation h-36 w-36 md:h-64 md:w-64">
+            <div className="absolute -top-16 md:top-0 -left-40 md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue-foundation h-36 w-36 md:h-64 md:w-64">
               <img src={homeImg7} className="w-full h-full" alt="" />
             </div>
             <div className="absolute z-20 -bottom-3 -right-12 overflow-hidden hidden md:block rounded-full ring-6 md:ring-8 ring-blue-foundation h-28 w-28">
