@@ -108,41 +108,6 @@ const AccomodationInfo = ({ accommodateInfo, hideaccom, setHaccom, hideroom, set
             </div>
           </div>
 
-          {/* <div className="feature-rules-div">
-          <div className="feature-section">
-            <h5 className="feature-header">Features</h5>
-            <ul className="feature-list1">
-              <li className="li">Tiled</li>
-              <li className="li">24hrs Power supply</li>
-              <li className="li">Tight Security</li>
-              <li className="li">Running Water</li>
-              <li className="li">Furnished Kitchen</li>
-              <li className="li">Standard wardrobe</li>
-            </ul>
-            <ul className="feature-list2">
-              <li className="li">Tiled</li>
-              <li className="li">24hrs Power supply</li>
-              <li className="li">Tight Security</li>
-              <li className="li">Running Water</li>
-              <li className="li">Furnished Kitchen</li>
-              <li className="li">Standard wardrobe</li>
-            </ul>
-          </div>
-          <div className="rules-section">
-            <h5 className="rule-header">
-              Rules and <br className="rm-br" /> Regulations
-            </h5>
-            <ul className="rules-list1">
-              <li className="li">No Entry after 10:00pm</li>
-              <li className="li">Rent must be paid before due date</li>
-              <li className="li">No Entry after 10:00pm</li>
-              <li className="li">Rent must be paid before due date</li>
-              <li className="li">No Entry after 10:00pm</li>
-              <li className="li">Rent must be paid before due date</li>
-            </ul>
-          </div>
-        </div> */}
-
           <button className="accom-btn">Contact</button>
         </>
       </div>
