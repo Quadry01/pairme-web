@@ -35,12 +35,12 @@ export const HomePage = forwardRef(() => {
             >
               Find the best fit for you, both in roommate & accommodation
             </div>
-            <div className="text-gray-600 text-xxs w-9/12 md:w-11/12 md:text-base font-normal mt-4">
+            <div className="text-gray-600 text-xxs w-10/12 md:w-11/12 md:text-base font-normal mt-4">
               We ensure you encounter zero stress when searching for a budget
               friendly apartment or for a suitable roommate.
             </div>
           </div>
-          <div className="shadow-sm md:shadow-md w-full h-11 md:h-28 px-4 gap-2 md:gap-4 md:px-10 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
+          <div className="shadow-sm md:shadow-md w-full h-11 md:h-28 mt-8 md:mt-4 px-4 gap-2 md:gap-4 md:px-10 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
             <div className="flex gap-2 md:gap-4 justify-between items-center grow">
               <DropDownComponent dropName="Location" option1={'Yaba'} option2={'Idi-Araba'} option3={'Akoka'} option4={'Oju-elegba'} />
               <DropDownComponent dropName="Price" option1={'250,000'} option2={'300,000'} option3={'400,000'} option4={'500,000'}/>
@@ -55,21 +55,21 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-32 md:right-32 top-44 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-80 md:w-home-mg h-80 md:h-home-mg -right-24 md:right-32 md:top-44 top-48 z-20">
           <img src={homeImg} className="w-full h-full object-cover" alt="" />
         </div>
       </section>
-      <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip">
+      <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip main-section1">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
-            <div className="absolute -top-16 md:top-0 -left-28 md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-6 md:ring-8 ring-gray-active md:ring-blue-foundation h-36 w-36 md:h-64 md:w-64">
+            <div className="absolute -top-16 md:top-0 -right-0 md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-4 md:ring-8 ring-gray-active md:ring-blue-foundation h-36 w-36 md:h-64 md:w-64">
               <img src={homeImg7} className="w-full h-full" alt="" />
             </div>
             <div className="absolute z-20 -bottom-3 -right-12 overflow-hidden hidden md:block rounded-full ring-6 md:ring-8 ring-blue-foundation h-28 w-28">
               <img src={homeImg8} className="w-full h-full" alt="" />
             </div>
           </div>
-          <div className=" w-10/12 md:w-[55%] mx-auto mt-40 md:mt-10 z-30">
+          <div className=" w-10/12 md:w-[55%] mx-auto mt-32 md:mt-10 z-30">
             <div className=" md:text-center font-semibold md:font-bold text-lg md:text-5xl">
               What is PairMe About?
             </div>
