@@ -37,6 +37,12 @@
   color: #61dafb;
 }
 
+.main-section1:before{
+  background-image:linear-gradient(0deg,rgba(10, 56, 85, .9), rgba(10, 56, 85, .9)), url('./images/jean.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: multiply;
+}
 .main-section:before {
   content: '';
   position: absolute;
@@ -70,6 +76,9 @@
   .footer-section:before {
     border-radius: 100% 100% 0 0/100% 100% 0 0;
     transform: scaleX(2.1);
+  }
+  .main-section1:before{
+     background-image: none;
   }
 
  }
