@@ -2,7 +2,7 @@ import { Footer } from "../../components/Footer";
 import { useState } from "react";
 import "./Signup.css";
 import { RiImageAddFill } from "react-icons/ri";
-import top_image from "../../images/Rectangle.png";
+import top_image from "../../images/Rectangle.jpg";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useStateContext } from "../../context/contextProvider";
 import { useEffect } from "react";
@@ -43,7 +43,7 @@ export const SignUp = () => {
   );
 
   const navigate = useNavigate();
-  const { setUser ,userStatus, setUserStatus } = useStateContext();
+  const { setUser, userStatus, setUserStatus } = useStateContext();
 
   const RoommateHandler = (e) => {
     e.preventDefault();
