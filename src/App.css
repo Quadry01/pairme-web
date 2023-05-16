@@ -82,3 +82,8 @@
   }
 
  }
+ @media only screen and (max-width: 365px) {
+  .samsungs8{
+    top:15rem
+  }
+ }

@@ -25,9 +25,9 @@ export const HomePage = forwardRef(() => {
     <div className="relative bg-blue-foundation w-full h-auto">
       <section
         ref={homeRef}
-        className="relative flex flex-col md:flex-row md:px-28 px-8 items-center w-full  overflow-x-clip"
+        className="relative flex flex-col md:flex-row md:px-28 px-8 items-center w-full  overflow-x-clip pb-40 md:pb-28 pt-14 md:pt-32"
       >
-        <div className="flex flex-col  gap-3 md:gap-7 mt-14 md:mt-52 w-full md:w-8/12 z-30">
+        <div className="flex flex-col  gap-3 md:gap-7  w-full md:w-8/12 z-30">
           <div className="w-11/12 md:w-9/12 text-blue">
             <div
               style={{ lineHeight: "1.2" }}
@@ -40,13 +40,13 @@ export const HomePage = forwardRef(() => {
               friendly apartment or for a suitable roommate.
             </div>
           </div>
-          <div className="shadow-sm md:shadow-md w-full h-11 md:h-28 mt-8 md:mt-4 px-4 gap-2 md:gap-4 md:px-10 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
+          <div className="shadow-sm md:shadow-md w-full h-11 md:h-24 mt-8 md:mt-4 px-4 gap-2 md:gap-4 md:px-10 rounded-lg md:rounded-3xl flex items-center justify-between bg-white">
             <div className="flex gap-2 md:gap-4 justify-between items-center grow">
               <DropDownComponent dropName="Location" option1={'Yaba'} option2={'Idi-Araba'} option3={'Akoka'} option4={'Oju-elegba'} />
               <DropDownComponent dropName="Price" option1={'250,000'} option2={'300,000'} option3={'400,000'} option4={'500,000'}/>
               <DropDownComponent dropName="Type" option1={'Single room apartment'} option2={'studio apartment'} option3={'2 bedroom shared apartment'} option4={'self contain apartment'}/>
             </div>
-            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-14 items-center text-xxs md:text-base justify-between px-2 md:px-6 tracking-wider font-light md:font-normal">
+            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-12 items-center text-xxs md:text-base justify-between px-2 md:px-6 tracking-wider font-light md:font-normal">
               <span className="md:text-xl">
                 <CiSearch />
               </span>
@@ -55,11 +55,11 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-[85%] md:w-home-mg aspect-square md:h-home-mg -right-24 md:right-32 md:top-44 top-48 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-[85%] md:w-home-mg aspect-square md:h-home-mg -right-24 md:right-32 md:top-20 top-48 z-20 samsungs8">
           <img src={homeImg} className="w-full h-full object-cover" alt="" />
         </div>
       </section>
-      <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip main-section1">
+      <section className="relative text-white main-section overflow-x-clip main-section1">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
             <div className="absolute -top-16 md:top-0 -left-[41vw] md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-4 md:ring-8 ring-gray-active md:ring-blue-foundation h-40 w-40 md:h-64 md:w-64">
@@ -109,7 +109,7 @@ export const HomePage = forwardRef(() => {
 
             <div key={item.id} className="relative md:first:blur-sm md:last:blur-sm">
               <AccomodationCard 
-              height={'h-[14em] md:h-[27em] rounded-xl md:rounded-3xl'}
+              height={'h-[14em] md:h-[23em] rounded-xl md:rounded-3xl'}
               nameText ={'text-sm md:text-3xl font-semibold'}
               cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
               payText ={'text-sm md:text-lg'}
@@ -127,8 +127,8 @@ export const HomePage = forwardRef(() => {
           </div>
           <div className="text-center">
             <Link to="/signup">
-              <button className="bg-blue text-white rounded-full w-36 h-8 px-5 md:w-72 md:h-16 md:px-9 md:font-normal text-xxs md:text-base">
-                sign up to view more
+              <button className="bg-blue text-white rounded-full w-36 h-8 px-5 md:w-64 md:h-14 md:px-9 md:font-normal text-xxs md:text-base">
+                Sign Up To View More
               </button>
             </Link>
           </div>
@@ -157,7 +157,7 @@ export const HomePage = forwardRef(() => {
                 className="relative md:first:blur-sm md:last:blur-sm"
               >
                 <RoommateCard
-                height={'h-[14em] md:h-[27em] rounded-xl md:rounded-3xl'} 
+                height={'h-[14em] md:h-[23em] rounded-xl md:rounded-3xl'} 
                 nameText ={'text-sm md:text-3xl font-semibold'}
                 cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
                 name={item.name}
@@ -171,8 +171,8 @@ export const HomePage = forwardRef(() => {
             {" "}
             <Link to="/signup">
               {" "}
-              <button className="bg-transparent rounded-full w-36 h-8 px-5 md:w-72 md:h-16 md:px-9 md:font-normal text-xxs md:text-base">
-                Sign up to view more
+              <button className="mt-8  bg-white text-blue rounded-full w-36 h-8 px-5 md:w-64 md:h-14 md:px-9 md:font-normal text-xxs md:text-base">
+                Sign Up To View More
               </button>{" "}
             </Link>{" "}
           </div>
@@ -180,9 +180,9 @@ export const HomePage = forwardRef(() => {
       </section>
 
       <section>
-        <div className="flex flex-col md:flex-row px-11 md:px-40 mt-9 md:mt-24 md:pb-24 pb-10">
-          <div className="mx-auto">
-            <div className="rounded-full ring-6 ring-gray-active w-64 h-64 md:w-72 md:h-72 overflow-hidden">
+        <div className="flex flex-col md:flex-row mt-9 md:mt-24 md:pb-24 pb-10 px-7 md:px-0">
+          <div className="w-full md:w-[40%] flex justify-center md:justify-start md:pl-32">
+            <div className="rounded-full ring-6 ring-gray-active w-64  md:w-[90%] aspect-square overflow-hidden">
               <img className="h-full w-full bg-cover" src={homeImg8} alt="" />
             </div>
           </div>
@@ -191,14 +191,14 @@ export const HomePage = forwardRef(() => {
               <div className="text-xl md:text-4xl font-bold">
                 Got an available space and need a roommate?
               </div>
-              <div className="mt-3 text-xs md:text-base font-light w-10/12 md:w-5/12">
+              <div className="mt-3 text-xs md:text-base font-light w-10/12 md:w-10/12">
                 List your property on our website and connect with students
                 looking for accommodation.
               </div>
             </div>
             <div className="mt-7 text-center md:ml-20 md:text-start">
               <Link to="/signup">
-                <button className="bg-blue text-white rounded-full w-36 h-8 px-5 md:w-72 md:h-16 md:px-9 md:font-normal text-xxs md:text-base">
+                <button className="bg-blue text-white rounded-full w-36 h-8 px-5 md:w-64 md:h-14 md:px-9 md:font-normal text-xxs md:text-base">
                   share your space
                 </button>
               </Link>

@@ -2,11 +2,12 @@ import "../App.css";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { BsInstagram } from "react-icons/bs";
 import { FaLinkedinIn, FaFacebookSquare, FaTwitter } from "react-icons/fa";
+import PairMeLogo from "./PairMeLogo";
 
 export const Footer = () => {
     return(
         <div className=" relative footer-section overflow-x-clip text-white grid grid-cols-1 items-center pb-20 ">
-          <div className="z-10 font-bold mx-auto mt-20 md:text-4xl">PairMe</div>
+          <div className="z-10 font-bold mx-auto mt-20 md:text-4xl"><PairMeLogo color='white'/></div>
           <div className="z-10 text-xxs md:text-sm grid grid-cols-2 mt-14 gap-14 md:gap-20 md:grid-cols-4 mx-auto">
             <div>
               <h3 className="text-xs md:text-xl font-semibold">Company</h3>

@@ -39,7 +39,7 @@ export const User = () => {
     <div className="bg-blue-foundation relative">
 
       <div className="h-12 fixed z-40 px-8 text-blue bg-white shadow-sm md:hidden w-full flex items-center justify-between">
-        <span className="font-bold hover:cursor-pointer"><NavLink to='/'><PairMeLogo/></NavLink></span>
+        <span className="font-bold hover:cursor-pointer"><NavLink to='/'><PairMeLogo color='blue'/></NavLink></span>
         <div className="flex gap-2 items-center">
           <span onClick={()=>setProfileModal(true)} className=" hover:cursor-pointer rounded-full ring-1 ring-gray-300 w-5 h-5 text-xxs flex items-center justify-center"><HiUser/></span>
           <span onClick={()=>setOpenSidebar(true)} className="hover:cursor-pointer text-2xl"><RxTextAlignJustify/></span>
@@ -57,7 +57,7 @@ export const User = () => {
           <div className={`fixed z-100 flex items-center flex-col overflow-hidden gap-y-8 text-white bg-blue h-[100vh] w-8/12 top-0 -right-0 ${openSidebar===false ?'translate-x-full':'translate-x-0'} ease-in-out duration-300`}>
           <div className="absolute -top-32 -right-28 rounded-full ring-6 ring-blue-ring bg-white w-64 h-64"></div>
             <div className="absolute -bottom-32 -left-28 rounded-full ring-6 ring-blue-ring bg-white w-64 h-64"></div>
-            <div className="text-lg font-bold w-full ml-16 mt-24">PairMe</div>
+            <div className="text-lg font-bold w-full ml-16 mt-24"><PairMeLogo color='white'/></div>
           <div className=" w-full px- gap-y-1 flex text-xxs items-center flex-col">
             <button onClick={()=>setOpenSidebar(false)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><AiTwotoneHome/></span> Dashboard</button>
             <button onClick={()=>setUserModal(true)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><BsBellFill/></span>Notification</button>
@@ -72,7 +72,7 @@ export const User = () => {
       <div className="relative overflow-x-hidden flex">  
         {/* <div className="fixed bottom-0 left-0 w-full"><Footer/></div> */} 
         <section className=" md:overflow-y-auto hidden md:flex flex-col items-center md:h-screen md:w-3/12 text-white bg-blue">
-          <div className="text-2xl font-bold mt-24 mx-auto">PairMe</div>
+          <div className="text-2xl font-bold mt-24 mx-auto"><PairMeLogo color='white'/></div>
           <div className="w-full text-center">
             <div className="rounded-full mx-auto ring-gray-active ring-8 w-36 h-36 mt-12 overflow-hidden">
               <img className="w-full h-full object-cover" src={profileImg} alt="" />
