@@ -1,6 +1,7 @@
 import { useStateContext } from "../context/contextProvider";
 import { Link } from "react-router-dom";
 import { Footer } from "../components/Footer";
+import { ToastContainer } from 'react-toastify';
 
 import '../App.css';
 import {HiOutlineEnvelope} from'react-icons/hi2';
@@ -9,10 +10,11 @@ import {FaLinkedinIn, FaFacebookSquare, FaTwitter} from 'react-icons/fa';
 import PairMeLogo from "../components/PairMeLogo";
 
 export const Payment = () => {
-  const { setUserModal } = useStateContext();
+  const { setUserModal,showToastMessage } = useStateContext();
 
   return (
     <div className="bg-white md:bg-blue-foundation w-full  text-blue">
+      <ToastContainer/>
       <div className="z-40  hidden bg-white md:flex items-center h-24 pl-28 font-bold text-4xl shadow-sm w-full">
         <Link onClick={() => setUserModal(false)} to="/">
           <PairMeLogo color='blue'/>
@@ -81,7 +83,7 @@ export const Payment = () => {
             <span className=" pl-3 font-medium md:text-xl">I agree to the Terms and Conditions</span> <br />
             </div>
             <div className="text-center mt-6">
-              <button className="md:text-xl md:w-[250px] w-28 h-8 md:h-[70px] bg-blue text-white text-center rounded-full mx-auto">
+              <button onClick={showToastMessage} className="md:text-xl md:w-[250px] w-28 h-8 md:h-[70px] bg-blue text-white text-center rounded-full mx-auto">
                 Make payment
               </button>
             </div>

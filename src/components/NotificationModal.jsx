@@ -7,7 +7,7 @@ import { NotifyData, NotifyData2 } from "../data/NotificatioData";
 import {MdWavingHand} from 'react-icons/md'
 
 export const NotificationModal = () => {
-  const { userModal, setUserModal,userStatus  } = useStateContext();
+  const { userModal, setUserModal,userStatus, showToastMessage  } = useStateContext();
   const [notifyDetail, setNotifyDetail] = useState(false)
   const [notifyText, setNotifyText] = useState(null)
 
@@ -75,9 +75,9 @@ export const NotificationModal = () => {
                 {notifyText.includes('waved') && <MdWavingHand/>}
               </div>
               <div className="text-xs md:text-base text-center mt-3 md:mt-4">{notifyText}</div>
-              {userStatus==="findingRoommate" && <div className="flex justify-center"><button className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">Check profile </button></div>}
-              {(userStatus==="findingAccommodation" && notifyText.includes('waved')) && <div className="flex justify-center"><button className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">Check profile </button></div>}
-              {(userStatus==="findingAccommodation" && notifyText.includes('available')) && <div className="flex justify-center"><Link to ="/payment"><button className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">Make payment </button></Link></div>}
+              {userStatus==="findingRoommate" && <div className="flex justify-center"><button onClick={showToastMessage} className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">Check profile </button></div>}
+              {(userStatus==="findingAccommodation" && notifyText.includes('waved')) && <div className="flex justify-center"><button onClick={showToastMessage} className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">Check profile </button></div>}
+              {(userStatus==="findingAccommodation" && notifyText.includes('available')) && <div className="flex justify-center"><Link to ="/payment"><button onClick={showToastMessage} className="rounded-full mt-6 text-white bg-blue text-center text-xxs md:text-sm  h-6 md:h-14 w-36 md:w-64 ">Make payment </button></Link></div>}
             </div>
       </div>) : null
       
