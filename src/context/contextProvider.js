@@ -1,5 +1,7 @@
 
 import { createContext, useContext, useState, useRef, useEffect } from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const StateContext = createContext({});
 
@@ -20,6 +22,16 @@ export const ContextProvider = ({ children }) => {
   const homeRef = useRef(null)
   const accomodationRef = useRef(null)
   const roommateRef = useRef(null)
+
+  //toast coming soon
+
+  const showToastMessage = () => {
+    toast.info('Coming Soon!', {
+        position: toast.POSITION.TOP_RIGHT,
+        autoClose : 500,
+        hideProgressBar: true
+    });
+};
 
     //Getting current window size
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -45,6 +57,7 @@ export const ContextProvider = ({ children }) => {
   return (
     <StateContext.Provider
       value={{
+        showToastMessage,
         showModal,
         setShowModal,
         userModal, 

@@ -7,7 +7,9 @@ import { useStateContext } from "../context/contextProvider";
 import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
 import RoommateCard from "../components/RoommateCard/RoommateCard";
 import { Roommate } from "../data/roomate";
-import accommodationData from '../data/accommodation.json'
+import accommodationData from '../data/accommodation.json';
+
+import { ToastContainer } from 'react-toastify';
 
 import "../App.css";
 
@@ -17,12 +19,13 @@ import homeImg7 from "../images/Ellipse7.png";
 import homeImg8 from "../images/Ellipse8.png";
 
 export const HomePage = forwardRef(() => {
-  const { accomodationRef, homeRef, roommateRef} = useStateContext();
+  const { accomodationRef, homeRef, roommateRef, showToastMessage} = useStateContext();
 
  
 
   return (
     <div className="relative bg-blue-foundation w-full h-auto">
+      <ToastContainer/>
       <section
         ref={homeRef}
         className="relative flex flex-col md:flex-row md:px-28 px-8 items-center w-full  overflow-x-clip pb-40 md:pb-28 pt-14 md:pt-32"
@@ -46,7 +49,7 @@ export const HomePage = forwardRef(() => {
               <DropDownComponent dropName="Price" option1={'250,000'} option2={'300,000'} option3={'400,000'} option4={'500,000'}/>
               <DropDownComponent dropName="Type" option1={'Single room apartment'} option2={'studio apartment'} option3={'2 bedroom shared apartment'} option4={'self contain apartment'}/>
             </div>
-            <button className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-12 items-center text-xxs md:text-base justify-between px-2 md:px-6 tracking-wider font-light md:font-normal">
+            <button onClick={showToastMessage} className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-12 items-center text-xxs md:text-base justify-between px-2 md:px-6 tracking-wider font-light md:font-normal">
               <span className="md:text-xl">
                 <CiSearch />
               </span>

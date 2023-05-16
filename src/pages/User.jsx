@@ -18,10 +18,11 @@ import { NavLink } from "react-router-dom";
 import { RoommateModal } from "../components/RoommateModal";
 import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
 import { AccommodationModal } from "../components/AccomodationModal";
+import { ToastContainer } from 'react-toastify';
 import PairMeLogo from "../components/PairMeLogo";
 
 export const User = () => {
-  const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal,accommodateModal, setAccommodateModal } = useStateContext()
+  const { user, setUserModal, setProfileModal, setLogoutModal,setRoommateModal, roommateModal,accommodateModal, setAccommodateModal, showToastMessage } = useStateContext()
   const [openSidebar, setOpenSidebar] = useState(false);
   const [roommateInfo, setRoomateInfo] = useState(null);
   const [accommodateInfo, setAccommodateInfo] = useState(null)
@@ -37,6 +38,7 @@ export const User = () => {
 
   return (
     <div className="bg-blue-foundation relative">
+      <ToastContainer/>
 
       <div className="h-12 fixed z-40 px-8 text-blue bg-white shadow-sm md:hidden w-full flex items-center justify-between">
         <span className="font-bold hover:cursor-pointer"><NavLink to='/'><PairMeLogo color='blue'/></NavLink></span>
@@ -61,8 +63,8 @@ export const User = () => {
           <div className=" w-full px- gap-y-1 flex text-xxs items-center flex-col">
             <button onClick={()=>setOpenSidebar(false)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><AiTwotoneHome/></span> Dashboard</button>
             <button onClick={()=>setUserModal(true)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><BsBellFill/></span>Notification</button>
-            <button className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><SiGooglechat/></span>Pull down space</button>
-            <button className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><IoMdSettings/></span>Settings</button>
+            <button onClick={showToastMessage} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><SiGooglechat/></span>Pull down space</button>
+            <button onClick={showToastMessage} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span><IoMdSettings/></span>Settings</button>
             <button onClick={()=>setLogoutModal(true)} className="w-8/12 rounded-md h-8 hover:text-blue hover:bg-white gap-2 flex items-center pl-12"><span className="-rotate-180"><IoLogOut/></span>Log out</button>
           </div>
           </div>
@@ -83,8 +85,8 @@ export const User = () => {
           <div className=" mb-96 mt-8 w-full px-5 text-center gap-y-1 flex flex-col">
             <button onClick={()=>setOpenSidebar(false)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><AiTwotoneHome/></span> Dashboard</button>
             <button onClick={()=>setUserModal(true)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><BsBellFill/></span>Notification</button>
-            <button className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><SiGooglechat/></span>Pull down space</button>
-            <button className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><IoMdSettings/></span>Settings</button>
+            <button onClick={showToastMessage} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><SiGooglechat/></span>Pull down space</button>
+            <button onClick={showToastMessage} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span><IoMdSettings/></span>Settings</button>
             <button onClick={()=>setLogoutModal(true)} className="w-full rounded-2xl h-16 hover:text-blue hover:bg-white gap-2 flex items-center pl-24"><span className="-rotate-180"><IoLogOut/></span>Log out</button>
           </div>
         </section>
@@ -102,7 +104,7 @@ export const User = () => {
               </div>
               <div className="text-sm flex items-center justify-between h-8 md:h-11 mt-8  gap-2 md:gap-5 w-full">
                 <input placeholder="search keyword" type="text"className="h-full w-full rounded-xl md:rounded-2xl outline-none ring-blue ring-1 px-2 md:px-5 bg-transparent"/> 
-                <button className="h-full w-24 md:w-40 text-white rounded-full bg-blue text-xs md:text-lg">Search</button>
+                <button onClick={showToastMessage} className="h-full w-24 md:w-40 text-white rounded-full bg-blue text-xs md:text-lg">Search</button>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 justify-between mb-20 mt-10 gap-4 md:gap-7 ">
