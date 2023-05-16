@@ -25,7 +25,7 @@ module.exports = {
           'xxs': '8.03px',
       },
       spacing: {
-        'home-mg': '570px',
+        'home-mg': '590px',
         'home-sch' : '981px',
 
       },

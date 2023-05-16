@@ -34,12 +34,12 @@ export const Navbar = () => {
 }
 
   return (
-    <nav className="bg-white w-full shadow-sm md:shadow-sm md:h-32 flex fixed top-0 left-0 z-40 text-blue">
+    <nav className="bg-white w-full shadow-sm md:shadow-sm md:h-24 flex fixed top-0 left-0 z-40 text-blue">
       <div className="justify-between px-7 py-2.5 items-center flex md:px-28 w-full">
         {/* LOGO */}
         <div className="font-bold text-base md:text-4xl cursor-pointer">
           <NavLink to="/">
-            <PairMeLogo/>
+            <PairMeLogo color='blue'/>
           </NavLink>
         </div>
         <div className=" hidden lg:block">
@@ -65,7 +65,7 @@ export const Navbar = () => {
             </div>
             { showNavList &&
             <div>
-                <NavLink to ='/signup'><button className="bg-blue text-white h-7 w-16 md:h-14 md:w-32 rounded-full">Sign Up</button></NavLink>
+                <NavLink to ='/signup'><button className="bg-blue text-white h-7 w-16 md:h-10 md:w-24 rounded-full">Sign Up</button></NavLink>
             </div>
             }
         </div>

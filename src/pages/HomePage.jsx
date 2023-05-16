@@ -25,9 +25,9 @@ export const HomePage = forwardRef(() => {
     <div className="relative bg-blue-foundation w-full h-auto">
       <section
         ref={homeRef}
-        className="relative flex flex-col md:flex-row md:px-28 px-8 items-center w-full  overflow-x-clip"
+        className="relative flex flex-col md:flex-row md:px-28 px-8 items-center w-full  overflow-x-clip pb-40 md:pb-28 pt-14 md:pt-32"
       >
-        <div className="flex flex-col  gap-3 md:gap-7 mt-14 md:mt-52 w-full md:w-8/12 z-30">
+        <div className="flex flex-col  gap-3 md:gap-7  w-full md:w-8/12 z-30">
           <div className="w-11/12 md:w-9/12 text-blue">
             <div
               style={{ lineHeight: "1.2" }}
@@ -55,11 +55,11 @@ export const HomePage = forwardRef(() => {
           </div>
         </div>
 
-        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-[85%] md:w-home-mg aspect-square md:h-home-mg -right-24 md:right-32 md:top-44 top-48 z-20">
+        <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-[85%] md:w-home-mg aspect-square md:h-home-mg -right-24 md:right-32 md:top-20 top-48 z-20 samsungs8">
           <img src={homeImg} className="w-full h-full object-cover" alt="" />
         </div>
       </section>
-      <section className="relative text-white mt-40 md:mt-28 main-section overflow-x-clip main-section1">
+      <section className="relative text-white main-section overflow-x-clip main-section1">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
             <div className="absolute -top-16 md:top-0 -left-[41vw] md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-4 md:ring-8 ring-gray-active md:ring-blue-foundation h-40 w-40 md:h-64 md:w-64">
@@ -171,7 +171,7 @@ export const HomePage = forwardRef(() => {
             {" "}
             <Link to="/signup">
               {" "}
-              <button className="bg-transparent rounded-full w-36 h-8 px-5 md:w-72 md:h-16 md:px-9 md:font-normal text-xxs md:text-base">
+              <button className="mt-8  bg-white text-blue rounded-full w-36 h-8 px-5 md:w-72 md:h-16 md:px-9 md:font-normal text-xxs md:text-base">
                 Sign up to view more
               </button>{" "}
             </Link>{" "}

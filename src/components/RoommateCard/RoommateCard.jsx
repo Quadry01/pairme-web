@@ -16,7 +16,7 @@ const RoommateCard = ({name, department, religion, height, nameText, cardText}) 
               {department.length > 25 ? `${department.substring(0, 25)}` : department}
             </h5>
             <h5 className="religion">
-              <FaPrayingHands className="roomate-card-icon" /> {religion}
+              <FaPrayingHands className="roomate-card-icon" />{religion}
             </h5>
           </div>
         </div>

@@ -13,14 +13,14 @@ export const Payment = () => {
 
   return (
     <div className="bg-white md:bg-blue-foundation w-full  text-blue">
-      <div className="z-40  hidden bg-white md:flex items-center h-32 pl-28 font-bold text-4xl shadow-sm w-full">
+      <div className="z-40  hidden bg-white md:flex items-center h-24 pl-28 font-bold text-4xl shadow-sm w-full">
         <Link onClick={() => setUserModal(false)} to="/">
-          <PairMeLogo/>
+          <PairMeLogo color='blue'/>
         </Link>
       </div>
       <div className="flex items-center justify-center md:hidden font-bold text-base w-full text-center mt-14 mb-8">
         <Link onClick={() => setUserModal(false)} to="/">
-          <PairMeLogo/>
+          <PairMeLogo color='blue'/>
         </Link>
       </div>
       <div className=" relative">
