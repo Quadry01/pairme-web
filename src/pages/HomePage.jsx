@@ -191,7 +191,7 @@ export const HomePage = forwardRef(() => {
           </div>
           <div>
             <div className=" text-blue mt-7 md:ml-20 text-center md:text-left flex flex-col items-center md:items-start">
-              <div className="text-xl md:text-4xl font-bold">
+              <div className="text-xl md:text-4xl font-bold md:w-7/12">
                 Got an available space and need a roommate?
               </div>
               <div className="mt-3 text-xs md:text-base font-light w-10/12 md:w-10/12">

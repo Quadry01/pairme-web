@@ -26,9 +26,9 @@ export const ContextProvider = ({ children }) => {
   //toast coming soon
 
   const showToastMessage = () => {
-    toast.info('Coming Soon!', {
+    toast.info('Feature Coming Soon!', {
         position: toast.POSITION.TOP_RIGHT,
-        autoClose : 500,
+        autoClose : 1000,
         hideProgressBar: true
     });
 };
