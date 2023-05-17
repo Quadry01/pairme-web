@@ -18,9 +18,9 @@ const AccomodationCard = ({height, nameText, cardText, payText, location, yearly
           {type}
         </h2>
         <h2>
-          <MdLocationPin className="accomodation-card-icon" /> {location.length > 15 ? `${location.substring(0, 15)}...` : location}
+          <MdLocationPin className="accomodation-card-icon" />{location.length > 15 ? `${location.substring(0, 15)}...` : location}
         </h2>
-        <h2 className={`${payText}`}> ₦{new Intl.NumberFormat().format(yearlyrent)}/year</h2>
+        <h2 className={`${payText}`}>₦{new Intl.NumberFormat().format(yearlyrent)}/year</h2>
       </div>
     </div>
   );
