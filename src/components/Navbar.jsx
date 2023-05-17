@@ -7,7 +7,7 @@ import PairMeLogo from './PairMeLogo.jsx';
 
 export const Navbar = () => {
   const location = useLocation()
-  const {setShowModal, accomodationRef, homeRef, roommateRef} = useStateContext()
+  const {setShowModal, accomodationRef, homeRef, roommateRef, showToastMessage} = useStateContext()
 
   const [showNavList, setShowNavList] = useState(false)
 
@@ -31,6 +31,7 @@ export const Navbar = () => {
     if(e.target.id === "home") homeRef.current?.scrollIntoView({behavior:'smooth', block: 'end'})
     if (e.target.id === "accomodation") accomodationRef.current?.scrollIntoView({behavior:'smooth',block: 'center'})
     if (e.target.id === "roommate")roommateRef.current?.scrollIntoView({behavior:'smooth', block: 'center'})
+    if(e.target.id === "contact") showToastMessage()
 }
 
   return (
