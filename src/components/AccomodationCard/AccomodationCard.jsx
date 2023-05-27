@@ -5,6 +5,8 @@ import { BsHouseFill } from "react-icons/bs";
 import accom from "../../images/accom.png";
 
 const AccomodationCard = ({height, nameText, cardText, payText, location, yearlyrent, type}) => {
+  const capLocation = location.split(' ').map(i=>i.charAt(0).toUpperCase()+ i.slice(1)).join(' ');
+  const capType = type.split(' ').map(i=>i.charAt(0).toUpperCase()+ i.slice(1)).join(' ');
 
   return (
     <div className={`${height} accomodation-card-wrapper shadow-sm md:shadow-md text-gray-700 bg-white`}>
@@ -15,10 +17,10 @@ const AccomodationCard = ({height, nameText, cardText, payText, location, yearly
         <h1 className={`${nameText}`}>Hostel</h1>
         <h2>
           <BsHouseFill className="accomodation-card-icon" />
-          {type}
+          {capType}
         </h2>
         <h2>
-          <MdLocationPin className="accomodation-card-icon" />{location.length > 15 ? `${location.substring(0, 15)}...` : location}
+          <MdLocationPin className="accomodation-card-icon" />{capLocation.length > 15 ? `${capLocation.substring(0, 15)}...` : capLocation}
         </h2>
         <h2 className={`${payText}`}>₦{new Intl.NumberFormat().format(yearlyrent)}/year</h2>
       </div>

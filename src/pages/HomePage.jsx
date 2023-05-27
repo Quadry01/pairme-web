@@ -65,7 +65,7 @@ export const HomePage = forwardRef(() => {
       <section className="relative text-white main-section overflow-x-clip main-section1">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
-            <div className="absolute -top-16 md:top-0 -left-[41vw] md:left-0 md:relative z-30 md:z-10 overflow-hidden rounded-full ring-4 md:ring-8 ring-gray-active md:ring-blue-foundation h-40 w-40 md:h-64 md:w-64">
+            <div className="absolute md:relative -top-16 md:top-0 -left-[41vw] md:left-0 z-30 md:z-10 overflow-hidden rounded-full ring-4 md:ring-8 ring-gray-active md:ring-blue-foundation h-40 w-40 md:h-64 md:w-64">
               <img src={homeImg7} className="w-full h-full" alt="" />
             </div>
             <div className="absolute z-20 -bottom-3 -right-12 overflow-hidden hidden md:block rounded-full ring-6 md:ring-8 ring-blue-foundation h-28 w-28">
