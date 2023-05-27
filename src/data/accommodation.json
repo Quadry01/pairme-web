@@ -28,7 +28,7 @@
         "university": "University of Lagos",
         "department": "Law",
         "about": "Gbenga is a confident and outgoing law student with a talent for event planning. He enjoys bringing people together and creating memorable experiences.",
-        "religion": "christianity",
+        "religion": "Christianity",
         "sideHustle": "Event Planning",
         "routine": "Gbenga wakes up at 7am every day, attends classes from 9am to 3pm, works on his event planning business from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
         "hobbies": ["Football", "Event Planning", "Music"]
@@ -46,7 +46,7 @@
       }
     ],
     "name": "Dada Street",
-    "type": "Shared apartment",
+    "type": "Shared Apartment",
     "distance": [
       {
         "driving": 1,
@@ -66,9 +66,9 @@
       {
         "name": "Adebayo Adekule",
         "university": "University of Lagos",
-        "department": "computer science",
+        "department": "Computer Science",
         "about": "Adebayo is a highly motivated computer science student with a passion for coding and problem-solving. He is always eager to learn new programming languages and improve his skills.",
-        "religion": "christianity",
+        "religion": "Christianity",
         "sideHustle": "Freelance Web Developer",
         "routine": "Adebayo wakes up at 6am every day, attends classes from 8am to 3pm, works on his freelance projects from 4pm to 7pm, plays football in the evening and reads before going to bed.",
         "hobbies": ["Football", "Reading", "Coding"]
@@ -86,7 +86,7 @@
       }
     ],
     "name": "Pako Area",
-    "type": "Shared apartment",
+    "type": "Shared Apartment",
     "distance": [
       {
         "driving": 5,
@@ -125,8 +125,8 @@
         "rightview": ""
       }
     ],
-    "name": "Dada street",
-    "type": "Studio apartment",
+    "name": "Dada Street",
+    "type": "Studio Apartment",
     "distance": [
       {
         "driving": 1,
@@ -180,7 +180,7 @@
       }
     ],
     "yearlyrent": 110000,
-    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair, semi-detached kitchen. 6-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
+    "overview": "Self-Contain Apartment, furnished with basic amenities including a bed, table & chair, semi-detached kitchen. 6-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting and loud music.",
     "features": [
       "Regular power supply",
       "Access to clean water",
@@ -193,7 +193,7 @@
         "university": "University of Lagos",
         "department": "Mass Communication",
         "about": "Olumide wakes up at 7am every day, attends classes from 9am to 3pm, works on his web development projects from 4pm to 7pm, plays football in the evening, and listens to music before going to bed.",
-        "religion": "christianity",
+        "religion": "Christianity",
         "sideHustle": "Freelance Journalist",
         "routine": "Patricia wakes up at 6am every day to write, attends classes from 8am to 2pm, works on her freelance journalism projects from 3pm to 6pm, reads in the evening, and listens to music before going to bed.",
         "hobbies": ["Writing", "Reading", "Music"]
@@ -220,7 +220,7 @@
       }
     ],
     "yearlyrent": 130000,
-    "overview": "Self-contain apartment, furnished with basic amenities including a bed, table & chair, reading room (library), semi-detached kitchen. 9-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting, littering, latenights and loud music.",
+    "overview": "Self-Contain Apartment, furnished with basic amenities including a bed, table & chair, reading room (library), semi-detached kitchen. 9-minutes walk to the nearest bus stop. Access to clean water and electricity. Rules against smoking,fighting, littering, latenights and loud music.",
     "features": [
       "Regular power supply",
       "Access to clean water",
@@ -239,7 +239,7 @@
         "university": "University of Lagos",
         "department": "Economics",
         "about": "Chima is a dedicated and hardworking economics student with a strong interest in education. She enjoys teaching and helping others to learn.",
-        "religion": "christianity",
+        "religion": "Christianity",
         "sideHustle": "Part-Time Tutor",
         "routine": " Chima wakes up at 5am every day to study, attends classes from 8am to 2pm, tutors students from 3pm to 6pm, listens to music and reads before going to bed.",
         "hobbies": ["Music", "Reading", "Tutoring"]
@@ -418,7 +418,7 @@
       }
     ],
     "name": "Dada Street",
-    "type": "Self-contain Apartment ",
+    "type": "Self-Contain Apartment ",
     "distance": [
       {
         "driving": 2,
@@ -441,7 +441,7 @@
         "university": "University of Lagos",
         "department": "Mechanical Engineering",
         "about": "Emeka is a practical and hands-on mechanical engineering student with a talent for fixing cars and other machines. He enjoys working with his hands and solving problems.",
-        "religion": "christianity",
+        "religion": "Christianity",
         "sideHustle": "Automobile Repair",
         "routine": "Emeka wakes up at 7am every day, attends classes from 9am to 2pm, works on his automotive repairs business from 3pm to 7pm, plays football in the evening, and listens to music before going to bed.",
         "hobbies": ["Football", "Automobile Repair", "Music"]
@@ -459,7 +459,7 @@
       }
     ],
     "name": "Chemist Area",
-    "type": "Self-contain Apartment ",
+    "type": "Self-Contain Apartment ",
     "distance": [
       {
         "driving": 5,
@@ -500,7 +500,7 @@
       }
     ],
     "name": "Ilaje Area",
-    "type": "Self-contain Apartment ",
+    "type": "Self-Contain Apartment ",
     "distance": [
       {
         "driving": 8,
@@ -540,7 +540,7 @@
       }
     ],
     "name": "Anuoluwapo/Police Station",
-    "type": "Self-contain Apartment ",
+    "type": "Self-Contain Apartment ",
     "distance": [
       {
         "driving": 7,
@@ -700,7 +700,7 @@
       }
     ],
     "name": "Anuoluwapo/Police Station",
-    "type": "Self-contain Apartment ",
+    "type": "Self-Contain Apartment ",
     "distance": [
       {
         "driving": 4,
