@@ -87,3 +87,8 @@
     height: 24vh;
   }
  }
+ @media only screen and (max-width: 400px) {
+  .xs-dropDown{
+    width: 65px;
+  }
+ }
