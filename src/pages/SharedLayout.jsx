@@ -8,7 +8,8 @@ const SharedLayout = () => {
     <div className="bg-blue-foundation relative">
       <Navbar/>
 
-      <section className='pt-12 md:pt-32'>
+      <section className='pt-12 md:pt-[97px]'>
+        {/* pt-12 md:pt-32 */}
         <Outlet/>
       </section>
 
