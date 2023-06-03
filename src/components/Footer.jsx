@@ -11,28 +11,28 @@ export const Footer = () => {
           <div className="z-10 text-xxs md:text-sm grid grid-cols-2 mt-14 gap-14 md:gap-20 md:grid-cols-4 mx-auto">
             <div>
               <h3 className="text-xs md:text-xl font-semibold">Company</h3>
-              <ul className="list-none mt-3">
+              <ul className="list-none mt-3 font-[200] md:leading-[28px] leading-[18px]">
                 <li>Home</li>
                 <li>About Us</li>
               </ul>
             </div>
             <div>
             <h3 className="text-xs md:text-xl font-semibold">Our Services</h3>
-              <ul className="list-none mt-3">
+              <ul className="list-none mt-3 font-[200] md:leading-[28px] leading-[18px]">
                 <li>Find Roomate</li>
                 <li>Find Accomodation</li>
               </ul>
             </div>
             <div>
             <h3 className="text-xs md:text-xl font-semibold">Legal</h3>
-              <ul className="list-none mt-3">
+              <ul className="list-none mt-3 font-[200] md:leading-[28px] leading-[18px]">
                 <li>Terms and Conditions</li>
                 <li>Service Agreement</li>
               </ul>
             </div>
             <div>
             <h3 className="text-xs md:text-xl font-semibold">Support</h3>
-              <ul className="list-none mt-3 ">
+              <ul className="list-none mt-3 font-[200] md:leading-[28px] leading-[18px]">
                 <li>Customer Care</li>
                 <li>FAQs</li>
               </ul>

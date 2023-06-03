@@ -18,7 +18,8 @@ module.exports = {
           ring: '#0D486D'
         },
         gray: {
-          active: "#B3C1CA"
+          active: "#B3C1CA",
+          B4B4B: "#4B4B4B"
         }
       },
       fontSize: {

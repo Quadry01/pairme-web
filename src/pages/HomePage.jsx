@@ -7,9 +7,9 @@ import { useStateContext } from "../context/contextProvider";
 import AccomodationCard from "../components/AccomodationCard/AccomodationCard";
 import RoommateCard from "../components/RoommateCard/RoommateCard";
 import { Roommate } from "../data/roomate";
-import accommodationData from '../data/accommodation.json';
+import accommodationData from "../data/accommodation.json";
 
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
 
 import "../App.css";
 
@@ -19,14 +19,45 @@ import homeImg7 from "../images/Ellipse7.png";
 import homeImg8 from "../images/Ellipse8.png";
 
 export const HomePage = forwardRef(() => {
-  const { accomodationRef, homeRef, roommateRef, showToastMessage} = useStateContext();
-
- 
+  const { accomodationRef, homeRef, roommateRef, showToastMessage } =
+    useStateContext();
 
   return (
     <div className="relative bg-blue-foundation w-full h-auto">
-      <ToastContainer/>
+      <ToastContainer />
       <section
+        ref={homeRef}
+        className="relative flex flex-col md:flex-row md:px-28 px-8 w-full overflow-x-clip"
+      >
+        <div className="md:mt-[202px] mt-[7vh] relative md:h-[544px] h-[262.6px]">
+          <div className="md:w-[624px] w-full">
+            <div className="md:text-[46px] text-[24px] leading-[32px] font-bold md:leading-[59px] text-blue">
+              Find the best fit for you, both in roommate & accommodation
+            </div>
+            <div className="md:w-[550px] w-[70vw] text-[8px] leading-[16px] mt-[8px] md:mt-[16px] md:text-[14px] text-gray-B4B4B md:leading-[28px] md:font-light">
+              We ensure you encounter zero stress when searching for a budget
+              friendly apartment or for a suitable roommate.
+            </div>
+          </div>
+          <div className="absolute justify-between items-center md:bottom-[153px] bottom-0 mt-[37px] md:mt-0 w-full md:w-[800px] h-[43px] md:h-[90px] py-[10px] md:py-[24px] md:px-[40px] px-[20px] rounded-[9px] md:rounded-[27px] flex bg-white shadow-[1px_1px_11px_0px_rgba(0,0,0,0.1)] z-30 ">
+            <DropDownComponent pHolder='Location'/>
+            <DropDownComponent pHolder='Price'/>
+            <DropDownComponent pHolder='Type'/>
+            <button onClick={showToastMessage} className="text-white bg-blue flex rounded-full w-14 md:w-[153px] h-5 md:h-12 items-center text-xxs md:text-base justify-between px-2 md:px-6 tracking-wider font-light md:font-normal">
+              <span className="md:text-xl">
+                <CiSearch />
+              </span>
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+        <div className="relative h-[18vh] xs-screen md:h-auto w-full">
+          <div className=" absolute right-[-137.8px] md:right-0 bottom-[-90px] md:bottom-[-60px] w-[90vw] md:w-[46vw] overflow-hidden rounded-full md:border-[18px] border-[8px] border-gray-active md:border-blue-ring aspect-square z-20">
+            <img src={homeImg} className="w-full h-full object-cover" alt="" />
+          </div>
+        </div>
+      </section>
+      {/* <section
         ref={homeRef}
         className="relative flex flex-col md:flex-row md:px-28 px-8 items-center w-full  overflow-x-clip pb-40 md:pb-28 pt-14 md:pt-32"
       >
@@ -61,7 +92,7 @@ export const HomePage = forwardRef(() => {
         <div className="overflow-hidden absolute rounded-full ring-8 md:ring-[1rem] ring-gray-active md:ring-blue-ring w-[85%] md:w-home-mg aspect-square md:h-home-mg -right-24 md:right-32 md:top-20 top-48 z-20 samsungs8">
           <img src={homeImg} className="w-full h-full object-cover" alt="" />
         </div>
-      </section>
+      </section> */}
       <section className="relative text-white main-section overflow-x-clip main-section1">
         <div className="flex flex-col items-center justify-center pb-16 md:pb-48">
           <div className="flex flex-col relative md:mt-44">
@@ -78,7 +109,7 @@ export const HomePage = forwardRef(() => {
             </div>
             <div
               style={{ lineHeight: "2" }}
-              className="font-normal text-xs md:font-light md:text-xl md:mt-11 text-justify"
+              className="font-[200] text-xs md:font-[100] md:text-xl md:mt-11 text-justify"
             >
               Pairmeon.com simplifies the task of finding accommodation and a
               roommate for tertiary institution students in Nigeria. Our
@@ -105,24 +136,27 @@ export const HomePage = forwardRef(() => {
             </div>
           </div>
           <div className="relative grid grid-cols-3 mt-5 -mx-20 md:-mx-40 md:grid-cols-5 items-center justify-center gap-5 md:gap-10">
-            {
-              (window.innerWidth > 798
-                ? accommodationData.slice(0, 5)
-                : accommodationData.slice(0, 3)).map((item) =>
-
-            <div key={item.id} className="relative md:first:blur-sm md:last:blur-sm">
-              <AccomodationCard 
-              height={'h-[14em] md:h-[23em] rounded-xl md:rounded-3xl'}
-              nameText ={'text-sm md:text-3xl font-semibold'}
-              cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
-              payText ={'text-sm md:text-lg'}
-              type ={item.type}
-              yearlyrent={item.yearlyrent}
-              location={item.name}
-              />
-            </div>        
-              )
-            }
+            {(window.innerWidth > 798
+              ? accommodationData.slice(0, 5)
+              : accommodationData.slice(0, 3)
+            ).map((item) => (
+              <div
+                key={item.id}
+                className="relative md:first:blur-sm md:last:blur-sm"
+              >
+                <AccomodationCard
+                  height={"h-[14em] md:h-[23em] rounded-xl md:rounded-3xl"}
+                  nameText={"text-sm md:text-3xl font-semibold"}
+                  cardText={
+                    "md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3"
+                  }
+                  payText={"text-sm md:text-lg"}
+                  type={item.type}
+                  yearlyrent={item.yearlyrent}
+                  location={item.name}
+                />
+              </div>
+            ))}
           </div>
           <div className="relative flex ">
             <div className="h-80  w-40 backdrop-blur-sm bg-white/30 hidden md:block absolute top-0 left-0"></div>
@@ -160,12 +194,14 @@ export const HomePage = forwardRef(() => {
                 className="relative md:first:blur-sm md:last:blur-sm"
               >
                 <RoommateCard
-                height={'h-[14em] md:h-[23em] rounded-xl md:rounded-3xl'} 
-                nameText ={'text-sm md:text-3xl font-semibold'}
-                cardText ={'md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3'}
-                name={item.name}
-                department={item.department}
-                religion={item.religion}
+                  height={"h-[14em] md:h-[23em] rounded-xl md:rounded-3xl"}
+                  nameText={"text-sm md:text-3xl font-semibold"}
+                  cardText={
+                    "md:text-sm text-xxs pl-3 md:pl-6 md:pt-5 pt-2 gap-1 md:gap-3"
+                  }
+                  name={item.name}
+                  department={item.department}
+                  religion={item.religion}
                 />
               </div>
             ))}
@@ -189,9 +225,9 @@ export const HomePage = forwardRef(() => {
               <img className="h-full w-full bg-cover" src={homeImg8} alt="" />
             </div>
           </div>
-          <div>
-            <div className=" text-blue mt-7 md:ml-20 text-center md:text-left flex flex-col items-center md:items-start">
-              <div className="text-xl md:text-4xl font-bold md:w-7/12">
+          <div className=" flex flex-col items-center justify-center md:ml-20">
+            <div className=" text-blue text-center md:text-left flex flex-col items-center md:items-start">
+              <div className="mt-[32px] md:mt-0 text-xl md:text-4xl font-bold md:w-7/12">
                 Got an available space and need a roommate?
               </div>
               <div className="mt-3 text-xs md:text-base font-light w-10/12 md:w-10/12">
@@ -199,10 +235,10 @@ export const HomePage = forwardRef(() => {
                 looking for accommodation.
               </div>
             </div>
-            <div className="mt-7 text-center md:ml-20 md:text-start">
-              <Link to="/signup">
+            <div className="mt-7 w-full flex justify-center md:justify-start">
+              <Link to="/signup" className="">
                 <button className="bg-blue text-white rounded-full w-36 h-8 px-5 md:w-64 md:h-14 md:px-9 md:font-normal text-xxs md:text-base">
-                  share your space
+                  Share Your Space
                 </button>
               </Link>
             </div>
