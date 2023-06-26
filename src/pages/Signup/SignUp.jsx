@@ -270,9 +270,9 @@ export const SignUp = () => {
                 <option disabled selected hidden value="">
                   Preffered Accommodation type
                 </option>
-                <option value="one">one room</option>
-                <option value="two">two rooms</option>
-                <option value="three">three rooms</option>
+                <option value="one">One room</option>
+                <option value="two">Two rooms</option>
+                <option value="three">Three rooms</option>
               </optgroup>
             </select>
           </div>
